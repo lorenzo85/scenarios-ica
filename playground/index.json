@@ -1,0 +1,29 @@
+{
+  "title": "Istio Playground",
+  "description": "Play with Istio installed on a Kubernetes cluster.",
+  "details": {
+      "steps": [
+      {
+        "title": "Play with Istio",
+        "text": "step1/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish/finish.md"
+    },
+    "intro": {
+      "text": "init/init.md",
+      "background": "init/background.sh",
+      "foreground": "init/foreground.sh"
+    },
+    "assets": {
+      "host01": [
+        {"file": "wait-background.sh", "target": "/ks", "chmod": "+x"},
+        {"file": "demo.yaml", "target": "/tmp", "chmod": "+x"}
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}

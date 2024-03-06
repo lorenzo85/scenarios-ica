@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: booking-service
+  name: booking-service
+  namespace: foo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: booking-service
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: booking-service
+    spec:
+      containers:
+        - image: kubeteam/booking-service:v1
+          name: booking-service
+          ports:
+            - containerPort: 8084
+          env:
+          - name: SERVICE_PORT
+            value: "8084"
+          - name: NOTIFICATION_SERVICE_URL
+            value: notification-service
+          - name: NOTIFICATION_SERVICE_PORT
+            value: "8084"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: booking-service
+  labels:
+    app: booking-service
+  namespace: foo
+spec:
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8084
+  selector:
+    app: booking-service

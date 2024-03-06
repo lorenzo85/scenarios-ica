@@ -1,0 +1,61 @@
+{
+  "title": "Egress - External services TLS origination",
+  "description": "Practice configuring Istio's to perform TLS origination for outbound traffic to an external service.",
+  "details": {
+    "steps": [
+      {
+        "title": "Configure service entry for HTTP and HTTPs traffic access",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      },
+      {
+        "title": "Test service entry",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "Configure service entry to redirect HTTP traffic to HTTPs",
+        "text": "step3/text.md",
+        "verify": "step3/verify.sh"
+      },
+      {
+        "title": "Configure destination rule TLS origination",
+        "text": "step4/text.md",
+        "verify": "step4/verify.sh"
+      },
+      {
+        "title": "Test service entry",
+        "text": "step5/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish/finish.md"
+    },
+    "intro": {
+      "text": "init/init.md",
+      "background": "init/background.sh",
+      "foreground": "init/foreground.sh"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "wait-background.sh",
+          "target": "/ks",
+          "chmod": "+x"
+        },
+        {
+          "file": "check-utils.sh",
+          "target": "/tmp",
+          "chmod": "+x"
+        },
+        {
+          "file": "demo.yaml",
+          "target": "/tmp",
+          "chmod": "+x"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}

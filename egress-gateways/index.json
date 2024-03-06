@@ -1,0 +1,88 @@
+{
+  "title": "Egress - Gateways",
+  "description": "Practice configuring Istio to direct traffic to external services through a dedicated egress gateway.",
+  "details": {
+    "steps": [
+      {
+        "title": "Intro",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "Create service entry for HTTP traffic",
+        "text": "step2/text.md",
+        "verify": "step2/verify.sh"
+      },
+      {
+        "title": "Test service entry",
+        "text": "step3/text.md"
+      },
+      {
+        "title": "Create egress gateway",
+        "text": "step4/text.md",
+        "verify": "step4/verify.sh"
+      },
+      {
+        "title": "Create virtual service",
+        "text": "step5/text.md",
+        "verify": "step5/verify.sh"
+      },
+      {
+        "title": "Test egress gateway for HTTP",
+        "text": "step6/text.md"
+      },
+      {
+        "title": "Create ServiceEntry for HTTPs traffic",
+        "text": "step7/text.md",
+        "verify": "step7/verify.sh"
+      },
+      {
+        "title": "Test Service Entry",
+        "text": "step8/text.md"
+      },
+      {
+        "title": "Update egress Gateway",
+        "text": "step9/text.md",
+        "verify": "step9/verify.sh"
+      },
+      {
+        "title": "Update VirtualService",
+        "text": "step10/text.md",
+        "verify": "step10/verify.sh"
+      },
+      {
+        "title": "Test Egress Gateway for HTTPs",
+        "text": "step11/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish/finish.md"
+    },
+    "intro": {
+      "text": "init/init.md",
+      "background": "init/background.sh",
+      "foreground": "init/foreground.sh"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "wait-background.sh",
+          "target": "/ks",
+          "chmod": "+x"
+        },
+        {
+          "file": "check-utils.sh",
+          "target": "/tmp",
+          "chmod": "+x"
+        },
+        {
+          "file": "demo.yaml",
+          "target": "/tmp",
+          "chmod": "+x"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}

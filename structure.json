@@ -1,0 +1,22 @@
+{
+  "items": [
+    { "path": "playground" },
+    { "path": "traffic-management-request-routing"},
+    { "path": "traffic-management-fault-injection"},
+    { "path": "traffic-management-traffic-shifting"},
+    { "path": "traffic-management-circuit-breaking"},
+    { "path": "traffic-management-mirroring"},
+    { "path": "ingress-gateways"},
+    { "path": "ingress-gateways-secure"},
+    { "path": "ingress-gateway-no-tsl-termination"},
+    { "path": "ingress-kubernetes"},
+    { "path": "egress-external-services-access"},
+    { "path": "egress-external-services-tls-origination"},
+    { "path": "egress-gateways"},
+    { "path": "egress-gateways-tls-origination"},
+    { "path": "security-authentication-mtls"},
+    { "path": "security-authorization-http-traffic"},
+    { "path": "security-authorization-jwt-token"},
+    { "path": "istio-installation-istioctl"}
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "title": "Security - Authentication - mTLS",
+  "description": "Practice configuring Istio authentication policy to set up mutual TLS.",
+  "details": {
+    "steps": [
+      {
+        "title": "Intro",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "Test default mTLS",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "Enforce mTLS cluster-wide",
+        "text": "step3/text.md",
+        "verify": "step3/verify.sh"
+      },
+      {
+        "title": "Test mTLS cluster-wide",
+        "text": "step4/text.md",
+        "verify": "step4/verify.sh"
+      },
+      {
+        "title": "Enforce mTLS namespace-wide",
+        "text": "step5/text.md",
+        "verify": "step5/verify.sh"
+      },
+      {
+        "title": "Test mTLS namespace-wide",
+        "text": "step6/text.md",
+        "verify": "step6/verify.sh"
+      },
+      {
+        "title": "Enforce mTLS workload-wide",
+        "text": "step7/text.md",
+        "verify": "step7/verify.sh"
+      },
+      {
+        "title": "Test mTLS workload-wide",
+        "text": "step8/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish/finish.md"
+    },
+    "intro": {
+      "text": "init/init.md",
+      "background": "init/background.sh",
+      "foreground": "init/foreground.sh"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "wait-background.sh",
+          "target": "/ks",
+          "chmod": "+x"
+        },
+        {
+          "file": "check-utils.sh",
+          "target": "/tmp",
+          "chmod": "+x"
+        },
+        {
+          "file": "demo.yaml",
+          "target": "/tmp",
+          "chmod": "+x"
+        },
+        {
+          "file": "notification-deployment.yaml",
+          "target": "/tmp",
+          "chmod": "+x"
+        },
+        {
+          "file": "booking-deployment.yaml",
+          "target": "/tmp",
+          "chmod": "+x"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

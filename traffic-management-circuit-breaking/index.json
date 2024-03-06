@@ -1,0 +1,72 @@
+{
+  "title": "Traffic Management - Circuit Breaking",
+  "description": "Practice configuring Istio's circuit breaking rules and then test the configuration by intentionally \"firing\" the circuit breaker.",
+  "details": {
+    "steps": [
+      {
+        "title": "Intro",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "Configure destination rule circuit breaker by connection pool",
+        "text": "step2/text.md",
+        "verify": "step2/verify.sh"
+      },
+      {
+        "title": "Configure virtual service",
+        "text": "step3/text.md",
+        "verify": "step3/verify.sh"
+      },
+      {
+        "title": "Test the circuit breaker",
+        "text": "step4/text.md",
+        "verify": "step4/verify.sh"
+      },
+      {
+        "title": "Configure destination rule circuit breaker by outlier detection",
+        "text": "step5/text.md",
+        "verify": "step5/verify.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish/finish.md"
+    },
+    "intro": {
+      "text": "init/init.md",
+      "background": "init/background.sh",
+      "foreground": "init/foreground.sh"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "wait-background.sh",
+          "target": "/ks",
+          "chmod": "+x"
+        },
+        {
+          "file": "check-utils.sh",
+          "target": "/tmp",
+          "chmod": "+x"
+        },
+        {
+          "file": "demo.yaml",
+          "target": "/tmp",
+          "chmod": "+x"
+        },
+        {
+          "file": "notification-deployment.yaml",
+          "target": "/tmp",
+          "chmod": "+x"
+        },
+        {
+          "file": "fortio-deployment.yaml",
+          "target": "/tmp",
+          "chmod": "+x"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}

@@ -1,0 +1,43 @@
+apiVersion: install.istio.io/v1alpha1
+kind: IstioOperator
+spec:
+  meshConfig:
+    accessLogFile: /dev/stdout
+    extensionProviders:
+    - name: otel
+      envoyOtelAls:
+        service: otel-collector.istio-system.svc.cluster.local
+        port: 4317
+  components:
+    egressGateways:
+    - name: istio-egressgateway
+      enabled: false
+    ingressGateways:
+    - name: istio-ingressgateway
+      enabled: false
+    pilot:
+      k8s:
+        env:
+          - name: PILOT_TRACE_SAMPLING
+            value: "100"
+        resources:
+          requests:
+            cpu: 0m # CHANGED
+            memory: 0Mi # CHANGED
+
+  values:
+    global:
+      proxy:
+        resources:
+          requests:
+            cpu: 0m # CHANGED
+            memory: 0Mi # CHANGED
+
+    pilot:
+      autoscaleEnabled: false
+
+    gateways:
+      istio-egressgateway:
+        autoscaleEnabled: false
+      istio-ingressgateway:
+        autoscaleEnabled: false

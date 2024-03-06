@@ -1,0 +1,66 @@
+{
+  "title": "Traffic Management - Traffic Shifting",
+  "description": "Practice configuring Istio to migrate traffic from an old to a new version of a microservice.",
+  "details": {
+    "steps": [
+      {
+        "title": "Intro",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "Environment",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "Configure destination rule",
+        "text": "step3/text.md",
+        "verify": "step3/verify.sh"
+      },
+      {
+        "title": "Configure 80% to v1 and 20% to v2 traffic shifting",
+        "text": "step4/text.md",
+        "verify": "step4/verify.sh"
+      },
+      {
+        "title": "Configure 100% v2 traffic shifting",
+        "text": "step5/text.md",
+        "verify": "step5/verify.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish/finish.md"
+    },
+    "intro": {
+      "text": "init/init.md",
+      "background": "init/background.sh",
+      "foreground": "init/foreground.sh"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "wait-background.sh",
+          "target": "/ks",
+          "chmod": "+x"
+        },
+        {
+          "file": "check-utils.sh",
+          "target": "/tmp",
+          "chmod": "+x"
+        },
+        {
+          "file": "demo.yaml",
+          "target": "/tmp",
+          "chmod": "+x"
+        },
+        {
+          "file": "notification-deployment.yaml",
+          "target": "/tmp",
+          "chmod": "+x"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}

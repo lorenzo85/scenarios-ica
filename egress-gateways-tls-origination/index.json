@@ -1,0 +1,70 @@
+{
+  "title": "Egress - Gateway TLS Origination",
+  "description": "Practice configuring Istio's egress gateway to perform TLS Origination for traffic to external services.",
+  "details": {
+    "steps": [
+      {
+        "title": "Intro",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "Create ServiceEntry",
+        "text": "step2/text.md",
+        "verify": "step2/verify.sh"
+      },
+      {
+        "title": "Test Service Entry",
+        "text": "step3/text.md"
+      },
+      {
+        "title": "Create egress Gateway",
+        "text": "step4/text.md",
+        "verify": "step4/verify.sh"
+      },
+      {
+        "title": "Create DestinationRule for egress gateway",
+        "text": "step5/text.md",
+        "verify": "step5/verify.sh"
+      },
+      {
+        "title": "Create VirtualService",
+        "text": "step6/text.md",
+        "verify": "step6/verify.sh"
+      },
+      {
+        "title": "Test Egress Gateway for HTTP",
+        "text": "step7/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish/finish.md"
+    },
+    "intro": {
+      "text": "init/init.md",
+      "background": "init/background.sh",
+      "foreground": "init/foreground.sh"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "wait-background.sh",
+          "target": "/ks",
+          "chmod": "+x"
+        },
+        {
+          "file": "check-utils.sh",
+          "target": "/tmp",
+          "chmod": "+x"
+        },
+        {
+          "file": "demo.yaml",
+          "target": "/tmp",
+          "chmod": "+x"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}

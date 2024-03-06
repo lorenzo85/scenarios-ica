@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: booking-service
+    version: v2
+  name: booking-service-v2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: booking-service
+      version: v2
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: booking-service
+        version: v2
+    spec:
+      volumes:
+        - name: certificates-volume
+          secret:
+            secretName: booking-server-certs
+      containers:
+        - image: kubeteam/booking-service:v2
+          name: booking-service
+          ports:
+            - containerPort: 443
+          volumeMounts:
+            - name: certificates-volume
+              readOnly: true
+              mountPath: "/etc/certificates"
+          env:
+          - name: SERVICE_PORT
+            value: "443"
+          - name: NOTIFICATION_SERVICE_URL
+            value: notification-service
+          - name: NOTIFICATION_SERVICE_PORT
+            value: "8084"
+          - name: SSL_KEY_FILE
+            value: /etc/certificates/tls.key
+          - name: SSL_CERT_FILE
+            value: /etc/certificates/tls.crt
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: booking-service
+  labels:
+    app: booking-service
+spec:
+  ports:
+    - name: https
+      port: 443
+  selector:
+    app: booking-service
