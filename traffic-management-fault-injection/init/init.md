@@ -1,4 +1,4 @@
-![Istio logo](https://raw.githubusercontent.com/lorenzo85/scenarios-ica/main/istio-logo.svg)
+![Istio logo](https://raw.githubusercontent.com/lorenzo85/scenarios-ica/master/istio-logo.svg)
 
 In this scenario you will practice injecting faults to test the resiliency of an application.
 

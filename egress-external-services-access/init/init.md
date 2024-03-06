@@ -1,5 +1,5 @@
 
-![Istio logo](https://raw.githubusercontent.com/lorenzo85/scenarios-ica/main/istio-logo.svg)
+![Istio logo](https://raw.githubusercontent.com/lorenzo85/scenarios-ica/master/istio-logo.svg)
 
 Istio provides control over outbound traffic from the mesh through the use of 
 [ServiceEntry](https://istio.io/latest/docs/reference/config/networking/service-entry/) 

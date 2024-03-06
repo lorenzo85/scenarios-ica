@@ -1,4 +1,4 @@
-![Istio logo](https://raw.githubusercontent.com/lorenzo85/scenarios-ica/main/istio-logo.svg)
+![Istio logo](https://raw.githubusercontent.com/lorenzo85/scenarios-ica/master/istio-logo.svg)
 
 Istio's circuit-breaking allows to limit the impact of failures, latency spikes, and other network 
 issues that may occur between requests within services deployed in a Kubernetes cluster.

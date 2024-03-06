@@ -1,5 +1,5 @@
 
-![Istio logo](https://raw.githubusercontent.com/lorenzo85/scenarios-ica/main/istio-logo.svg)
+![Istio logo](https://raw.githubusercontent.com/lorenzo85/scenarios-ica/master/istio-logo.svg)
 
 
 Istio Egress gateways are load balancers running at the edge of a service mesh. 

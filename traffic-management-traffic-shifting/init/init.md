@@ -1,4 +1,4 @@
-![Istio logo](https://raw.githubusercontent.com/lorenzo85/scenarios-ica/main/istio-logo.svg)
+![Istio logo](https://raw.githubusercontent.com/lorenzo85/scenarios-ica/master/istio-logo.svg)
 
 Isto's traffic shifting allows to shift traffic from one version of a service to another.
 
