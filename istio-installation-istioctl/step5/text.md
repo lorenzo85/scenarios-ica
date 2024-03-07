@@ -6,8 +6,8 @@ kubectl run test --image=nginx
 
 
 Wait until the pod is ready and then test that the pod has 2 containers:
-- 1 with nginx image
-- 1 with the istio proxy automatically injected by Istio
+- 1 with nginx image named *test*
+- 1 with the istio proxy named *istio-proxy* (automatically injected by Istio)
 
  
 ```bash
