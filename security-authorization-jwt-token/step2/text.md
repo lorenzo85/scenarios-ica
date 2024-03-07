@@ -61,6 +61,6 @@ spec:
    app: booking-service
  jwtRules:
  - issuer: "testing@secure.istio.io"
-   jwksUri: "https://raw.githubusercontent.com/lorenzo85/scenarios-ica/main/security-authorization-jwt-token/jwks.json"
+   jwksUri: "https://raw.githubusercontent.com/lorenzo85/scenarios-ica/master/security-authorization-jwt-token/jwks.json"
 ```{{copy}}
 </details>
