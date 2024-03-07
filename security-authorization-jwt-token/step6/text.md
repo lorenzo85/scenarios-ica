@@ -1,5 +1,8 @@
-Update the `booking-service` authorization policy to also require the JWT to have a 
-claim named `groups` containing the value `group2`. Use the following configuration properties:
+Update the `booking-service` authorization policy to also require that the request JWT
+must have claim named `groups` containing the value `group2`. 
+
+
+Use the following configuration properties:
 
 *authorization policy:*
 - name: `booking-service`
@@ -8,7 +11,7 @@ claim named `groups` containing the value `group2`. Use the following configurat
 - action: `ALLOW`
 
 *authorization policy rule 1:*
-- from source request principals: `testing@secure.istio.io/testing@secure.istio.io`
+- from source **requestPrincipals**: `testing@secure.istio.io/testing@secure.istio.io`
 - when key: `request.auth.claims[groups]`
 - when values: `group2`
 

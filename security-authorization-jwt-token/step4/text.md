@@ -1,5 +1,6 @@
-Create an authorization policy to enable access control to the `booking-service` workload only from
-JWT token with principals (i.e. subject) matching `testing@secure.istio.io` using the following 
+Create an [AuthorizationPolicy](https://istio.io/latest/docs/reference/config/security/authorization-policy/)
+to enable access control to the `booking-service` workload only from JWT tokens 
+with principals (i.e. token subject) matching `testing@secure.istio.io` using the following 
 configuration properties:
 
 *authorization policy:*
@@ -9,7 +10,7 @@ configuration properties:
 - action: `ALLOW`
 
 *authorization policy rule 1:*
-- from source request principals: `testing@secure.istio.io/testing@secure.istio.io`
+- from source **requestPrincipals**: `testing@secure.istio.io/testing@secure.istio.io`
 
 
 

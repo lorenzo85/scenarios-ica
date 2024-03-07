@@ -1,16 +1,16 @@
 Isto's JWT token authorization is configured using
-a [RequestAuthentication](https://istio.io/latest/docs/reference/config/security/request_authentication/),
+a [RequestAuthentication](https://istio.io/latest/docs/reference/config/security/request_authentication/)
 and an [AuthorizationPolicy](https://istio.io/latest/docs/reference/config/security/authorization-policy/)
 resource.
 
 
-A request authentication resource defines what request authentication methods are supported 
+A **request authentication** resource defines what request authentication methods are supported 
 by a workload, specified through a label selector. 
 
 Requests which do not contain valid authentication information are rejected.
 
 
-An authorization policy enables access control on the workloads using source principals and 
+An **authorization policy** enables access control on the workloads using source principals and 
 optionally, custom matching conditions on JWT token claims such as roles or groups.
 
 
@@ -25,7 +25,7 @@ Use the following configuration properties:
 
 *request authentication jwt rule 1:*
 - issuer: `testing@secure.istio.io`
-- jwks uri: `https://raw.githubusercontent.com/lorenzo85/scenarios-ica/main/security-authorization-jwt-token/jwks.json`
+- jwks uri: `https://raw.githubusercontent.com/lorenzo85/scenarios-ica/master/security-authorization-jwt-token/jwks.json`
 
 
 <br>
