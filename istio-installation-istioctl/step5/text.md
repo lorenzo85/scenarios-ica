@@ -11,5 +11,12 @@ Wait until the pod is ready and then test that the pod has 2 containers:
 
  
 ```bash
-kubectl get pods -o jsonpath='{range .items[*].spec.containers[*]}{.name}{"\n"}{end}' 
+kubectl get pods -o \
+    jsonpath='{range .items[*].spec.containers[*]}{.name}{"\n"}{end}' 
 ```{{exec}}
+
+You should see two containers listed:
+```text
+test
+istio-proxy
+```

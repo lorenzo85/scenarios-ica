@@ -10,5 +10,6 @@ Label the `default` namespace resource for automatic injection with the followin
 
 
 ```bash
-kubectl label namespace default istio-injection=enabled
+kubectl label namespace default \
+    istio-injection=enabled
 ```{{exec}}
