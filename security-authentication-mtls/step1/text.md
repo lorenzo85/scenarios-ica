@@ -1,12 +1,17 @@
 
-The cluster has two namespaces: `foo` and `bar`. 
-Specifically, the configuration has been set up to automatically inject Istio sidecars 
-solely within the `foo` and `bar` namespaces, while excluding the `default` namespace.
-Istio auto-injection is enabled by setting a `istio-injection` label on the namespace where
+In the Kubernetes cluster there are two namespaces: `foo` and `bar`.
+
+
+Istio has been configured to automatically inject Istio sidecars solely within 
+the `foo` and `bar` namespaces, while excluding auto-injection for the `default` namespace.
+
+
+Istio auto-injection is enabled by setting an `istio-injection` label on the namespace where
 automatic sidecar injection is required.
 
 
-You can check it by looking at the `istio-injection` labels of the namespace resources:
+Check that the `foo` and `bar` namespace resources have the `istio-injection` label and that
+the `default` namespace does not have it by listing the namespaces along with the label name:
 ```bash
 kubectl get namespaces -L istio-injection
 ```{{exec}}
@@ -19,9 +24,9 @@ There are three deployments installed in the Kubernetes cluster:
 Check the running pods and services and wait until they are all in status `Running`. 
 
 ```bash
-kubectl get po -n foo
+kubectl get po,svc -n foo
 ```{{exec}}
 
 ```bash
-kubectl get po -n bar
+kubectl get po,svc -n bar
 ```{{exec}}

@@ -1,6 +1,6 @@
 {
-  "title": "Security - Authentication - mTLS",
-  "description": "Practice configuring Istio authentication policy to set up mutual TLS.",
+  "title": "Security - Authentication Policy - mTLS",
+  "description": "Practice configuring Istio authentication policies to enforce mutual TLS.",
   "details": {
     "steps": [
       {
@@ -12,32 +12,32 @@
         "text": "step2/text.md"
       },
       {
-        "title": "Enforce mTLS cluster-wide",
+        "title": "Enforce cluster-wide mTLS ",
         "text": "step3/text.md",
         "verify": "step3/verify.sh"
       },
       {
-        "title": "Test mTLS cluster-wide",
+        "title": "Test cluster-wide mTLS",
         "text": "step4/text.md",
         "verify": "step4/verify.sh"
       },
       {
-        "title": "Enforce mTLS namespace-wide",
+        "title": "Enforce namespace-wide mTLS",
         "text": "step5/text.md",
         "verify": "step5/verify.sh"
       },
       {
-        "title": "Test mTLS namespace-wide",
+        "title": "Test namespace-wide mTLS",
         "text": "step6/text.md",
         "verify": "step6/verify.sh"
       },
       {
-        "title": "Enforce mTLS workload-wide",
+        "title": "Enforce workload-wide mTLS",
         "text": "step7/text.md",
         "verify": "step7/verify.sh"
       },
       {
-        "title": "Test mTLS workload-wide",
+        "title": "Test workload-wide mTLS",
         "text": "step8/text.md"
       }
     ],

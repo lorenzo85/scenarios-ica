@@ -1,7 +1,10 @@
-Create a `PeerAuthentication` resource to enforce workload-wide mutual authentication in the `foo` namespace.
+Now you will configure a `PeerAuthentication` resource to enforce workload-wide
+mTLS restricted to workloads with label `booking-service` running in the `foo` namespace.
+
 To enforce mTLS the resource **must** be created in the target namespace, where mTLS has to be enforced.
 
-Use the following configuration properties:
+Create a `PeerAuthentication` resource to enforce workload-wide mTLS in the `foo` namespace for workloads
+having label `app=booking-service`, using the following configuration properties:
 
 *peer authentication:*
 - name: `workload-wide-mtls`
