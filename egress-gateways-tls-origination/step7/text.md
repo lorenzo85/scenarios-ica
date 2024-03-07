@@ -2,7 +2,9 @@ Test that the Egress gateway resource configured with TLS Origination works corr
 to the `finance.yahoo.com` over HTTP:
 
 ```bash
-kubectl exec tester -c tester -- curl -sSL -o /dev/null -D - http://finance.yahoo.com/crypto | grep HTTP/
+kubectl exec tester -c tester -- \
+  curl -sSL -o /dev/null -D - http://finance.yahoo.com/crypto | \
+  grep HTTP/
 ```{{exec}}
 
 The output should be:
@@ -16,7 +18,8 @@ TLS to connect to the service on behalf of the client automatically.
 
 Check the Egress Gateway proxy logs for outbound HTTP traffic to `finance.yahoo.com`:
 ```bash
-kubectl logs -l istio=egressgateway -n istio-system
+kubectl logs -l istio=egressgateway \
+  -n istio-system
 ```{{exec}}
 
 You should see a log line similar to the following:

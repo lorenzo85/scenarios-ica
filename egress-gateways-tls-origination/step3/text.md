@@ -15,5 +15,6 @@ location: https://finance.yahoo.com/crypto
 HTTP/2 200 
 ```
 
-This means that the ServiceEntry configuration works correctly, but also that finance.yahoo.com does not accept
-requests over HTTP and therefore requested curl client to resend the request over HTTPs on `https://finance.yahoo.com/crypto`.
+This means that the service entry configuration works correctly, but also that finance.yahoo.com does not accept
+requests over HTTP and therefore the server requested curl client to resend the 
+request over HTTPs on `https://finance.yahoo.com/crypto`.
