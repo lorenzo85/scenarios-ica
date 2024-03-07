@@ -7,4 +7,4 @@ check_path_value requestauthentication.security.istio.io booking-service '.spec.
 
 check_array_length requestauthentication.security.istio.io booking-service '.spec.jwtRules' 1
 check_path_value requestauthentication.security.istio.io booking-service '.spec.jwtRules[0].issuer' 'testing@secure.istio.io'
-check_path_value requestauthentication.security.istio.io booking-service '.spec.jwtRules[0].jwksUri' 'https://raw.githubusercontent.com/lorenzo85/scenarios-ica/main/security-authorization-jwt-token/jwks.json'
+check_path_value requestauthentication.security.istio.io booking-service '.spec.jwtRules[0].jwksUri' 'https://raw.githubusercontent.com/lorenzo85/scenarios-ica/master/security-authorization-jwt-token/jwks.json'
