@@ -4,7 +4,7 @@ in the `default` namespace to route HTTPs egress traffic to host `httpbin.org`.
 
 Note that in this case the both routing match conditions and destinations must ust the 
 [TLSRoute](https://istio.io/latest/docs/reference/config/networking/virtual-service/#TLSRoute) object
-and not the [HTTPRoute](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPRoute object.
+and not the [HTTPRoute](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPRoute) object.
 
 Moreover, the match conditions must also include the SNI (server name indicator) to match on.
 
