@@ -1,11 +1,8 @@
-Create an authorization policy for the `notification-service`
-to enable incoming POST request from sources with principal service 
-named `notification-service-policy` in the `default` namespace.
+Create now an [AuthorizationPolicy](https://istio.io/latest/docs/reference/config/security/authorization-policy/)
+in the `default` namespace for the `notification-service` to enable incoming POST request 
+from sources with service account principal equal to `notification-service-policy`.
 
-
-The policy must have a single rule which allows traffic from sources 
-having service account principal `booking-service-account` and to 
-any `notification-service` endpoint with method `POST`.
+The policy must **ALLOW** POST requests to any endpoint (i.e. no operation paths specified).
 
 Use the following configuration properties:
 

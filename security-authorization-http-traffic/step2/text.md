@@ -1,11 +1,11 @@
-Isto's security authorization can be setup using access control on workloads using an
+Isto's security authorization is configured using 
 [AuthorizationPolicy](https://istio.io/latest/docs/reference/config/security/authorization-policy/)
-resource.
+resources.
 
 An authorization policy supports **DENY**, **ALLOW** and **CUSTOM** actions for a workload.
 
-Set up an *allow-nothing* authorization policy denying all traffic within the `default` namespace 
-with the following properties:
+Create an *allow-nothing* authorization policy denying all traffic within the `default` namespace 
+using the following configuration properties:
 
 *authorization policy:*
 - name: `allow-nothing`

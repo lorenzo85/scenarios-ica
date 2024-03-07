@@ -13,5 +13,7 @@ kubectl get po,svc -L app,version
 Test the booking-service by placing a new booking:
 
 ```bash
-kubectl exec -it tester -- bash -c 'curl -s -X POST http://booking-service/book; echo;'
+kubectl exec -it tester -- \
+    bash -c 'curl -s -X POST http://booking-service/book; \
+    echo;'
 ```{{exec}}

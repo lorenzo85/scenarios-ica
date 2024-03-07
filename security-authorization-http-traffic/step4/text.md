@@ -1,11 +1,12 @@
-You are going to set up a set of authorization policies for pods to pods communication between
-booking and `notification-service` so that a booking can be placed using POST requests to the `booking-service`.
+You are now going to set up a set of authorization policies for pods 
+to pods communication between the `booking-service` and the `notification-service`.
 
-Moreover, you will configure the `notification-service` to only accept *POST* requests only if the *source principal* has service
+Moreover, you will configure the `notification-service` to accept *POST* requests only if the *source pod* has service
 account named `booking-service-account`.
 
-You will also configure an authorization policy to allow incoming requests to the `booking-service` with method *POST*,
+You will also configure an authorization policy to allow any incoming **POST** request to the `booking-service`,
 so that a booking can be placed by external clients.
+
 
 First, create a service account resource named `booking-service-account` and update the `booking-service` 
 deployment to use this service account.
