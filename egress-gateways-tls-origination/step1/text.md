@@ -26,7 +26,7 @@ kubectl exec tester -c tester -- \
 
 The result should be:
 ```text
-curl: (35) OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to finance.yahoo.com:443 
-command terminated with exit code 35
+HTTP/1.1 502 Bad Gateway
 ```
-because Istio proxy has blocked it as there is no ServiceEntry configured yet for `finance.yahoo.com`.
+This is because Istio proxy has blocked it as there is no service entry 
+in the registry configured for `finance.yahoo.com` yet.
