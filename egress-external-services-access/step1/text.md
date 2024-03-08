@@ -18,31 +18,36 @@ the Istio proxies let calls to unknown services pass through, whereas if the opt
 is set to **REGISTRY_ONLY**, Istio proxies will block any host not listed in the internal service registry.
 
 Currently, the environment is configured with the `outboundTrafficPolicy` option is set 
-to **ALLOW_ANY**. Test that you can call an external service by running:
+to **ALLOW_ANY**. 
+
+
+Test that you can successfully make a request to the *httpbin* external service by running:
 ```bash
 kubectl exec tester -- \
-    curl -s http://httpbin.org/status/200 | \
+    curl -sS -o /dev/null -D - http://httpbin.org/status/200 | \
     grep  "HTTP/";
 ```{{exec}}
 
 
-Your task is to update the Istio installation and use **REGISTRY_ONLY** mode instead using `istioctl`:
+Your task is to update the Istio installation and use **REGISTRY_ONLY** outbound traffic policy 
+mode instead of **ALLOW_ANY** using `istioctl`:
 ```bash
 istioctl install --set profile=demo \
     -y --manifests=/root/istio-${ISTIO_VERSION}/manifests \
     --set meshConfig.outboundTrafficPolicy.mode=REGISTRY_ONLY
 ```{{exec}}
  
-Wait a few seconds and then retry to access the external service:
+Wait a few seconds and then retry to access *httpbin* external service:
 
 ```bash
 kubectl exec tester -- \
-    curl -s http://httpbin.org/status/200 | \
+    curl -sS -o /dev/null -D - http://httpbin.org/status/200 | \
     grep  "HTTP/";
 ```{{exec}}
 
 The requests to outside services should now be blocked with message:
  
 ```text
+curl: (56) Recv failure: Connection reset by peer
 command terminated with exit code 56
 ```

@@ -1,15 +1,17 @@
-Test that the service entry resource configuration from the previous step
+Test that the service entry resource configuration created in the previous step
 works correctly by making another request to the `httpbin.org` over HTTP.
+
+
 The response from the service should now be successful:
 
 ```bash
 kubectl exec tester -- \
-    curl -s http://httpbin.org/status/200 | \
+    curl -sS -o /dev/null -D - http://httpbin.org/status/200 | \
     grep  "HTTP/";
 ```{{exec}}
 
-Now check the logs of the sidecar proxy of the `tester` pod, 
-to inspect if it contains a record of the HTTP request to `httpbin.org`:
+Now check the logs of the sidecar proxy for the `tester` pod, 
+to inspect if it contains a matching record of the HTTP request to `httpbin.org`:
 
 ```bash
 kubectl logs tester -c istio-proxy | tail
