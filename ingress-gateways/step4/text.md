@@ -6,8 +6,8 @@ curl http://booking.example.com:30000/bookings; \
 echo;
 ```{{exec}}
 
-The result should be a list of bookings along with their booking dates similar to the following.
-Please note that the unique *id*s might be different from the ones below.
+The result should be a list of bookings along with their booking dates similar to the following JSON response below.
+Please note that the unique *id*s might be different.
 
 ```json
 [

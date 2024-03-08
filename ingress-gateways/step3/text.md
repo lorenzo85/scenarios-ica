@@ -3,8 +3,10 @@ resource created in the previous step.
 
 Create a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/)
 resource in the `default` namespace named `booking`
-with a single HTTP route destination to internal `booking-service` host.
-The virtual service host to which traffic is being sent should be `booking.example.com`.
+with a single HTTP route destination to the internal `booking-service` host.
+
+
+The virtual service host to which traffic from clients is sent to when connecting to the service is: `booking.example.com`.
 
 
 *virtual service:*
