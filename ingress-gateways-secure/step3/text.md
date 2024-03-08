@@ -5,7 +5,7 @@ named `secure-booking-gateway` in the `default` namespace
 to expose HTTPs traffic on port 443 and for host `booking.example.com`.
 
 
-Configure the Gateway resource with TLS mode `SIMPLE`, using the 
+Configure the gateway resource with TLS mode `SIMPLE`, using the 
 [ServerTLSSettings](https://istio.io/latest/docs/reference/config/networking/gateway/#ServerTLSSettings)
 configuration object.
 
@@ -13,6 +13,7 @@ Use the following configuration properties:
 
 *gateway:*
 - name: `secure-booking-gateway`
+- namespace: `default`
 - selector: `istio=ingressgateway`
 
 *gateway server 1:*
