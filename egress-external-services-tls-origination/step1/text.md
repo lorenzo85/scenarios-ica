@@ -15,14 +15,14 @@ access to host `finance.yahoo.com` over HTTP and HTTPs, with the following prope
 - location: `MESH_EXTERNAL`
 
 *service entry port 1:*
-- number: 80
-- name: http-port
-- protocol: HTTP
+- number: `80`
+- name: `http-port`
+- protocol: `HTTP`
 
 *service entry port 2:*
-- number: 443
-- name: https-port
-- protocol: HTTPS
+- number: `443`
+- name: `https-port`
+- protocol: `HTTPS`
 
 
 <br>

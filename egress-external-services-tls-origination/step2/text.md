@@ -2,7 +2,7 @@ Test that the service entry resource configuration works correctly by making a r
 to the external `finance.yahoo.com` service over HTTP. 
 
 
-The **-L** parameter tells curl to follow redirects:
+The **-L** parameter tells curl to automatically follow redirects:
 
 ```bash
 kubectl exec tester -c tester -- \
