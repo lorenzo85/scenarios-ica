@@ -12,6 +12,7 @@ access to host `finance.yahoo.com` over HTTP and HTTPs, with the following prope
 - name: `finance-yahoo-com`
 - hosts: `finance.yahoo.com`
 - resolution: `DNS`
+- location: `MESH_EXTERNAL`
 
 *service entry port 1:*
 - number: 80
@@ -43,6 +44,7 @@ spec:
     name: // TODO
     protocol: // TODO
   resolution: // TODO
+  location: // TODO
 ```{{copy}}
 </details>
 
@@ -65,5 +67,6 @@ spec:
     name: https-port
     protocol: HTTPS
   resolution: DNS
+  location: `MESH_EXTERNAL`
 ```{{copy}}
 </details>
