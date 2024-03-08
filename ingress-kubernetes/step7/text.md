@@ -5,7 +5,7 @@ Because the endpoint is secure we must pass the certificate authority certificat
 TLS handshake can be performed correctly:
 
 ```bash
-curl -v --cacert certificates/example.com.crt "https://booking.example.com:30443/bookings"
+curl -v --cacert certificates/example.com.crt https://booking.example.com:30443/bookings
 ```{{exec}}
 
 The result should be a list of bookings along with their dates:
