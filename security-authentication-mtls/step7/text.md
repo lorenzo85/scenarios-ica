@@ -9,6 +9,7 @@ having label `app=booking-service`, using the following configuration properties
 *peer authentication:*
 - name: `workload-wide-mtls`
 - namespace: `foo`
+- label selector: `app=booking-service`
 - mTLS mode: `STRICT`
 
 
