@@ -4,8 +4,8 @@ Create a [VirtualService](https://istio.io/latest/docs/reference/config/networki
 resource in the `default` namespace named `booking`
 with a single HTTP route destination to internal `booking-service` host on port `443`.
 
-The virtual service host from which traffic is being sent is `booking.example.com` 
-because we want to access it via the ingress gateway.
+
+The virtual service host to which traffic is sent is `booking.example.com`.
 
 
 *virtual service:*

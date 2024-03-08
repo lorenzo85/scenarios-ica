@@ -12,6 +12,7 @@ SNI host equals `booking.example.com` and port is 443:
 
 *virtual service:*
 - name: `booking`
+- namespace: `default`
 - hosts: `booking.example.com`
 - gateways: `booking-gateway`
 
