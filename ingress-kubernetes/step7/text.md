@@ -1,7 +1,7 @@
 Test that the Kubernetes Ingress TLS configuration works correctly by making a request
-to retrieve all bookings using `https://booking.example.com` on node port `30443`.
+to retrieve all bookings using `https://booking.example.com` on *NodePort* `30443`.
 
-Because the endpoint is secure we must pass the certificate authority certificate to curl, so that
+Because the endpoint is secure we must pass the certificate authority certificate to *curl*, so that
 TLS handshake can be performed correctly:
 
 ```bash
