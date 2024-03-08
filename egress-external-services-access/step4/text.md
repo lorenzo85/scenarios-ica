@@ -17,14 +17,15 @@ The request should return status code *200* in approximately *5 seconds*.
 Your task is to configure a request timeout of 3 seconds for requests to the `httbin.org` service.
 
 Create a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/) 
-with the following configuration properties:
+in the `default` namespace with the following configuration properties:
 
 *virtual service:*
 - name: `httpbin-ext`
+- namespace: `default`
 - hosts: `httpbin.org`
-- http timeout: `3s`
 
-*default route:*
+*http route 1:*
+- timeout: `3s`
 - destination port: `80`
 - destination host: `httpbin.org`
 
