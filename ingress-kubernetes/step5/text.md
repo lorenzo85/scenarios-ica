@@ -14,7 +14,7 @@ ls -la /root/certificates
 Create a Kubernetes Secret resource in the `istio-system` namespace with the following properties. 
 Please note that the secret **must** be in the istio-system namespace:
 
-*TLS secret:*
+***tls** secret:*
 - secret namespace: `istio-system`
 - secret name: `booking-credential`
 - secret type: `tls`

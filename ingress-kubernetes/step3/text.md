@@ -1,9 +1,9 @@
 Create a Kubernetes [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 named `booking-ingress` in the `default` namespace to
-expose HTTP traffic on port `80` and for host `booking.example.com`.
+expose HTTP traffic on port `80` for host `booking.example.com`.
 
 
-Use as ingress class name `istio`, which we created in the previous step and the following configuration properties:
+Use as ingress class name `istio` (which we created in the previous step) and the following configuration properties:
 
 *ingress:*
 - name: `booking-ingress`

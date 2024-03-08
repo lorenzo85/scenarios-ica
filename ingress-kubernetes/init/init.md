@@ -3,8 +3,8 @@
 
 
 In this scenario, you will practice configuring Istio to expose a service 
-outside the service mesh cluster, using the Kubernetes Ingress resource 
+outside the mesh with a Kubernetes Ingress resource 
 using Isto's ingress controller.
 
-You will configure the Kubernetes Ingress resource to expose a service 
-first on HTTP and then HTTPs using a TLS secret containing the key and the certificate.
+You will configure a Kubernetes Ingress resource to expose a service 
+first on HTTP and then HTTPs protocol.

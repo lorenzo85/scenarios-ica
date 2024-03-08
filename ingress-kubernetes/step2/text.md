@@ -1,8 +1,8 @@
-Ingress traffic using a Kubernetes Ingress resource is configured using:
-an [IngressClass](https://kubernetes.io/docs/concepts/services-networking/ingress/#ingress-class)
-and an Isto's [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) resource.
+Ingress traffic using a Kubernetes Ingress resource is configured with
+a Kubernetes [IngressClass](https://kubernetes.io/docs/concepts/services-networking/ingress/#ingress-class)
+and an [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) resource.
 
-The Kubernetes Ingress class can be implemented by different controllers, such as the Istio ingress controller.
+A Kubernetes Ingress class is backed by different implementations called controllers. An example is the Istio ingress controller.
 An [IngressClass](https://kubernetes.io/docs/concepts/services-networking/ingress/#ingress-class)
 resource contains the name of the controller and additional configurations such as the 
 scope and if it is the default class.  

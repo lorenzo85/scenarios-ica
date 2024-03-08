@@ -11,6 +11,6 @@ Test the booking-service by retrieving existing bookings:
 
 ```bash
 kubectl exec -it tester -- \
-    bash -c 'curl -s http://booking-service/bookings; \
-    echo;'
+    curl -s http://booking-service/bookings; \
+    echo;
 ```{{exec}}

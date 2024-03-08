@@ -1,5 +1,5 @@
 Test that the Kubernetes ingress configuration works correctly by making a request
-to retrieve all bookings using `http://booking.example.com` on node port `30000`:
+to retrieve all bookings using `http://booking.example.com` on **NodePort** `30000`:
 
 ```bash
 curl http://booking.example.com:30000/bookings
