@@ -14,17 +14,15 @@ kubectl exec tester -c tester -- \
 You should get a response with:
 ```text
 HTTP/1.1 301 Moved Permanently
-location: https://finance.yahoo.com/crypto
-```
-
-followed by:
-```text
+location: https:///crypto
 HTTP/2 200
 ```
 
 
-What happened is that the curl command handled the redirection transparently for us, 
-however there are two problems with this communication flow:
+What just happened is that the *curl* command handled the redirection to HTTPs transparently for us.
+`finance.yahoo.com` accepts only connections over HTTPs. 
+
+There are two problems with this communication flow:
 
 1. Redundant request which doubles the latency of fetching the content from http://finance.yahoo.com/crypto.
 2. Clear text request: the first request is sent out in clear text. If there is an attacker who sniffs 

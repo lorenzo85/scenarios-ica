@@ -1,7 +1,7 @@
-Isto's service registry entries are configured using
+Isto's TLS origination for external services is configured using
 a [ServiceEntry](https://istio.io/latest/docs/reference/config/networking/service-entry/#ServiceEntry)
 and a [DestinationRule](https://istio.io/latest/docs/reference/config/networking/destination-rule/)
-resources.
+resource.
 
 
 Create a service entry resource in the `default` namespace named `finance-yahoo-com` to allow
