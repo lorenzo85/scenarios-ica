@@ -8,31 +8,31 @@
         "text": "step1/text.md"
       },
       {
-        "title": "Create ServiceEntry",
+        "title": "Create service entry",
         "text": "step2/text.md",
         "verify": "step2/verify.sh"
       },
       {
-        "title": "Test Service Entry",
+        "title": "Test service entry",
         "text": "step3/text.md"
       },
       {
-        "title": "Create egress Gateway",
+        "title": "Create egress gateway",
         "text": "step4/text.md",
         "verify": "step4/verify.sh"
       },
       {
-        "title": "Create DestinationRule for egress gateway",
+        "title": "Create destination rule for egress gateway",
         "text": "step5/text.md",
         "verify": "step5/verify.sh"
       },
       {
-        "title": "Create VirtualService",
+        "title": "Create virtual service",
         "text": "step6/text.md",
         "verify": "step6/verify.sh"
       },
       {
-        "title": "Test Egress Gateway for HTTP",
+        "title": "Test egress gateway for HTTP",
         "text": "step7/text.md"
       }
     ],

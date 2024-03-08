@@ -3,9 +3,9 @@ a [ServiceEntry](https://istio.io/latest/docs/reference/config/networking/servic
 a [Gateway](https://istio.io/latest/docs/reference/config/networking/gateway/)
 a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/)
 and two [DestinationRule](https://istio.io/latest/docs/reference/config/networking/destination-rule/)s
-resources.
+resource.
 
-Create a ServiceEntry resource in the `default` namespace named `yahoo-ext` to allow
+Create a service entry resource in the `default` namespace named `yahoo-ext` to allow
 access to host `finance.yahoo.com` over HTTP and HTTPs, with the following properties:
 
 *service entry:*
@@ -15,14 +15,14 @@ access to host `finance.yahoo.com` over HTTP and HTTPs, with the following prope
 - location: `MESH_EXTERNAL`
 
 *service entry port 1:*
-- number: 80
-- name: http
-- protocol: HTTP
+- number: `80`
+- name: `http`
+- protocol: `HTTP`
 
 *service entry port 2:*
-- number: 443
-- name: https
-- protocol: HTTPS
+- number: `443`
+- name: `https`
+- protocol: `HTTPS`
 
 
 <br>

@@ -1,9 +1,10 @@
-Istio has been installed on the environment, and it has been configured to deploy
-an Istio Egress gateway.
+Istio has been installed on the environment, and it has been configured to enable
+the Istio [Egress gateway](https://istio.io/latest/docs/tasks/traffic-management/egress/egress-gateway/).
 
 
-Moreover, the Isto's mesh configuration has the outbound traffic policy set to `REGISTRY_ONLY`, 
-meaning that Istio proxy blocks any request to a host without an entry in the internal Isto's service registry.
+Moreover, the Istio's mesh configuration has the outbound
+traffic policy set to `REGISTRY_ONLY`, meaning that Istio proxy blocks any host without
+an HTTP service or service entry defined within the mesh.
 
 
 You can check the configured traffic policy mode with the following command:

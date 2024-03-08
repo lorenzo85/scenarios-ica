@@ -3,8 +3,8 @@ you need a [VirtualService](https://istio.io/latest/docs/reference/config/networ
 
 
 The virtual service configuration needs to have the following two route destination rules:
-- HTTP traffic *from* the *mesh* must go *to* the Istio egress gateway service: `istio-egressgateway.istio-system.svc.cluster.local`.
-- HTTP traffic *from* the *httpbin-egressgateway* must go *to* destination `httpbin.org`.
+- *HTTP* traffic from the *mesh* must go to Istio egress gateway service `istio-egressgateway.istio-system.svc.cluster.local` on *HTTP*.
+- *HTTP* traffic from the *httpbin-egressgateway* must go to destination `httpbin.org` on *HTTPs*.
 
 Create a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/)
 named `direct-httbin-through-egress-gateway` in the `default` namespace with the following configuration:

@@ -1,10 +1,13 @@
-Create a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/)
-resource routing traffic with the following rules:
-- Traffic **from** the **mesh** **to** destination `istio-egressgateway.istio-system.svc.cluster.local` on HTTP.
-- Traffic **from** the **yahoo-egressgateway** **to** destination `finance.yahoo.com` on HTTPs.
+In order to route `finance.yahoo.com` request traffic to the egress gateway created in the previous step
+you need a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/).
 
 
-Use the following configuration:
+The virtual service configuration needs to have the following two route destination rules:
+- *HTTP* traffic from the *mesh* must go to Istio egress gateway service `istio-egressgateway.istio-system.svc.cluster.local` on *HTTP*.
+- *HTTP* traffic from the *httpbin-egressgateway* must go to destination `httpbin.org` on *HTTPs*.
+
+
+Use the following configuration properties:
 
 *virtual service:*
 - name: `direct-yahoo-through-egress-gateway`
