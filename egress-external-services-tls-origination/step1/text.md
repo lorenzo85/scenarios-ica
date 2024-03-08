@@ -67,6 +67,6 @@ spec:
     name: https-port
     protocol: HTTPS
   resolution: DNS
-  location: `MESH_EXTERNAL`
+  location: MESH_EXTERNAL
 ```{{copy}}
 </details>

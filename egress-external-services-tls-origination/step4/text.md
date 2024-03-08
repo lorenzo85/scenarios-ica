@@ -11,8 +11,8 @@ Configure the destination rule resource with the following properties:
 - host: `finance.yahoo.com`
 
 *traffic policy port level settings:*
-- port number: 80
-- tls mode: SIMPLE
+- port number: `80`
+- tls mode: `SIMPLE`
 
 
 <br>
