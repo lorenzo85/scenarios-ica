@@ -14,9 +14,9 @@ access to host `httpbin.org` over HTTP, with the following properties:
 - location: `MESH_EXTERNAL`
 
 *service entry port:*
-- number: 80
-- name: http
-- protocol: HTTP
+- number: `80`
+- name: `http`
+- protocol: `HTTP`
 
 
 <br>

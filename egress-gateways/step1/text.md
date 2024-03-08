@@ -1,5 +1,5 @@
-Istio has been installed on the environment, and it has been configured to deploy
-an Istio Egress gateway. 
+Istio has been installed on the environment, and it has been configured to enable
+the Istio [Egress gateway](https://istio.io/latest/docs/tasks/traffic-management/egress/egress-gateway/). 
 
 
 Moreover, the Istio's mesh configuration has the outbound 
@@ -14,7 +14,7 @@ kubectl get -n istio-system istiooperators \
     echo;
 ```{{exec}}
 
-Your task is to enable external access to `httpbin.org` using an Egress gateway over HTTP protocol. 
+Your task is to enable external access to `httpbin.org` using a egress gateway for HTTP protocol. 
 
 Test that you **cannot** make HTTP requests to `httpbin.org` with the following:
 ```bash

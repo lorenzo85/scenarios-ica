@@ -1,5 +1,5 @@
-Test that the service entry resource configuration works correctly by making a request
-to the `httpbin.org` over HTTPs.
+Test that the service entry resource configuration works correctly by making an HTTPs request
+to `httpbin.org`:
 
 ```bash
 kubectl exec tester -c tester -- \

@@ -1,5 +1,5 @@
 Update the `httpbin-egressgateway` gateway resource to enable egress 
-**HTTPs** traffic to host `httpbin.org`. 
+**HTTPs** traffic for `httpbin.org`. 
 
 
 Use the following configuration properties:

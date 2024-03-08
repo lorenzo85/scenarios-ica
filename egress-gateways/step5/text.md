@@ -1,7 +1,9 @@
 In order to route `httpbin.org` request traffic to the egress gateway created in the previous step
-you need a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/). The virtual service configuration should contain 
-the following two route destination rules:
-- HTTP traffic **from** the **mesh** must go **to** destination `istio-egressgateway.istio-system.svc.cluster.local`.
+you need a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/). 
+
+
+The virtual service configuration needs to have the following two route destination rules:
+- HTTP traffic **from** the **mesh** must go **to** the Istio egress gateway service: `istio-egressgateway.istio-system.svc.cluster.local`.
 - HTTP traffic **from** the **httpbin-egressgateway** must go **to** destination `httpbin.org`.
 
 Create a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/)

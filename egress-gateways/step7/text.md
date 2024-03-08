@@ -1,7 +1,7 @@
 Your task is now to enable secure external access to `httpbin.org` using an 
-egress gateway using **HTTPs** protocol instead of **HTTP**.
+egress gateway over **HTTPs** protocol instead of **HTTP**.
 
-Test that you *cannot* reach `httpbin.org` via *HTTPs* protocol with the following:
+Test that you **cannot** reach `httpbin.org` via *HTTPs* protocol with the following:
 ```bash
 kubectl exec tester -c tester -- \
     curl -sS -o /dev/null -D - https://httpbin.org/status/200 | \
