@@ -17,7 +17,7 @@ If the `outboundTrafficPolicy` configuration option is set to **ALLOW_ANY**,
 the Istio proxies let calls to unknown services pass through, whereas if the option 
 is set to **REGISTRY_ONLY**, Istio proxies will block any host not listed in the internal service registry.
 
-Currently, the environment is configured with the `outboundTrafficPolicy` option is set 
+Currently, Istio is configured with the `outboundTrafficPolicy` option is set 
 to **ALLOW_ANY**. 
 
 
