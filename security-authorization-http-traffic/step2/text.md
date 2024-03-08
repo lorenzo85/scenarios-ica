@@ -1,5 +1,5 @@
 Isto's security authorization is configured using 
-[AuthorizationPolicy](https://istio.io/latest/docs/reference/config/security/authorization-policy/)
+a set of [AuthorizationPolicy](https://istio.io/latest/docs/reference/config/security/authorization-policy/)
 resources.
 
 An authorization policy supports **DENY**, **ALLOW** and **CUSTOM** actions for a workload.
