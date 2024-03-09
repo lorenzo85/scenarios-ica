@@ -8,7 +8,7 @@ kubectl exec -it tester -- \
 ```{{exec}}
 
 This traffic was routed to the `notification-service` `v1` by the virtual service default route. 
-The responses were only containing `["EMAIL"]` because `v1` send notifications using *EMAIL*(s) only. 
+The responses were only containing `["EMAIL"]` because `v1` sends notifications using *EMAIL*(s) only. 
 
 
 Check the `notification-service` `v1` container **logs**, to verify that the traffic was sent to `v1`:
@@ -18,7 +18,8 @@ kubectl logs \
 ```{{exec}} 
 
 
-Now check the `notification-service` `v2` container logs, and verify that the logs contains requests **mirrored** from `v1`:
+Now we need to check the `notification-service` `v2` container logs, to verify that 
+there are logs containing all the requests **mirrored** from `v1` by Istio:
 
 ```bash
 kubectl logs \

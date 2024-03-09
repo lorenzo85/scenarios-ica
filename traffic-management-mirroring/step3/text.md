@@ -10,7 +10,7 @@ to mirror 100% of the traffic to subset `v2`, created in the previous step.
 * name: `notification`
 * host: `notification-service`
 
-*default route:*
+*http default route:*
 * destination host: `notification-service`
 * destination subset: `v1`
 * mirror host: `notification-service`
