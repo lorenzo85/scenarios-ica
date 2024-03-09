@@ -9,7 +9,7 @@ and the second one to the subset named `v2` with weight `20%`.
 * name: `notification`
 * host: `notification-service`
 
-*default route:*
+*http route:*
 * destination 1 host: `notification-service`
 * destination 1 subset: `v1`
 * destination 1 weight: `80`

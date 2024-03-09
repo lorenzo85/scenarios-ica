@@ -2,11 +2,11 @@ Update the `notification` virtual service resource to add a route based on match
 
 If the request contains query parameter `testing=true` then route the request to `v2`, otherwise to `v1`.
 
-*default route:*
+*http default route:*
 * host: `notification-service`
 * subset: `v1`
 
-*Query param match request route:*
+*http query param match request route:*
 * query param key: `testing`
 * query key value: `true`
 * query value match type: `exact`

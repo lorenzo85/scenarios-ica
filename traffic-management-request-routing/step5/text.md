@@ -3,11 +3,11 @@ Update the `notification` virtual service resource to add a new route based on a
 If the request contains HTTP header `testing`: `true`, then route the request to `v2`,
 otherwise default to `v1`.
 
-*default route:*
+*http default route:*
 * host: `notification-service`
 * subset: `v1`
 
-*HTTP header match request route:*
+*http header match request route:*
 * header name: `testing`
 * matching type: `exact` on value `true`
 * destination host: `notification-service`

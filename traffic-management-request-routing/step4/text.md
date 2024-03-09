@@ -8,7 +8,7 @@ The destination route points to the subset named `v1`, created in the previous s
 * host: `notification-service`
 
 
-*default route:*
+*http default route:*
 * destination host: `notification-service`
 * destination subset: `v1`
 

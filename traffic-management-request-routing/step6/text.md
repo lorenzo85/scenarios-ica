@@ -1,14 +1,14 @@
 Update the `notification` virtual service resource to add a new route based on a matching URI prefix.
 
-If the request URI starts with`/v2/notify` route the request to v2, otherwise to v1.
+If the request URI starts with`/v2/notify` route the request to `v2`, otherwise to `v1`.
 
 Additionally, rewrite the path `/v2/notify` to `/notify`.
 
-*default route:*
+*http default route:*
 * host: `notification-service`
 * subset: `v1`
 
-*URI prefix match request route:*
+*http URI prefix match request route:*
 * URI prefix: `/v2/notify`
 * rewrite URI: `/notify`
 * destination host: `notification-service`
