@@ -19,4 +19,4 @@ fi
 check_array_length ingress booking-ingress '.spec.tls' 1
 check_array_length ingress booking-ingress '.spec.tls[0].hosts' 1
 check_path_value ingress booking-ingress '.spec.tls[0].hosts[0]' 'booking.example.com'
-check_path_value ingress booking-ingress '.spec.tls[0].secretName' 'booking-certificates'
+check_path_value ingress booking-ingress '.spec.tls[0].secretName' 'booking-credential'

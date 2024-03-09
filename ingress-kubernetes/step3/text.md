@@ -1,5 +1,5 @@
 Create a Kubernetes [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
-named `booking-ingress` in the `default` namespace to
+resource named `booking-ingress` in the `default` namespace to
 expose HTTP traffic on port `80` for host `booking.example.com`.
 
 
@@ -7,14 +7,15 @@ Use as ingress class name `istio` (which we created in the previous step) and th
 
 *ingress:*
 - name: `booking-ingress`
+- namespace: `default`
 - ingress class name: `istio`
 
 *ingress rule 1:*
-- rule host: `booking.example.com`
-- rule http path: `/`
-- rule http path type: `Prefix`
-- rule backend service name: `booking-service`
-- rule backend service port: `80`
+- host: `booking.example.com`
+- http path: `/`
+- http path type: `Prefix`
+- backend service name: `booking-service`
+- backend service port: `80`
 
 
 <br>

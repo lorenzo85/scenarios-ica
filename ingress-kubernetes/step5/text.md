@@ -12,21 +12,21 @@ ls -la /root/certificates
 ```{{exec}}
 
 Create a Kubernetes Secret resource in the `istio-system` namespace with the following properties. 
-Please note that the secret **must** be in the istio-system namespace:
+Note that the secret **must** be in the `istio-system` namespace:
 
 ***tls** secret:*
-- secret namespace: `istio-system`
-- secret name: `booking-credential`
-- secret type: `tls`
-- secret key path: `/root/certificates/booking.example.com.key`
-- secret cert path: `/root/certificates/booking.example.com.crt`
+- namespace: `istio-system`
+- name: `booking-credential`
+- type: `tls`
+- key path: `/root/certificates/booking.example.com.key`
+- cert path: `/root/certificates/booking.example.com.crt`
 
 
 <br>
 <details><summary>Tip</summary>
 
 ```plain
-kubectl create -n istio-system secret tls booking-certificates \
+kubectl create -n istio-system secret tls booking-credential \
   --key=// TODO \
   --cert=// TODO
 ```{{copy}}
@@ -37,7 +37,7 @@ kubectl create -n istio-system secret tls booking-certificates \
 <details><summary>Solution</summary>
 
 ```plain
-kubectl create -n istio-system secret tls booking-certificates \
+kubectl create -n istio-system secret tls booking-credential \
   --key=/root/certificates/booking.example.com.key \
   --cert=/root/certificates/booking.example.com.crt
 ```{{copy}}

@@ -60,7 +60,7 @@ spec:
  tls:
   - hosts:
     - booking.example.com
-    secretName: booking-certificates
+    secretName: booking-credential
  rules:
  - host: booking.example.com
    http:
