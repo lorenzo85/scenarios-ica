@@ -2,14 +2,13 @@ Isto's circuit breaking is configured using two resources:
 a [DestinationRule](https://istio.io/latest/docs/reference/config/networking/destination-rule/) 
 and a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/).
 
-Settings controlling the volume of connections to an upstream service
 
 Your task is to configure an HTTP connection pool traffic policy which allows 
 max 1 pending request and max 1 request per connection.
 These settings will control the volume of connections to the `notification-service`, triggering
 a circuit breaker if the conditions are not met. 
+The HTTP connection pool traffic policy is set in a destination rule resource.
 
-The circuit breaker configuration is set in a destination rule resource.
 
 Create a [DestinationRule](https://istio.io/latest/docs/reference/config/networking/destination-rule/)
 resource in the `default` namespace named `notification` containing a single subset named `default` 

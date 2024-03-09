@@ -7,7 +7,7 @@ The destination route points to the subset named `default`, created in the previ
 * name: `notification`
 * host: `notification-service`
 
-*default route:*
+*http default route:*
 * destination host: `notification-service`
 * destination subset: `default`
 
