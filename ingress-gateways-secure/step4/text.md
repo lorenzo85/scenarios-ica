@@ -12,7 +12,7 @@ The virtual service host to which traffic is sent is be `booking.example.com`.
 * hosts: `booking.example.com`
 * gateways: `secure-booking-gateway`
 
-*default route:*
+*http default route:*
 * destination port: `80`
 * destination host: `booking-service`
 

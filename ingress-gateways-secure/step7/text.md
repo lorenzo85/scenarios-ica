@@ -5,16 +5,17 @@ Use the following configuration properties:
 
 *gateway:*
 - name: `secure-booking-gateway`
+- namespace: `default`
 - selector: `istio=ingressgateway`
 
 *gateway server 1:*
-- server name: `booking`
-- server hosts: `booking.example.com`
-- server port number: `443`
-- server port name: `https`
-- server port protocol: `HTTPS`
-- server TLS mode: `MUTUAL`
-- server TLS credential name: `booking-credential-mutual`
+- name: `booking`
+- hosts: `booking.example.com`
+- port number: `443`
+- port name: `https`
+- port protocol: `HTTPS`
+- TLS mode: `MUTUAL`
+- TLS credential name: `booking-credential-mutual`
 
 <br>
 <details><summary>Tip</summary>

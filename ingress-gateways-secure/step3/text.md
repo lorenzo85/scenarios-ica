@@ -17,13 +17,13 @@ Use the following configuration properties:
 - selector: `istio=ingressgateway`
 
 *gateway server 1:*
-- server name: `booking`
-- server hosts: `booking.example.com`
-- server port number: `443`
-- server port name: `https`
-- server port protocol: `HTTPS`
-- server TLS mode: `SIMPLE`
-- server TLS credential name: `booking-credential`
+- name: `booking`
+- hosts: `booking.example.com`
+- port number: `443`
+- port name: `https`
+- port protocol: `HTTPS`
+- TLS mode: `SIMPLE`
+- TLS credential name: `booking-credential`
 
 <br>
 <details><summary>Tip</summary>

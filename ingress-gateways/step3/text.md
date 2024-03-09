@@ -14,7 +14,7 @@ The virtual service host to which traffic from clients is sent to when connectin
 * hosts: `booking.example.com`
 * gateways: `booking-gateway`
 
-*default http route:*
+*http default route:*
 * destination port: `80`
 * destination host: `booking-service`
 
