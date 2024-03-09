@@ -11,12 +11,12 @@ Use the following configuration properties:
 - hosts: `booking.example.com`
 - secret name:  `booking-credential`
 
-*ingress rule 1:*
-- rule host: `booking.example.com`
-- rule http path: `/`
-- rule http path type: `Prefix`
-- rule backend service name: `booking-service`
-- rule backend service port: `80`
+*ingress tls rule 1:*
+- host: `booking.example.com`
+- http path: `/`
+- http path type: `Prefix`
+- backend service name: `booking-service`
+- backend service port: `80`
 
 
 <br>
