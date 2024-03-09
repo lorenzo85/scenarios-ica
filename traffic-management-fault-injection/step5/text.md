@@ -1,13 +1,14 @@
-Update the `notification` virtual service again to inject an HTTP abort fault to trigger an HTTP error status 500.
+Update the `notification` virtual service again to inject an HTTP abort fault 
+to trigger an HTTP error status 500 instead of a delay.
 
-We want to simulate the upstream notification-service returning status code 500 to test
-that the booking-service handles the error correctly.
+We want to simulate the upstream `notification-service` returning status code 500 to test
+that the `booking-service` handles the error correctly.
 
 *virtual service:*
 * name: `notification`
 * host: `notification-service`
 
-*default route:*
+*http default route:*
 * destination host: `notification-service`
 * destination subset: `v1`
 * abort http status: `500`
@@ -19,9 +20,13 @@ Verify that a booking **cannot** be placed using:
 kubectl exec -it tester -- \
     bash -c 'curl -s -X POST http://booking-service/book; \
     echo;'
-```{{copy}}
+```{{exec}}
 
-You should see that the response now is an error: `Booking could not be placed, notification service returned HTTP status=500`.
+You should see that the response now is an error: 
+
+```text
+Booking could not be placed, notification service returned HTTP status=500
+```
 
 <br>
 <details><summary>Tip</summary>

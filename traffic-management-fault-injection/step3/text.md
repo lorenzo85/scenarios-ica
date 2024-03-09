@@ -1,7 +1,7 @@
 Create a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/)
 resource in the `default` namespace named `notification`
 with only a single default HTTP destination route for host `notification-service`.
-The destination route points to the subset named `v1`, created in the previous step.
+The destination route targets the subset named `v1`, created in the previous step.
 
 Apply a fixed delay fault injection rule to the default HTTP destination route with the following parameters:
 
@@ -9,14 +9,14 @@ Apply a fixed delay fault injection rule to the default HTTP destination route w
 * name: `notification`
 * host: `notification-service`
 
-*default route:*
+*http default route:*
 * destination host: `notification-service`
 * destination subset: `v1`
 * delay fixed delay: `3s`
 * delay percentage: `100`
 
-We want to make sure that despite the introduced latency when calling the notification-service, the booking service waits
-at least for 5 seconds before giving up with the request.
+We want to make sure that despite the introduced latency when calling the `notification-service`, the `booking-service`
+HTTP client waits at least for 5 seconds before giving up with the request.
 
 The HTTP fault injection configuration parameters can be found here: [HTTPFaultInjection](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPFaultInjection).
 
@@ -28,7 +28,7 @@ kubectl exec -it tester -- \
                 -X POST http://booking-service/book'
 ```{{exec}}
 
-You should see that the response time takes ~3 seconds and that a booking can be placed successfully.
+You should see that the response time takes ~3 seconds and that despite the introduced delay a booking can be placed successfully.
 
 <br>
 <details><summary>Tip</summary>

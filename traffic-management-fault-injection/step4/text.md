@@ -1,13 +1,21 @@
-Update the `notification` virtual service fixed delay time to 10 seconds.
+Update now the `notification` virtual service fixed delay time to 10 seconds instead of 3 seconds.
 
-This should fire the booking-service HTTP client timeout (set to 5 seconds) when making a request to the notification-service,
-forcing the `The service is currently unavailable, please try again later` error message returned when placing a booking.
+This should trigger the `booking-service` HTTP client timeout (hardcoded in the application to 5 seconds) 
+when making a request to the `notification-service`. This should force the following error message returned 
+when placing a new booking:  
+
+```text
+The service is currently unavailable, please try again later
+```
+
+Use the following configuration properties:
+
 
 *virtual service:*
 * name: `notification`
 * host: `notification-service`
 
-*default route:*
+*http default route:*
 * destination host: `notification-service`
 * destination subset: `v1`
 * delay fixed delay: `10s`
@@ -24,7 +32,7 @@ You should see that the response now is an error: `The service is currently unav
 
 
 In this case the booking-service REST client timeout kicks in, managing correctly the timeout error from the 
-upstream service which you injected using the virtual service configuration. 
+upstream service which you simulated using the virtual service configuration. 
 
 <br>
 <details><summary>Tip</summary>
