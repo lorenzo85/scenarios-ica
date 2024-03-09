@@ -17,7 +17,7 @@ Update the `notification` destination rule with the following properties:
 - traffic policy outlier detection `interval`: `1m`
 - traffic policy outlier detection `maxEjectionPercent`: `100`
 
-*default subset, targeting notification-service pods with label `version=v3`:*
+*default subset, targets notification-service pods with label `version=v3`:*
 - name: `default`
 - labels: `version=v3`
 

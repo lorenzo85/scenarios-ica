@@ -14,7 +14,7 @@ for the `notification-service` host, with the following properties:
 - traffic policy connection pool http `http1MaxPendingRequests`: `1`
 - traffic policy connection pool http `maxRequestsPerConnection`: `1`
 
-*default subset, targeting notification-service pods with label `version=v2`:*
+*default subset, targets notification-service pods with label `version=v2`:*
 - name: `default`
 - labels: `version=v2`
 
