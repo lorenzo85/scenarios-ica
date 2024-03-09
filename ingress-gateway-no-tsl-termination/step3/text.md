@@ -10,6 +10,7 @@ The virtual service host to which traffic is sent is `booking.example.com`.
 
 *virtual service:*
 * name: `booking`
+* n
 * hosts: `booking.example.com`
 * gateways: `booking-gateway`
 

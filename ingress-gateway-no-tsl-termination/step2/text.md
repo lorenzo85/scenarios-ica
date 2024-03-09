@@ -2,7 +2,8 @@ Isto's ingress traffic is configured using two resources:
 a [Gateway](https://istio.io/latest/docs/reference/config/networking/gateway/#Gateway)
 and a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/).
 
-You will first create an ingress gateway exposing the booking-service on HTTP to do some initial testing.
+You will first create an ingress gateway exposing the booking-service on HTTP to do some initial testing
+and verify the results by calling the service over HTTP instead of HTTPs protocol. 
 
 
 Create an Istio [Gateway](https://istio.io/latest/docs/reference/config/networking/gateway/#Gateway)
@@ -12,14 +13,15 @@ Use the following configuration properties:
 
 *gateway:*
 - name: `booking-gateway`
+- namespace: `default`
 - selector: `istio=ingressgateway`
 
 *gateway server 1:*
-- server name: `booking`
-- server hosts: `booking.example.com`
-- server port number: `80`
-- server port name: `http`
-- server port protocol: `HTTP`
+- name: `booking`
+- hosts: `booking.example.com`
+- port number: `80`
+- port name: `http`
+- port protocol: `HTTP`
 
 
 <br>

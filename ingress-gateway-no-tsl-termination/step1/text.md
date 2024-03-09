@@ -10,7 +10,7 @@ kubectl get po,svc -L app,version
 The booking-service is exposed using HTTPs on port 443 and it does not accept requests on HTTP protocol. 
 
 
-Check that the service port definition exposes port **443/TCP** by running:
+Check that the `booking-service` service port definition exposes HTTPs on port **443/TCP** by running:
 
 ```bash
 kubectl get svc booking-service
