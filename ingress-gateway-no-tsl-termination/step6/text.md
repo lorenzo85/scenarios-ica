@@ -7,8 +7,8 @@ TLS traffic (TLS/HTTPS) based on the SNI hosts.
 Configure the virtual service to forward unterminated TLS traffic on port 443 of the `booking-gateway`gateway 
 to the internal `booking-service`. 
 
-Configure the destination route to route the request to `booking-service` host if the 
-SNI host equals `booking.example.com` and port is 443:
+Configure the destination route to route the request to `booking-service` host only if the 
+SNI host matches `booking.example.com` and port matches 443:
 
 *virtual service:*
 - name: `booking`
