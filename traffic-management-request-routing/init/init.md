@@ -15,6 +15,6 @@ Examples of request match criteria that can be defined in Istio include:
 - URL Path Prefix
 - Query Parameters
 
-Isto's request match criteria are defined using a [HTTPMatchRequest](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPMatchRequest)
+Isto's request match criteria are defined using an [HTTPMatchRequest](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPMatchRequest)
 object in a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/) 
 resource.
