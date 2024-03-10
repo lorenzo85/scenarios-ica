@@ -5,6 +5,7 @@ The destination route points to the subset named `v1`, created in the previous s
 
 *virtual service:*
 * name: `notification`
+* namespace: `default`
 * host: `notification-service`
 
 
@@ -34,10 +35,10 @@ kubectl exec -it tester -- \
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
- name: notification
+ name: // TODO
 spec:
  hosts:
- - notification-service
+ - // TODO
  http:
  - route:
    - destination:

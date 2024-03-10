@@ -27,7 +27,11 @@ kubectl exec -it tester -- \
 
 ```bash
 # Should return ["EMAIL"]
-kubectl exec -it tester -- bash -c 'for i in {1..20}; do curl -s -X POST http://notification-service/notify; echo; done;'
+kubectl exec -it tester -- \
+    bash -c 'for i in {1..20}; \
+                do curl -s -X POST http://notification-service/notify; 
+                echo; 
+            done;'
 ```{{exec}}
 
 
