@@ -7,15 +7,15 @@ access to host `httpbin.org` over HTTP, with the following configuration propert
 
 
 *service entry:*
-- name: `httpbin-ext`
-- hosts: `httpbin.org`
-- resolution: `DNS`
-- location: `MESH_EXTERNAL`
+* name: `httpbin-ext`
+* hosts: `httpbin.org`
+* resolution: `DNS`
+* location: `MESH_EXTERNAL`
 
 *service entry port:*
-- number: 80
-- name: http
-- protocol: HTTP
+* number: 80
+* name: http
+* protocol: HTTP
 
 
 <br>
