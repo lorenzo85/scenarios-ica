@@ -19,13 +19,13 @@ Create a JWT request authentication resource in the `default` namespace for the 
 Use the following configuration properties:
 
 *request authentication:*
-- name: `booking-service`
-- namespace: `default`
-- selector match label: `app=booking-service`
+* name: `booking-service`
+* namespace: `default`
+* selector match label: `app=booking-service`
 
 *request authentication jwt rule 1:*
-- issuer: `testing@secure.istio.io`
-- jwks uri: `https://raw.githubusercontent.com/lorenzo85/scenarios-ica/master/security-authorization-jwt-token/jwks.json`
+* issuer: `testing@secure.istio.io`
+* jwks uri: `https://raw.githubusercontent.com/lorenzo85/scenarios-ica/master/security-authorization-jwt-token/jwks.json`
 
 
 <br>

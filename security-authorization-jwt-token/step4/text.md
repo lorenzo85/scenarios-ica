@@ -4,13 +4,13 @@ with principals (i.e. token subject) matching `testing@secure.istio.io` using th
 configuration properties:
 
 *authorization policy:*
-- name: `booking-service`
-- namespace: `default`
-- selector match label: `app=booking-service`
-- action: `ALLOW`
+* name: `booking-service`
+* namespace: `default`
+* selector match label: `app=booking-service`
+* action: `ALLOW`
 
 *authorization policy rule 1:*
-- from source **requestPrincipals**: `testing@secure.istio.io/testing@secure.istio.io`
+* from source **requestPrincipals**: `testing@secure.istio.io/testing@secure.istio.io`
 
 
 
