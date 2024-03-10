@@ -11,16 +11,16 @@ Configure the destination route to route the request to `booking-service` host o
 SNI host matches `booking.example.com` and port matches 443:
 
 *virtual service:*
-- name: `booking`
-- namespace: `default`
-- hosts: `booking.example.com`
-- gateways: `booking-gateway`
+* name: `booking`
+* namespace: `default`
+* hosts: `booking.example.com`
+* gateways: `booking-gateway`
 
 *TLS match route:*
-- match port: `443`
-- match SNI hosts: `booking.example.com`
-- route destination host: `booking-service`
-- route destination port: `443`
+* match port: `443`
+* match SNI hosts: `booking.example.com`
+* route destination host: `booking-service`
+* route destination port: `443`
 
 The virtual service Server Name Indication (SNI) hosts property is needed because only requests with 
 the correct SNI hosts must be routed to the booking service:

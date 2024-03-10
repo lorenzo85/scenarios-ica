@@ -6,16 +6,16 @@ The `PASSTHROUGH` TLS mode instructs the gateway to pass the ingress traffic "as
 Use the following configuration properties:
 
 *gateway:*
-- name: `booking-gateway`
-- selector: `istio=ingressgateway`
+* name: `booking-gateway`
+* selector: `istio=ingressgateway`
 
 *gateway server 1:*
-- name: `booking`
-- hosts: `booking.example.com`
-- port number: `443`
-- port name: `https`
-- port protocol: `HTTPS`
-- TLS mode: `PASSTHROUGH`
+* name: `booking`
+* hosts: `booking.example.com`
+* port number: `443`
+* port name: `https`
+* port protocol: `HTTPS`
+* TLS mode: `PASSTHROUGH`
 
 
 
