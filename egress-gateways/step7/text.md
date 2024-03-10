@@ -12,15 +12,15 @@ Update the service entry resource named `httpbin-ext` in the `default` namespace
 to allow access to host `httpbin.org` over HTTPs, using the following configuration properties:
 
 *service entry:*
-- name: `httpbin-ext`
-- hosts: `httpbin.org`
-- resolution: `DNS`
-- location: `MESH_EXTERNAL`
+* name: `httpbin-ext`
+* hosts: `httpbin.org`
+* resolution: `DNS`
+* location: `MESH_EXTERNAL`
 
 *service entry port:*
-- number: `443`
-- name: `tls`
-- protocol: `TLS`
+* number: `443`
+* name: `tls`
+* protocol: `TLS`
 
 
 <br>

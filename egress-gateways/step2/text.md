@@ -8,15 +8,16 @@ Create a service entry resource in the `default` namespace named `httpbin-ext` t
 access to host `httpbin.org` over HTTP, with the following properties:
 
 *service entry:*
-- name: `httpbin-ext`
-- hosts: `httpbin.org`
-- resolution: `DNS`
-- location: `MESH_EXTERNAL`
+* name: `httpbin-ext`
+* namespace: `default`
+* hosts: `httpbin.org`
+* resolution: `DNS`
+* location: `MESH_EXTERNAL`
 
 *service entry port:*
-- number: `80`
-- name: `http`
-- protocol: `HTTP`
+* number: `80`
+* name: `http`
+* protocol: `HTTP`
 
 
 <br>

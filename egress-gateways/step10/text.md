@@ -13,24 +13,24 @@ The match conditions must also include the SNI (server name indicator) to match 
 Use the following configuration properties:
 
 *virtual service:*
-- name: `direct-httbin-through-egress-gateway`
-- namespace: `default`
-- hosts: `httpbin.org`
-- gateways: \[`httpbin-egressgateway`,`mesh`\]
+* name: `direct-httbin-through-egress-gateway`
+* namespace: `default`
+* hosts: `httpbin.org`
+* gateways: \[`httpbin-egressgateway`,`mesh`\]
 
-* **tls** route 1:*
-- match gateways: `mesh`
-- match port: `443`
-- match sni hosts: `httpbin.org`
-- destination host: `istio-egressgateway.istio-system.svc.cluster.local`
-- destination port: `443`
+***tls** route 1:*
+* match gateways: `mesh`
+* match port: `443`
+* match sni hosts: `httpbin.org`
+* destination host: `istio-egressgateway.istio-system.svc.cluster.local`
+* destination port: `443`
 
-* **tls** route 2:*
-- match gateways: `httpbin-egressgateway`
-- match port: `443`
-- match sni hosts: `httpbin.org`
-- destination host: `httpbin.org`
-- destination port: `443`
+**tls** route 2:*
+* match gateways: `httpbin-egressgateway`
+* match port: `443`
+* match sni hosts: `httpbin.org`
+* destination host: `httpbin.org`
+* destination port: `443`
 
 
 <br>

@@ -7,15 +7,15 @@ to allow egress HTTP traffic on port 80 for host `httpbin.org`.
 Use the following configuration properties:
 
 *gateway:*
-- name: `httpbin-egressgateway`
-- selector: `istio=egressgateway`
+* name: `httpbin-egressgateway`
+* selector: `istio=egressgateway`
 
 *gateway server 1:*
-- server name: `httpbin`
-- server hosts: `httpbin.org`
-- server port number: `80`
-- server port name: `http`
-- server port protocol: `HTTP`
+* server name: `httpbin`
+* server hosts: `httpbin.org`
+* server port number: `80`
+* server port name: `http`
+* server port protocol: `HTTP`
 
 
 <br>
