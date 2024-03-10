@@ -2,6 +2,7 @@ Update the `notification` virtual service resource to shift all traffic to `v2` 
 
 *virtual service:*
 * name: `notification`
+* namespace: `default`
 * host: `notification-service`
 
 *default route:*
@@ -31,10 +32,10 @@ kubectl exec -it tester -- bash -c \
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
- name: notification
+ name: // TODO
 spec:
   hosts:
-  - notification-service
+  - // TODO
   http:
   - route:
     - destination:

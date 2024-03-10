@@ -7,6 +7,7 @@ and the second one to the subset named `v2` with weight `20%`.
 
 *virtual service:*
 * name: `notification`
+* namespace: `default`
 * host: `notification-service`
 
 *http default route:*
@@ -38,10 +39,10 @@ Roughly 20% of the requests should be forwarded to `v2`, hence notifications are
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
- name: notification
+ name: // TODO
 spec:
   hosts:
-  - notification-service
+  - // TODO
   http:
   - route:
     - destination:
