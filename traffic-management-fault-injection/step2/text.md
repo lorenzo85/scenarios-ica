@@ -7,12 +7,13 @@ resource in the `default` namespace named `notification` containing a single sub
 for the `notification-service` host, with the following properties:
 
 *destination rule:*
-- name: `notification`
-- host: `notification-service`
+* name: `notification`
+* namespace: `default`
+* host: `notification-service`
 
 *subset 1, targets notification-service pods with label `version=v1`:*
-- name: `v1`
-- labels: `version=v1`
+* name: `v1`
+* labels: `version=v1`
 
 <br>
 <details><summary>Tip</summary>

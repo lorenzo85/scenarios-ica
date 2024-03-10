@@ -32,7 +32,7 @@ You should see that the response now is an error: `The service is currently unav
 
 
 In this case the booking-service REST client timeout kicks in, managing correctly the timeout error from the 
-upstream service which you simulated using the virtual service configuration. 
+upstream service which you simulated using the virtual service fault delay configuration. 
 
 <br>
 <details><summary>Tip</summary>

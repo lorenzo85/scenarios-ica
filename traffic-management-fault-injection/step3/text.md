@@ -37,10 +37,10 @@ You should see that the response time takes ~3 seconds and that despite the intr
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
- name: notification
+ name: // TODO
 spec:
  hosts:
- - notification-service
+ - // TODO
  http:
  - fault:
       delay:

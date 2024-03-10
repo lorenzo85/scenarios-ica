@@ -35,10 +35,10 @@ Booking could not be placed, notification service returned HTTP status=500
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
- name: notification
+ name: // TODO
 spec:
  hosts:
- - notification-service
+ - // TODO
  http:
  - fault:
       abort:
