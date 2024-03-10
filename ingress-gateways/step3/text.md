@@ -11,6 +11,7 @@ The virtual service host to which traffic from clients is sent to when connectin
 
 *virtual service:*
 * name: `booking`
+* namespace: `default`
 * hosts: `booking.example.com`
 * gateways: `booking-gateway`
 

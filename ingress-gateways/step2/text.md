@@ -14,15 +14,16 @@ expose HTTP traffic on port `80` and for host `booking.example.com`.
 Use the following configuration properties:
 
 *gateway:*
-- name: `booking-gateway`
-- selector: `istio=ingressgateway`
+* name: `booking-gateway`
+* namespace: `default`
+* selector: `istio=ingressgateway`
 
 *gateway server 1:*
-- name: `booking`
-- hosts: `booking.example.com`
-- port number: `80`
-- port name: `http`
-- port protocol: `HTTP`
+* name: `booking`
+* hosts: `booking.example.com`
+* port number: `80`
+* port name: `http`
+* port protocol: `HTTP`
 
 
 <br>
