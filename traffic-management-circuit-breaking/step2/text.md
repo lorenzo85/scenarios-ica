@@ -15,16 +15,17 @@ resource in the `default` namespace named `notification` containing a single sub
 for the `notification-service` host, with the following properties:
 
 *destination rule:*
-- name: `notification`
-- host: `notification-service`
-- traffic policy connection pool http `http1MaxPendingRequests`: `1`
-- traffic policy connection pool http `maxRequestsPerConnection`: `1`
+* name: `notification`
+* namespace: `default`
+* host: `notification-service`
+* traffic policy connection pool http `http1MaxPendingRequests`: `1`
+* traffic policy connection pool http `maxRequestsPerConnection`: `1`
 
 *default subset, targets notification-service pods with label `version=v2`:*
-- name: `default`
-- labels: `version=v2`
+* name: `default`
+* labels: `version=v2`
 
-The connection pool traffic policy http1MaxPendingRequests: 1 and maxConnections: 1 
+The connection pool traffic policy *http1MaxPendingRequests* equal to 1 and *maxRequestsPerConnection* equal to 1 
 means that if you exceed more than one connection and request concurrently, 
 you should start seeing some failures when the istio-proxy opens the circuit for 
 further requests and connections.

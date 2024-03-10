@@ -5,6 +5,7 @@ The destination route points to the subset named `default`, created in the previ
 
 *virtual service:*
 * name: `notification`
+* namespace: `default`
 * host: `notification-service`
 
 *http default route:*
@@ -32,10 +33,10 @@ kubectl exec -it tester -- \
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
- name: notification
+ name: // TODO
 spec:
  hosts:
- - notification-service
+ - // TODO
  http:
  - route:
    - destination:

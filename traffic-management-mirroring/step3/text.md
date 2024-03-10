@@ -8,6 +8,7 @@ to mirror 100% of the traffic to subset `v2`, created in the previous step.
 
 *virtual service:*
 * name: `notification`
+* namespace: `default`
 * host: `notification-service`
 
 *http default route:*
@@ -25,10 +26,10 @@ to mirror 100% of the traffic to subset `v2`, created in the previous step.
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
- name: notification
+ name: // TODO
 spec:
   hosts:
-  - notification-service
+  - // TODO
   http:
   - route:
     - destination:
