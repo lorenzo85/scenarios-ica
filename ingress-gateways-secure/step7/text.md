@@ -4,18 +4,18 @@ the secret `booking-credential-mutual` created in the previous step.
 Use the following configuration properties:
 
 *gateway:*
-- name: `secure-booking-gateway`
-- namespace: `default`
-- selector: `istio=ingressgateway`
+* name: `secure-booking-gateway`
+* namespace: `default`
+* selector: `istio=ingressgateway`
 
 *gateway server 1:*
-- name: `booking`
-- hosts: `booking.example.com`
-- port number: `443`
-- port name: `https`
-- port protocol: `HTTPS`
-- TLS mode: `MUTUAL`
-- TLS credential name: `booking-credential-mutual`
+* name: `booking`
+* hosts: `booking.example.com`
+* port number: `443`
+* port name: `https`
+* port protocol: `HTTPS`
+* TLS mode: `MUTUAL`
+* TLS credential name: `booking-credential-mutual`
 
 <br>
 <details><summary>Tip</summary>

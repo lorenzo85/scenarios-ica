@@ -9,6 +9,7 @@ The virtual service host to which traffic is sent is be `booking.example.com`.
 
 *virtual service:*
 * name: `booking`
+* namespace: `default`
 * hosts: `booking.example.com`
 * gateways: `secure-booking-gateway`
 

@@ -15,11 +15,11 @@ ls -la certificates
 Create a Kubernetes **tls** secret in the `istio-system` namespace with the following properties:
 
 *secret:*
-- namespace: `istio-system`
-- name: `booking-credential`
-- type: `tls`
-- key path: `/root/certificates/booking.example.com.key`
-- cert path: `/root/certificates/booking.example.com.crt`
+* namespace: `istio-system`
+* name: `booking-credential`
+* type: `tls`
+* key path: `/root/certificates/booking.example.com.key`
+* cert path: `/root/certificates/booking.example.com.crt`
 
 
 <br>
