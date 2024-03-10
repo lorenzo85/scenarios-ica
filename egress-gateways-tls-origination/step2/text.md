@@ -9,20 +9,20 @@ Create a service entry resource in the `default` namespace named `yahoo-ext` to 
 access to host `finance.yahoo.com` over HTTP and HTTPs, with the following properties:
 
 *service entry:*
-- name: `yahoo-ext`
-- hosts: `finance.yahoo.com`
-- resolution: `DNS`
-- location: `MESH_EXTERNAL`
+* name: `yahoo-ext`
+* hosts: `finance.yahoo.com`
+* resolution: `DNS`
+* location: `MESH_EXTERNAL`
 
 *service entry port 1:*
-- number: `80`
-- name: `http`
-- protocol: `HTTP`
+* number: `80`
+* name: `http`
+* protocol: `HTTP`
 
 *service entry port 2:*
-- number: `443`
-- name: `https`
-- protocol: `HTTPS`
+* number: `443`
+* name: `https`
+* protocol: `HTTPS`
 
 
 <br>

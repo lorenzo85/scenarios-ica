@@ -7,12 +7,13 @@ for HTTP requests to `finance.yahoo.com` using a
 Configure the destination rule resource with the following properties:
 
 *destination rule:*
-- name: `finance-yahoo-com`
-- host: `finance.yahoo.com`
+* name: `finance-yahoo-com`
+* namespace: `default`
+* host: `finance.yahoo.com`
 
 *traffic policy port level settings:*
-- port number: `80`
-- tls mode: `SIMPLE`
+* port number: `80`
+* tls mode: `SIMPLE`
 
 
 <br>
