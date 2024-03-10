@@ -7,10 +7,10 @@ The policy must **ALLOW** POST requests to any endpoint (i.e. no operation paths
 Use the following configuration properties:
 
 *authorization policy:*
-- name: `notification-service-policy`
-- selector: `app=notification-service`
-- rule from source principal: `cluster.local/ns/default/sa/booking-service-account`
-- rule to operation method: `POST`
+* name: `notification-service-policy`
+* selector: `app=notification-service`
+* rule from source principal: `cluster.local/ns/default/sa/booking-service-account`
+* rule to operation method: `POST`
 
 
 <br>

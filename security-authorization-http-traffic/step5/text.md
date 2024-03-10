@@ -6,11 +6,11 @@ source.
 Use the following configuration properties:
 
 *authorization policy:*
-- name: `booking-service-policy`
-- namespace: `default`
-- selector: `app=booking-service`
-- action: `ALLOW`
-- rule to operation method: `POST`
+* name: `booking-service-policy`
+* namespace: `default`
+* selector: `app=booking-service`
+* action: `ALLOW`
+* rule to operation method: `POST`
 
 <br>
 <details><summary>Tip</summary>

@@ -14,8 +14,8 @@ and update the `booking-service-v1` deployment to use this service account in th
 Use the following configuration properties:
 
 *service account:*
-- name: `booking-service-account`
-- namespace: `default`
+* name: `booking-service-account`
+* namespace: `default`
 
 *booking-service-v1 deployment pods spec:*
 - serviceAccountName: `booking-service-account`

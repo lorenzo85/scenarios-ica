@@ -8,8 +8,8 @@ Create an *allow-nothing* authorization policy denying all traffic within the `d
 using the following configuration properties:
 
 *authorization policy:*
-- name: `allow-nothing`
-- namespace: `default`
+* name: `allow-nothing`
+* namespace: `default`
 
 
 <br>
