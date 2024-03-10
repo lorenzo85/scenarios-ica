@@ -4,19 +4,19 @@ created in the previous step.
 Use the following configuration properties:
 
 *ingress:*
-- name: `booking-ingress`
-- ingress class name: `istio`
+* name: `booking-ingress`
+* ingress class name: `istio`
 
 *ingress tls:*
-- hosts: `booking.example.com`
-- secret name:  `booking-credential`
+* hosts: `booking.example.com`
+* secret name:  `booking-credential`
 
 *ingress tls rule 1:*
-- host: `booking.example.com`
-- http path: `/`
-- http path type: `Prefix`
-- backend service name: `booking-service`
-- backend service port: `80`
+* host: `booking.example.com`
+* http path: `/`
+* http path type: `Prefix`
+* backend service name: `booking-service`
+* backend service port: `80`
 
 
 <br>

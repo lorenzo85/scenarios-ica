@@ -6,16 +6,16 @@ expose HTTP traffic on port `80` for host `booking.example.com`.
 Use as ingress class name `istio` (which we created in the previous step) and the following configuration properties:
 
 *ingress:*
-- name: `booking-ingress`
-- namespace: `default`
-- ingress class name: `istio`
+* name: `booking-ingress`
+* namespace: `default`
+* ingress class name: `istio`
 
 *ingress rule 1:*
-- host: `booking.example.com`
-- http path: `/`
-- http path type: `Prefix`
-- backend service name: `booking-service`
-- backend service port: `80`
+* host: `booking.example.com`
+* http path: `/`
+* http path type: `Prefix`
+* backend service name: `booking-service`
+* backend service port: `80`
 
 
 <br>

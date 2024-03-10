@@ -10,8 +10,9 @@ scope and if it is the default class.
 Create an ingress class resource named `istio` in the `default` namespace using following configuration properties:
 
 *ingress class:*
-- name: `istio`
-- controller: `istio.io/ingress-controller`
+* name: `istio`
+* namespace: `default`
+* controller: `istio.io/ingress-controller`
 
 <br>
 <details><summary>Tip</summary>

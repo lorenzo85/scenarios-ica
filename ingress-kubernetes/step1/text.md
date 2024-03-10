@@ -7,7 +7,7 @@ Check the running pods and services and wait until they are all in status `Runni
 kubectl get po,svc -L app,version
 ```{{exec}}
 
-Test the booking-service by retrieving existing bookings:
+Test the `booking-service` by retrieving existing bookings:
 
 ```bash
 kubectl exec -it tester -- \

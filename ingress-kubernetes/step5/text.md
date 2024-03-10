@@ -15,11 +15,11 @@ Create a Kubernetes Secret resource in the `istio-system` namespace with the fol
 Note that the secret **must** be in the `istio-system` namespace:
 
 ***tls** secret:*
-- namespace: `istio-system`
-- name: `booking-credential`
-- type: `tls`
-- key path: `/root/certificates/booking.example.com.key`
-- cert path: `/root/certificates/booking.example.com.crt`
+* namespace: `istio-system`
+* name: `booking-credential`
+* type: `tls`
+* key path: `/root/certificates/booking.example.com.key`
+* cert path: `/root/certificates/booking.example.com.crt`
 
 
 <br>
