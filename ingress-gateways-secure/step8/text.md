@@ -4,8 +4,8 @@ to retrieve all bookings using `https://booking.example.com` on **NodePort** `30
 Because the endpoint now uses mutual TLS we also must pass to *curl* the client certificate and key
 using the *--cert* and *--key* parameters.
 
-The client certificate and key have been already prepared and signed using *example.com.crt* CA 
-in the `/root/certificates` directory. 
+The client certificate and key have been already prepared and signed using *example.com.crt* CA
+in the `/root/certificates` directory.
 
 
 Verify that mutual TLS is working correctly using *curl*:

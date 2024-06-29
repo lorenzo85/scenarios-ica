@@ -9,7 +9,7 @@ kubectl exec -it tester -n foo -- \
 ```{{exec}}
 
 This request is **successful** because the tester pod runs within the `foo` namespace and therefore it is equipped with
-the Istio proxy sidecar. 
+the Istio proxy sidecar.
 
 Making a request to `notification-service` in `foo` namespace from the `default` namespace **does not work**,
 because the pods in the `default` namespace are not istio-injected with a sidecar proxy and the `foo` namespace
@@ -21,7 +21,7 @@ kubectl exec -it tester -- \
     echo;
 ```{{exec}}
 
-However, making a request to `notification-service` in the `bar` namespace from the 
+However, making a request to `notification-service` in the `bar` namespace from the
 `default` namespace **works successfully**, because mTLS is not enforced on the `bar` namespace:
 
 ```bash

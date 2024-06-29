@@ -16,7 +16,7 @@ kubectl get -n istio-system istiooperators \
 ```{{exec}}
 
 Your task is to enable external access to `finance.yahoo.com` using an egress gateway configured to perform TLS Origination
-on the original request made over HTTP. 
+on the original request made over HTTP.
 
 Test that you *cannot* reach `finance.yahoo.com` with the following:
 ```bash
@@ -29,5 +29,5 @@ The result should be:
 ```text
 HTTP/1.1 502 Bad Gateway
 ```
-This is because Istio proxy has blocked it as there is no service entry 
+This is because Istio proxy has blocked it as there is no service entry
 in the registry configured for `finance.yahoo.com` yet.

@@ -3,7 +3,7 @@ service `httpbin.org` from the Istio sidecar proxies, but exactly as before,
 the *HTTPs* requests are not going through the egress gateway just yet.
 
 
-Update the `httpbin-egressgateway` gateway resource created previously to allow egress 
+Update the `httpbin-egressgateway` gateway resource created previously to allow egress
 *HTTPs* traffic for host `httpbin.org`, using the following configuration properties:
 
 *gateway:*

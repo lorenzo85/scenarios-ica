@@ -1,6 +1,6 @@
 ![Istio logo](https://raw.githubusercontent.com/lorenzo85/scenarios-ica/master/istio-logo.svg)
 
-Isto's request routing allows to control traffic flow 
+Isto's request routing allows to control traffic flow
 between services deployed within a Kubernetes cluster.
 
 Request routing can be used for A/B testing. For instance, it enables
@@ -16,5 +16,5 @@ Examples of request match criteria that can be defined in Istio include:
 - Query Parameters
 
 Isto's request match criteria are defined using an [HTTPMatchRequest](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPMatchRequest)
-object in a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/) 
+object in a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/)
 resource.

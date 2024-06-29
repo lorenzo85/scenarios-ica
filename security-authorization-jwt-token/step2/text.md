@@ -4,17 +4,17 @@ and an [AuthorizationPolicy](https://istio.io/latest/docs/reference/config/secur
 resource.
 
 
-A **request authentication** resource defines what request authentication methods are supported 
-by a workload, specified through a label selector. 
+A **request authentication** resource defines what request authentication methods are supported
+by a workload, specified through a label selector.
 
 Requests which do not contain valid authentication information are rejected.
 
 
-An **authorization policy** enables access control on the workloads using source principals and 
+An **authorization policy** enables access control on the workloads using source principals and
 optionally, custom matching conditions on JWT token claims such as roles or groups.
 
 
-Create a JWT request authentication resource in the `default` namespace for the `booking-service` APIs. 
+Create a JWT request authentication resource in the `default` namespace for the `booking-service` APIs.
 
 Use the following configuration properties:
 

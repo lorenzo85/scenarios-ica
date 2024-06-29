@@ -1,5 +1,5 @@
 In order to route `httpbin.org` request traffic to the egress gateway created in the previous step
-you need a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/). 
+you need a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/).
 
 
 The virtual service configuration needs to have the following two route destination rules:

@@ -1,10 +1,10 @@
-Isto's security authorization is configured using 
+Isto's security authorization is configured using
 a set of [AuthorizationPolicy](https://istio.io/latest/docs/reference/config/security/authorization-policy/)
 resources.
 
 An authorization policy supports **DENY**, **ALLOW** and **CUSTOM** actions for a workload.
 
-Create an *allow-nothing* authorization policy denying all traffic within the `default` namespace 
+Create an *allow-nothing* authorization policy denying all traffic within the `default` namespace
 using the following configuration properties:
 
 *authorization policy:*

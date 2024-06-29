@@ -2,7 +2,7 @@ Create a [VirtualService](https://istio.io/latest/docs/reference/config/networki
 resource in the `default` namespace named `notification`
 with a single default HTTP destination route for host `notification-service`.
 
-Define the route with two destinations, one to the subset named `v1` with weight `80%` 
+Define the route with two destinations, one to the subset named `v1` with weight `80%`
 and the second one to the subset named `v2` with weight `20%`.
 
 *virtual service:*
@@ -25,12 +25,12 @@ Verify the result using:
 ```bash
 kubectl exec -it tester -- bash -c \
     'for i in {1..20}; \
-        do curl -s -X POST http://notification-service/notify; 
+        do curl -s -X POST http://notification-service/notify;
         echo; \
      done;'
 ```{{exec}}
 
-Roughly 20% of the requests should be forwarded to `v2`, hence notifications are sent via EMAIL and SMS only ~20% of the times.  
+Roughly 20% of the requests should be forwarded to `v2`, hence notifications are sent via EMAIL and SMS only ~20% of the times.
 
 <br>
 <details><summary>Tip</summary>

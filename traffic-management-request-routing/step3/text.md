@@ -1,10 +1,10 @@
-Isto's request routing is configured using two resources: 
-a [DestinationRule](https://istio.io/latest/docs/reference/config/networking/destination-rule/) 
+Isto's request routing is configured using two resources:
+a [DestinationRule](https://istio.io/latest/docs/reference/config/networking/destination-rule/)
 and a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/).
 
-Create a [DestinationRule](https://istio.io/latest/docs/reference/config/networking/destination-rule/) 
-resource in the `default` namespace named `notification` containing 
-two subsets `v1` and `v2` for the `notification-service` host, 
+Create a [DestinationRule](https://istio.io/latest/docs/reference/config/networking/destination-rule/)
+resource in the `default` namespace named `notification` containing
+two subsets `v1` and `v2` for the `notification-service` host,
 with the following properties:
 
 *destination rule:*

@@ -1,6 +1,6 @@
 Test that the circuit breaker works correctly using `fortio`.
 
-Call the notification-service with a single connection (`-c 1`) and send 20 requests (`-n 20`). 
+Call the notification-service with a single connection (`-c 1`) and send 20 requests (`-n 20`).
 You should see that 100% of the requests terminate with success status code `201`:
 
 ```bash
@@ -24,10 +24,10 @@ kubectl exec ${FORTIO_POD} -c fortio -- \
   -X POST http://notification-service/notify
 ```{{exec}}
 
-You should see now that some of the requests failed with status code 503 (Service Unavailable), 
-meaning that the server is currently unable to handle the requests. 
+You should see now that some of the requests failed with status code 503 (Service Unavailable),
+meaning that the server is currently unable to handle the requests.
 
-In this case the circuit breaker "kicked" in, by trapping some of the requests and 
+In this case the circuit breaker "kicked" in, by trapping some of the requests and
 you should see that some of the requests terminated with `503` status code (your numbers below might be different):
 
 ```bash

@@ -1,5 +1,5 @@
 Create a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/)
-resource in the `default` namespace named `notification` 
+resource in the `default` namespace named `notification`
 with only a single default HTTP destination route for host `notification-service`.
 The destination route points to the subset named `v1`, created in the previous step.
 
@@ -14,7 +14,7 @@ The destination route points to the subset named `v1`, created in the previous s
 * destination subset: `v1`
 
 
-Istio will route all requests to host: `notification-service` to 
+Istio will route all requests to host: `notification-service` to
 the notification service with version `v1`.
 
 
@@ -23,7 +23,7 @@ Verify the result using:
 # Should return ["EMAIL"]
 kubectl exec -it tester -- \
     bash -c 'for i in {1..20}; \
-                do curl -s -X POST http://notification-service/notify; 
+                do curl -s -X POST http://notification-service/notify;
                 echo; \
             done;'
 ```{{exec}}

@@ -2,14 +2,14 @@ Isto's ingress traffic is configured using two resources:
 a [Gateway](https://istio.io/latest/docs/reference/config/networking/gateway/#Gateway)
 and a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/).
 
-A Gateway resource describes a load balancer positioned at the edge of the service mesh managing 
+A Gateway resource describes a load balancer positioned at the edge of the service mesh managing
 incoming HTTP/TCP connections.
 
 Your task is to expose the `booking-service` APIs on host `booking.example.com` over HTTP.
 
 Create an Istio [Gateway](https://istio.io/latest/docs/reference/config/networking/gateway/#Gateway)
-named `booking-gateway` in the `default` namespace to 
-expose HTTP traffic on port `80` and for host `booking.example.com`. 
+named `booking-gateway` in the `default` namespace to
+expose HTTP traffic on port `80` and for host `booking.example.com`.
 
 Use the following configuration properties:
 

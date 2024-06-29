@@ -1,4 +1,4 @@
-Move to the Istio package directory and add the Istio's `bin` folder to the environment path. 
+Move to the Istio package directory and add the Istio's `bin` folder to the environment path.
 
 
 This is needed so that you can run the `istioctl` client in the terminal without specifying the full installation path.
@@ -6,7 +6,7 @@ This is needed so that you can run the `istioctl` client in the terminal without
 
 Move to the current Istio directory:
 ```bash
-cd istio-1.20.3/ 
+cd istio-1.20.3/
 ```{{exec}}
 
 

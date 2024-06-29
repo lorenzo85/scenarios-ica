@@ -2,7 +2,7 @@
 ![Istio logo](https://raw.githubusercontent.com/lorenzo85/scenarios-ica/master/istio-logo.svg)
 
 
-By default, Istio employs mTLS for secure communication between pods 
+By default, Istio employs mTLS for secure communication between pods
 utilizing Istio proxies installed as sidecars. The mTLS constraint is relaxed for transmissions
 of plain text traffic to and from workloads lacking Istio sidecar proxies.
 

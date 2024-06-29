@@ -12,8 +12,8 @@ The output should be the same as before:
 HTTP/1.1 200 OK
 ```
 
-However, now the request went through the egress gateway you just configured. 
-We can verify this by inspecting the logs of the `istio-egressgateway` 
+However, now the request went through the egress gateway you just configured.
+We can verify this by inspecting the logs of the `istio-egressgateway`
 pod for a line corresponding to the `httpbin.org` host request:
 
 Run the following command to inspect the logs of the `istio-egressgateway` pod:

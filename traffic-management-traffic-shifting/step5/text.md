@@ -13,14 +13,14 @@ Update the `notification` virtual service resource to shift all traffic to `v2` 
 * destination 2 subset: `v2`
 * destination 2 weight: `100`
 
-This configuration will now route 100% of the requests to host `notification-service` to the 
+This configuration will now route 100% of the requests to host `notification-service` to the
 notification service with version `v2`, hence all notifications are now sent both via EMAIL and SMS.
 
 Verify the result using:
 ```bash
 kubectl exec -it tester -- bash -c \
     'for i in {1..20}; \
-        do curl -s -X POST http://notification-service/notify; 
+        do curl -s -X POST http://notification-service/notify;
         echo; \
      done;'
 ```{{exec}}

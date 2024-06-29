@@ -14,7 +14,7 @@ Check the running pods and services and wait until they are all in status `Runni
 kubectl get po,svc -L app,version
 ```{{exec}}
 
-Note that the notification-service-v1 pods have 
+Note that the notification-service-v1 pods have
 labels *app=notification-service* and *version=v1*.
-The notification-service-v2 pods have 
+The notification-service-v2 pods have
 labels *app=notification-service* and *version=v2*.

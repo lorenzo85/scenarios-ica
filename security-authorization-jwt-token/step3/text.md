@@ -11,7 +11,7 @@ kubectl exec -it tester -- \
   echo;
 ```{{exec}}
 
-The expected response is: `401 Unauthorized` with message: 
+The expected response is: `401 Unauthorized` with message:
 ```text
 Jwt is not in the form of Header.Payload.Signature with two dots and 3 sections
 ```
@@ -27,7 +27,7 @@ kubectl exec -it tester -- \
 The expected expected response is: `200 OK`
 
 
-Lastly, making a request to the `booking-service` with a **valid** JWT token works successfully, 
+Lastly, making a request to the `booking-service` with a **valid** JWT token works successfully,
 because there is no authorization policy yet, checking on the principal in the token:
 ```bash
 kubectl exec -it tester -- \

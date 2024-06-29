@@ -1,7 +1,7 @@
 Update the `notification` destination rule resource in the `default` namespace to configure the existing traffic policy
-with `outlierDetection` instead of `connectionPool`. 
+with `outlierDetection` instead of `connectionPool`.
 
-To test the outlier detection feature we will use `notification-service-v3`. 
+To test the outlier detection feature we will use `notification-service-v3`.
 The `notification-service-v3` has a storage problem and always returns **507** (insufficient storage) HTTP status code.
 
 We want to configure the outlier detection settings to consider a host unhealthy from the load balancing pool as soon as
@@ -32,7 +32,7 @@ kubectl exec ${FORTIO_POD} -c fortio -- \
   -X POST http://notification-service/notify
 ```{{exec}}
 
-You should see that just 2 requests terminated with 507, but then the circuit 
+You should see that just 2 requests terminated with 507, but then the circuit
 breaker kicked in forcing the `503` status code response for the remaining requests:
 ```bash
 Code 503 : 18 (90.0 %)

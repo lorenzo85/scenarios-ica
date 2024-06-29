@@ -1,7 +1,7 @@
 We now want to secure the Kubernetes Ingress we created in the previous steps in order to expose the `booking-service`
 over HTTPs.
 
-You can secure an [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/#tls) 
+You can secure an [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/#tls)
 by specifying a Secret that contains a TLS private key and certificate.
 
 There is a self-signed certificate and key already available in the certificates'
@@ -11,7 +11,7 @@ directory for the `booking.example.com` domain:
 ls -la /root/certificates
 ```{{exec}}
 
-Create a Kubernetes Secret resource in the `istio-system` namespace with the following properties. 
+Create a Kubernetes Secret resource in the `istio-system` namespace with the following properties.
 Note that the secret **must** be in the `istio-system` namespace:
 
 ***tls** secret:*

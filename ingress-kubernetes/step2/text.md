@@ -4,8 +4,8 @@ and an [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress
 
 A Kubernetes Ingress class is backed by different implementations called controllers. An example is the Istio ingress controller.
 An [IngressClass](https://kubernetes.io/docs/concepts/services-networking/ingress/#ingress-class)
-resource contains the name of the controller and additional configurations such as the 
-scope and if it is the default class.  
+resource contains the name of the controller and additional configurations such as the
+scope and if it is the default class.
 
 Create an ingress class resource named `istio` in the `default` namespace using following configuration properties:
 

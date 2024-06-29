@@ -7,7 +7,7 @@ Check the running pods and services and wait until they are all in status `Runni
 kubectl get po,svc -L app,version
 ```{{exec}}
 
-The booking-service is exposed using HTTPs on port 443 and it does not accept requests on HTTP protocol. 
+The booking-service is exposed using HTTPs on port 443 and it does not accept requests on HTTP protocol.
 
 
 Check that the `booking-service` service port definition exposes HTTPs on port **443/TCP** by running:

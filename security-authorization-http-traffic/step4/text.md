@@ -1,4 +1,4 @@
-You are now going to set up a set of authorization policies for pods 
+You are now going to set up a set of authorization policies for pods
 to pods communication between the `booking-service` and the `notification-service`.
 
 Moreover, you will configure the `notification-service` to accept *POST* requests only if the *source pod* has service
@@ -8,7 +8,7 @@ You will also configure an authorization policy to allow any incoming **POST** r
 so that a booking can be placed by external clients.
 
 
-First, create a service account resource named `booking-service-account` 
+First, create a service account resource named `booking-service-account`
 and update the `booking-service-v1` deployment to use this service account in the pods spec.
 
 Use the following configuration properties:

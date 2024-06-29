@@ -4,7 +4,7 @@ the *mesh* to the Istio egress gateway service: `istio-egressgateway.istio-syste
 *from* *httpbin-egressgateway* *to* the final destination `httpbin.org`.
 
 
-Note that in this case both routing match conditions and destinations must use a 
+Note that in this case both routing match conditions and destinations must use a
 [TLSRoute](https://istio.io/latest/docs/reference/config/networking/virtual-service/#TLSRoute) object
 and not a [HTTPRoute](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPRoute) object.
 

@@ -1,5 +1,5 @@
 Update the `booking-service` authorization policy to also require that the request JWT
-must have claim named `groups` containing the value `group2`. 
+must have claim named `groups` containing the value `group2`.
 
 
 Use the following configuration properties:

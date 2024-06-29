@@ -1,4 +1,4 @@
-Your task is now to enable secure external access to `httpbin.org` using an 
+Your task is now to enable secure external access to `httpbin.org` using an
 egress gateway over *HTTPs* protocol instead of *HTTP*.
 
 First, test that you *cannot* make *HTTPs* requests to `httpbin.org`:
@@ -8,7 +8,7 @@ kubectl exec tester -c tester -- \
     grep HTTP/
 ```{{exec}}
 
-Update the service entry resource named `httpbin-ext` in the `default` namespace 
+Update the service entry resource named `httpbin-ext` in the `default` namespace
 to allow access to host `httpbin.org` over HTTPs, using the following configuration properties:
 
 *service entry:*

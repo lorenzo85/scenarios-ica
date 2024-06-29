@@ -1,7 +1,7 @@
 Note that it might take a few seconds for the authorization policy to propagate fully through the cluster.
 If the requests below does not return the expected responses, retry after a few seconds.
 
-Test that the `booking-service` request authorization policy works correctly by making a request to 
+Test that the `booking-service` request authorization policy works correctly by making a request to
 the `booking-service` with a **valid** JWT token signed with subject (**sub**) `testing@secure.istio.io`:
 
 ```bash
@@ -24,7 +24,7 @@ kubectl exec -it tester -- \
 The expected response is: `403 Forbidden` with message: `RBAC: access denied`.
 
 
-JWT signed with a different subject does not work anymore, due to the source request principal 
+JWT signed with a different subject does not work anymore, due to the source request principal
 property specified in the authorization policy which must match: *testing@secure.istio.io/testing@secure.istio.io*.
 
 The folowing request uses a token which has been signed with a different subect (tom@secure.istio.io) instead of (testing@secure.istio.io):

@@ -1,7 +1,7 @@
 Create a [DestinationRule](https://istio.io/latest/docs/reference/config/networking/destination-rule/)
 named `finance-yahoo-com` in the `default` namespace and configure it to perform TLS origination
-for HTTP requests to `finance.yahoo.com` using a 
-[TrafficPolicy](https://istio.io/latest/docs/reference/config/networking/destination-rule/#TrafficPolicy). 
+for HTTP requests to `finance.yahoo.com` using a
+[TrafficPolicy](https://istio.io/latest/docs/reference/config/networking/destination-rule/#TrafficPolicy).
 
 
 Configure the destination rule resource with the following properties:

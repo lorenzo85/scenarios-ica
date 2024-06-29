@@ -1,5 +1,5 @@
 Create now an [AuthorizationPolicy](https://istio.io/latest/docs/reference/config/security/authorization-policy/)
-in the `default` namespace for the `notification-service` to enable incoming POST request 
+in the `default` namespace for the `notification-service` to enable incoming POST request
 from sources with service account principal equal to `cluster.local/ns/default/sa/booking-service-account`.
 
 The policy must **ALLOW** POST requests to any endpoint (i.e. no operation paths specified).

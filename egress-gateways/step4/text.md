@@ -1,4 +1,4 @@
-The service entry resource added in the previous steps has just enabled the communication to the external 
+The service entry resource added in the previous steps has just enabled the communication to the external
 service `httpbin.org` from the Istio sidecar proxies, but the requests are not going through an egress gateway just yet.
 
 You first need to create a gateway. Create an Istio [Gateway](https://istio.io/latest/docs/reference/config/networking/gateway/#Gateway)

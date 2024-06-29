@@ -1,4 +1,4 @@
-Update the `notification` virtual service resource to add a new route based on a matching HTTP header. 
+Update the `notification` virtual service resource to add a new route based on a matching HTTP header.
 
 If the request contains HTTP header `testing`: `true`, then route the request to `v2`,
 otherwise default to `v1`.
@@ -20,8 +20,8 @@ Verify the result using:
 # Should return ["EMAIL","SMS"]
 kubectl exec -it tester -- \
     bash -c 'for i in {1..20}; \
-                do curl -s -X POST -H "testing: true" http://notification-service/notify; 
-                echo; 
+                do curl -s -X POST -H "testing: true" http://notification-service/notify;
+                echo;
             done;'
 ```{{exec}}
 
@@ -29,8 +29,8 @@ kubectl exec -it tester -- \
 # Should return ["EMAIL"]
 kubectl exec -it tester -- \
     bash -c 'for i in {1..20}; \
-                do curl -s -X POST http://notification-service/notify; 
-                echo; 
+                do curl -s -X POST http://notification-service/notify;
+                echo;
             done;'
 ```{{exec}}
 
