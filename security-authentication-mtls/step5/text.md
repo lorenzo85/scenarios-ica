@@ -1,3 +1,5 @@
+**The previous `cluster-wide-mtls` `PeerAuthentication` was deleted.**
+
 Now you will configure a `PeerAuthentication` resource to enforce namespace-wide
 mTLS restricted to workloads running in the `foo` namespace.
 
