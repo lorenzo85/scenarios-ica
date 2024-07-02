@@ -1,4 +1,4 @@
-Update the `notification` virtual service again to inject an HTTP abort fault 
+Update the `notification` virtual service again to inject an HTTP abort fault
 to trigger an HTTP error status 500 instead of a delay.
 
 We want to simulate the upstream `notification-service` returning status code 500 to test
@@ -22,7 +22,7 @@ kubectl exec -it tester -- \
     echo;'
 ```{{exec}}
 
-You should see that the response now is an error: 
+You should see that the response now is an error:
 
 ```text
 Booking could not be placed, notification service returned HTTP status=500

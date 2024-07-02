@@ -1,7 +1,9 @@
-Now you will configure a `PeerAuthentication` resource to enforce namespace-wide 
+**The previous `cluster-wide-mtls` `PeerAuthentication` was deleted.**
+
+Now you will configure a `PeerAuthentication` resource to enforce namespace-wide
 mTLS restricted to workloads running in the `foo` namespace.
 
-Note that to enforce mTLS the peer authentication resource **must** be created in the target namespace, 
+Note that to enforce mTLS the peer authentication resource **must** be created in the target namespace,
 where mTLS has to be enforced.
 
 Create a `PeerAuthentication` resource to enforce in the `foo` namespace with the following configuration properties:

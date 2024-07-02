@@ -1,8 +1,8 @@
 Update now the `notification` virtual service fixed delay time to 10 seconds instead of 3 seconds.
 
-This should trigger the `booking-service` HTTP client timeout (hardcoded in the application to 5 seconds) 
-when making a request to the `notification-service`. This should force the following error message returned 
-when placing a new booking:  
+This should trigger the `booking-service` HTTP client timeout (hardcoded in the application to 5 seconds)
+when making a request to the `notification-service`. This should force the following error message returned
+when placing a new booking:
 
 ```text
 The service is currently unavailable, please try again later
@@ -31,8 +31,8 @@ kubectl exec -it tester -- \
 You should see that the response now is an error: `The service is currently unavailable, please try again later` and that the response time is ~5 seconds.
 
 
-In this case the booking-service REST client timeout kicks in, managing correctly the timeout error from the 
-upstream service which you simulated using the virtual service fault delay configuration. 
+In this case the booking-service REST client timeout kicks in, managing correctly the timeout error from the
+upstream service which you simulated using the virtual service fault delay configuration.
 
 <br>
 <details><summary>Tip</summary>

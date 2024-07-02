@@ -23,8 +23,8 @@ Verify the result using:
 # Should return ["EMAIL","SMS"]
 kubectl exec -it tester -- \
     bash -c 'for i in {1..20}; \
-                do curl -s -X POST http://notification-service/v2/notify; 
-                echo; 
+                do curl -s -X POST http://notification-service/v2/notify;
+                echo;
             done;'
 ```{{exec}}
 
@@ -32,8 +32,8 @@ kubectl exec -it tester -- \
 # Should return ["EMAIL"]
 kubectl exec -it tester -- \
     bash -c 'for i in {1..20}; \
-                do curl -s -X POST http://notification-service/notify; 
-                echo; 
+                do curl -s -X POST http://notification-service/notify;
+                echo;
             done;'
 ```{{exec}}
 

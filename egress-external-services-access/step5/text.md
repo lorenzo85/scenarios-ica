@@ -7,7 +7,7 @@ kubectl exec tester -- curl -o /dev/null \
     echo;
 ```{{exec}}
 
-You should see that the request ends after ~3 seconds with a 504 (Gateway Timeout) error. 
+You should see that the request ends after ~3 seconds with a 504 (Gateway Timeout) error.
 
-Although `httpbin.org` response was forced to take ~5 seconds, Istio cut off the request earlier at 3 seconds 
+Although `httpbin.org` response was forced to take ~5 seconds, Istio cut off the request earlier at 3 seconds
 due to the maximum timeout set to 3s in the virtual service resource configuration created in the previous step.

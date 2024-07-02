@@ -21,6 +21,7 @@ spec:
             cpu: 0m # CHANGED
             memory: 0Mi # CHANGED
         service:
+          type: NodePort
           ports:
             ## You can add custom gateway ports in user values overrides, but it must include those ports since helm replaces.
             # Note that AWS ELB will by default perform health checks on the first port

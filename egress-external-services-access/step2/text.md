@@ -1,5 +1,5 @@
-Isto's service registry entries are configured using 
-[ServiceEntry](https://istio.io/latest/docs/reference/config/networking/service-entry/#ServiceEntry) 
+Isto's service registry entries are configured using
+[ServiceEntry](https://istio.io/latest/docs/reference/config/networking/service-entry/#ServiceEntry)
 resources.
 
 Create a service entry resource in the `default` namespace named `httpbin-ext` to allow

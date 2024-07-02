@@ -1,5 +1,5 @@
-Update the service entry resource named `finance-yahoo-com` previously created, 
-to automatically redirect any HTTP traffic to HTTPs using **target port** 443 
+Update the service entry resource named `finance-yahoo-com` previously created,
+to automatically redirect any HTTP traffic to HTTPs using **target port** 443
 in the **http-port** [service entry port](https://istio.io/latest/docs/reference/config/networking/service-entry/#ServicePort) using a `targetPort` property.
 
 

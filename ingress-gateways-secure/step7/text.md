@@ -1,4 +1,4 @@
-Update the `secure-booking-gateway` gateway to use `MUTUAL` TLS using 
+Update the `secure-booking-gateway` gateway to use `MUTUAL` TLS using
 the secret `booking-credential-mutual` created in the previous step.
 
 Use the following configuration properties:

@@ -1,8 +1,8 @@
-Isto's mTLS is configured using a 
+Isto's mTLS is configured using a
 [PeerAuthentication](https://istio.io/latest/docs/reference/config/security/peer_authentication/)
 resource.
 
-Create a `PeerAuthentication` resource to enforce cluster-wide mutual TLS. 
+Create a `PeerAuthentication` resource to enforce cluster-wide mutual TLS.
 
 
 To enforce cluster-wide mTLS the resource **must** be created in the `istio-system` namespace, otherwise it won't work.

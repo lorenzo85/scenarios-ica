@@ -10,7 +10,7 @@ kubectl exec tester -- \
     grep  "HTTP/";
 ```{{exec}}
 
-Now check the logs of the sidecar proxy for the `tester` pod, 
+Now check the logs of the sidecar proxy for the `tester` pod,
 to inspect if it contains a matching record of the HTTP request to `httpbin.org`:
 
 ```bash

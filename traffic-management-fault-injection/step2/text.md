@@ -3,7 +3,7 @@ a [DestinationRule](https://istio.io/latest/docs/reference/config/networking/des
 [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/).
 
 Create a [DestinationRule](https://istio.io/latest/docs/reference/config/networking/destination-rule/)
-resource in the `default` namespace named `notification` containing a single subset `v1` 
+resource in the `default` namespace named `notification` containing a single subset `v1`
 for the `notification-service` host, with the following properties:
 
 *destination rule:*

@@ -3,7 +3,7 @@ If the requests below does not return the expected responses, retry after a few 
 
 Test that the updated `booking-service` request authorization policy works correctly.
 
-Make a request to the `booking-service` by sending a valid JWT token with subject `testing@secure.istio.io` 
+Make a request to the `booking-service` by sending a valid JWT token with subject `testing@secure.istio.io`
 and claim key `groups` with values \[`group2`\]:
 
 ```bash
@@ -16,8 +16,8 @@ kubectl exec -it tester -- \
 The expected response is: `200 OK` because the token contains a claim with key `groups` and values \[`group2`\].
 
 
-However, making a request to the `booking-service` by sending a valid JWT token with subject `testing@secure.istio.io` 
-and claim key `groups` but with values \[`group1`\]  does not work because it does not match the 
+However, making a request to the `booking-service` by sending a valid JWT token with subject `testing@secure.istio.io`
+and claim key `groups` but with values \[`group1`\]  does not work because it does not match the
 `request.auth.claims[groups]` condition specified in the updated authorization policy:
 
 ```bash

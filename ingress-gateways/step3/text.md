@@ -1,4 +1,4 @@
-Configure routes for traffic entering via the ingress `booking-gateway` 
+Configure routes for traffic entering via the ingress `booking-gateway`
 resource created in the previous step.
 
 Create a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/)

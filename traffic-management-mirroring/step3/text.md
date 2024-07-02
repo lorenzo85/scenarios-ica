@@ -1,8 +1,8 @@
 Create a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/)
-resource in the `default` namespace named `notification` with a single default HTTP destination 
-route for host `notification-service`. 
+resource in the `default` namespace named `notification` with a single default HTTP destination
+route for host `notification-service`.
 
-Configure the route destination to subset `v1` and 
+Configure the route destination to subset `v1` and
 to mirror 100% of the traffic to subset `v2`, created in the previous step.
 
 

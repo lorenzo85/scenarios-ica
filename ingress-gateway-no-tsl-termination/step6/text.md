@@ -1,13 +1,13 @@
-Update the `booking` virtual service 
+Update the `booking` virtual service
 to use a [TLSRoute](https://istio.io/latest/docs/reference/config/networking/virtual-service/#TLSRoute)
-instead of an [HTTPRoute](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPRoute) 
-which allows to describe match conditions and actions for routing unterminated 
+instead of an [HTTPRoute](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPRoute)
+which allows to describe match conditions and actions for routing unterminated
 TLS traffic (TLS/HTTPS) based on the SNI hosts.
 
-Configure the virtual service to forward unterminated TLS traffic on port 443 of the `booking-gateway`gateway 
-to the internal `booking-service`. 
+Configure the virtual service to forward unterminated TLS traffic on port 443 of the `booking-gateway`gateway
+to the internal `booking-service`.
 
-Configure the destination route to route the request to `booking-service` host only if the 
+Configure the destination route to route the request to `booking-service` host only if the
 SNI host matches `booking.example.com` and port matches 443:
 
 *virtual service:*
@@ -22,7 +22,7 @@ SNI host matches `booking.example.com` and port matches 443:
 * route destination host: `booking-service`
 * route destination port: `443`
 
-The virtual service Server Name Indication (SNI) hosts property is needed because only requests with 
+The virtual service Server Name Indication (SNI) hosts property is needed because only requests with
 the correct SNI hosts must be routed to the booking service:
 
 

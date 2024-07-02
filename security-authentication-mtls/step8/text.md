@@ -20,8 +20,8 @@ kubectl exec -it tester -- \
 This request is **successful** as well because the `notification-service` in the `bar` namespace is not mTLS enforced.
 
 
-However, making a request to the `booking-service` in `foo` namespace from a pod running in 
-the `default` namespace **does not work**, because the pods in the `default` namespace 
+However, making a request to the `booking-service` in `foo` namespace from a pod running in
+the `default` namespace **does not work**, because the pods in the `default` namespace
 are not istio-injected with a sidecar proxy and `foo` namespace enforces mTLS on the `booking-service` workload:
 
 ```bash

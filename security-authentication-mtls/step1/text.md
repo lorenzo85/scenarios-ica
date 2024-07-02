@@ -2,7 +2,7 @@
 In the Kubernetes cluster there are two namespaces: `foo` and `bar`.
 
 
-Istio has been configured to automatically inject Istio sidecars solely within 
+Istio has been configured to automatically inject Istio sidecars solely within
 the `foo` and `bar` namespaces, while excluding auto-injection for the `default` namespace.
 
 
@@ -21,7 +21,7 @@ There are three deployments installed in the Kubernetes cluster:
 - notification-service-v1 in the `bar` namespace.
 - booking-service-v1 in the `foo` namespace.
 
-Check the running pods and services and wait until they are all in status `Running`. 
+Check the running pods and services and wait until they are all in status `Running`.
 
 ```bash
 kubectl get po,svc -n foo

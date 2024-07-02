@@ -1,7 +1,7 @@
 Isto's Egress traffic is configured using
 a [ServiceEntry](https://istio.io/latest/docs/reference/config/networking/service-entry/#ServiceEntry),
 a [Gateway](https://istio.io/latest/docs/reference/config/networking/gateway/)
-and a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/) 
+and a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/)
 resource.
 
 Create a service entry resource in the `default` namespace named `httpbin-ext` to allow
