@@ -3,7 +3,7 @@ to the `finance.yahoo.com` over HTTP:
 
 ```bash
 kubectl exec tester -c tester -- \
-  curl -sSL -o /dev/null -D - http://finance.yahoo.com/crypto | \
+  curl -sSL -o /dev/null -D - http://finance.yahoo.com/markets/crypto | \
   grep HTTP/
 ```{{exec}}
 
@@ -24,5 +24,5 @@ kubectl logs -l istio=egressgateway \
 
 You should see a log line similar to the following:
 ```text
-[2024-03-02T14:42:21.404Z] "GET /crypto HTTP/2" 200 - via_upstream - "-" 0 1035583 114 35 "X.Y.Z" "curl/7.88.1" "0ce1a5ba-99cf-9c8a-962d-bd9202f5522b" "finance.yahoo.com" "X.Y.Z:443" outbound|443||finance.yahoo.com X.Y.Z:33568 X.Y.Z:8080 X.Y.Z:36074 - -
+[2024-03-02T14:42:21.404Z] "GET /markets/crypto HTTP/2" 200 - via_upstream - "-" 0 1035583 114 35 "X.Y.Z" "curl/7.88.1" "0ce1a5ba-99cf-9c8a-962d-bd9202f5522b" "finance.yahoo.com" "X.Y.Z:443" outbound|443||finance.yahoo.com X.Y.Z:33568 X.Y.Z:8080 X.Y.Z:36074 - -
 ```

@@ -6,7 +6,7 @@ The **-L** parameter tells curl to automatically follow redirects:
 
 ```bash
 kubectl exec tester -c tester -- \
-  curl -sSL -o /dev/null -D - http://finance.yahoo.com/crypto | \
+  curl -sSL -o /dev/null -D - http://finance.yahoo.com/markets/crypto | \
   grep -e HTTP/ -e location; \
   echo;
 ```{{exec}}
@@ -14,7 +14,7 @@ kubectl exec tester -c tester -- \
 You should get a response with:
 ```text
 HTTP/1.1 301 Moved Permanently
-location: https://finance.yahoo.com/crypto
+location: https://finance.yahoo.com/markets/crypto
 HTTP/2 200
 ```
 
