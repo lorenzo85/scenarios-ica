@@ -3,6 +3,6 @@
 
 In this scenario, you will practice configuring Istio to secure ingress traffic by using an ingress Gateway resource.
 
-A secure ingress Gateway serves the purpose of exposing a service beyond the boundaries of the service mesh over HTTPs/TLS.
+A secure ingress Gateway serves the purpose of exposing a service beyond the boundaries of the service mesh over HTTPS/TLS.
 
 You will also extend the Gateway resource configuration to support **mutual TLS** between the server and the client.

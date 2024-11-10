@@ -19,8 +19,8 @@ HTTP/2 200
 ```
 
 
-What just happened is that the *curl* command handled the redirection to HTTPs transparently for us.
-`finance.yahoo.com` accepts only connections over HTTPs.
+What just happened is that the *curl* command handled the redirection to HTTPS transparently for us.
+`finance.yahoo.com` accepts only connections over HTTPS.
 
 There are two problems with this communication flow:
 

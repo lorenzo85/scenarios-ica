@@ -1,7 +1,7 @@
 Your task is now to enable secure external access to `httpbin.org` using an
-egress gateway over *HTTPs* protocol instead of *HTTP*.
+egress gateway over *HTTPS* protocol instead of *HTTP*.
 
-First, test that you *cannot* make *HTTPs* requests to `httpbin.org`:
+First, test that you *cannot* make *HTTPS* requests to `httpbin.org`:
 ```bash
 kubectl exec tester -c tester -- \
     curl -sS -o /dev/null -D - https://httpbin.org/status/200 | \
@@ -9,7 +9,7 @@ kubectl exec tester -c tester -- \
 ```{{exec}}
 
 Update the service entry resource named `httpbin-ext` in the `default` namespace
-to allow access to host `httpbin.org` over HTTPs, using the following configuration properties:
+to allow access to host `httpbin.org` over HTTPS, using the following configuration properties:
 
 *service entry:*
 * name: `httpbin-ext`

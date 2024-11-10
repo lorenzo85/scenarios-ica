@@ -1,6 +1,7 @@
 {
   "items": [
     { "path": "playground" },
+    { "path": "istio-installation-istioctl"},
     { "path": "traffic-management-request-routing"},
     { "path": "traffic-management-fault-injection"},
     { "path": "traffic-management-traffic-shifting"},
@@ -16,7 +17,6 @@
     { "path": "egress-gateways-tls-origination"},
     { "path": "security-authentication-mtls"},
     { "path": "security-authorization-http-traffic"},
-    { "path": "security-authorization-jwt-token"},
-    { "path": "istio-installation-istioctl"}
+    { "path": "security-authorization-jwt-token"}
   ]
 }

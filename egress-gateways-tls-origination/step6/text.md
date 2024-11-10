@@ -4,7 +4,7 @@ you need a [VirtualService](https://istio.io/latest/docs/reference/config/networ
 
 The virtual service configuration needs to have the following two route destination rules:
 - *HTTP* traffic from the *mesh* must go to Istio egress gateway service `istio-egressgateway.istio-system.svc.cluster.local` on *HTTP*.
-- *HTTP* traffic from the *httpbin-egressgateway* must go to destination `httpbin.org` on *HTTPs*.
+- *HTTP* traffic from the *httpbin-egressgateway* must go to destination `httpbin.org` on *HTTPS*.
 
 
 Use the following configuration properties:

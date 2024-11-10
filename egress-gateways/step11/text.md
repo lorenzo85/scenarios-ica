@@ -1,4 +1,4 @@
-Test that the egress gateway configuration works correctly by making an HTTPs request
+Test that the egress gateway configuration works correctly by making an HTTPS request
 to `httpbin.org`:
 
 ```bash

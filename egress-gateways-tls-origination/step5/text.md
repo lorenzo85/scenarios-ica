@@ -1,6 +1,6 @@
 Create a [DestinationRule](https://istio.io/latest/docs/reference/config/networking/destination-rule/)
 resource in the `default` namespace named `originate-tls-for-yahoo-com` containing
-a traffic policy with port level settings configuration to initiate HTTPs for
+a traffic policy with port level settings configuration to initiate HTTPS for
 connections to `finance.yahoo.com`.
 
 *destination rule:*

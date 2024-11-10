@@ -5,4 +5,4 @@ In this scenario, you will practice configuring Istio Gateway to perform TLS pas
 instead of TLS termination on incoming requests.
 
 TLS pass-through is useful for use cases where services **within** the mesh need to
-securely serve traffic over HTTPs for security reasons.
+securely serve traffic over HTTPS for security reasons.

@@ -1,5 +1,5 @@
 The ingress gateway is sending plain HTTP requests to the booking-service which listens
-only HTTPs on port 443, therefore the request will fail because we are sending an
+only HTTPS on port 443, therefore the request will fail because we are sending an
 HTTP request to an HTTPS server.
 
 Test the current ingress gateway configuration by making a request
