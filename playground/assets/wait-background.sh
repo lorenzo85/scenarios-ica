@@ -2,7 +2,7 @@
 
 # waits for background init to finish
 
-rm $0
+rm "$0"
 
 clear
 
@@ -26,5 +26,3 @@ while [ ! -f /ks/.initfinished ]; do
     sleep 1;
 done;
 echo " done"
-
-echo
