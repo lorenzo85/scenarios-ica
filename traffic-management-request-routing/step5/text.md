@@ -1,6 +1,6 @@
 Update the `notification` virtual service resource to add a new route based on a matching HTTP header.
 
-If the request contains HTTP header `testing: true`, then route the request to `v2`,
+If the request contains HTTP header `testing: "true"`, then route the request to `v2`,
 otherwise default to `v1`.
 
 *http default route:*
