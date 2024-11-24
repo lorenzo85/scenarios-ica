@@ -8,12 +8,13 @@ If the request contains query parameter `testing=true` then route the request to
 
 *http query param match request route:*
 * query param key: `testing`
-* query key value: `true`
+* query key value: `"true"`
 * query value match type: `exact`
 * destination host: `notification-service`
 * destination subset: `v2`
 
-The HTTP match request configuration parameters can be found here: [HTTPMatchRequest](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPMatchRequest).
+The HTTP match request configuration parameters can be found here:
+[HTTPMatchRequest](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPMatchRequest).
 
 Verify the result using:
 ```bash

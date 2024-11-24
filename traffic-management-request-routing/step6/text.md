@@ -14,9 +14,11 @@ Additionally, rewrite the path `/v2/notify` to `/notify`.
 * destination host: `notification-service`
 * destination subset: `v2`
 
-The HTTP match request configuration parameters can be found here: [HTTPMatchRequest](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPMatchRequest).
+The HTTP match request configuration parameters can be found here:
+[HTTPMatchRequest](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPMatchRequest).
 
-The HTTP route parameters for path rewriting can be found here: [HTTPRoute](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPRoute)
+The HTTP route parameters for path rewriting can be found here:
+[HTTPRewrite](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPRewrite).
 
 Verify the result using:
 ```bash
