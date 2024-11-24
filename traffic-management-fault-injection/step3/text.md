@@ -15,11 +15,11 @@ Apply a fixed delay fault injection rule to the default HTTP destination route w
 * delay fixed delay: `3s`
 * delay percentage: `100`
 
-We want to make sure that despite the introduced latency when calling the `notification-service`, the `booking-service`
-HTTP client waits at least for 5 seconds before giving up with the request.
+We want to make sure that despite the introduced latency when calling the
+`notification-service`, the `booking-service` HTTP client
+waits at least for 5 seconds before giving up with the request.
 
 The HTTP fault injection configuration parameters can be found here: [HTTPFaultInjection](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPFaultInjection).
-
 
 Verify that a booking can be placed correctly using:
 ```bash
@@ -28,7 +28,8 @@ kubectl exec -it tester -- \
                 -X POST http://booking-service/book'
 ```{{exec}}
 
-You should see that the response time takes ~3 seconds and that despite the introduced delay a booking can be placed successfully.
+You should see that the response time takes ~3 seconds and that despite the
+introduced delay a booking can be placed successfully.
 
 <br>
 <details><summary>Tip</summary>

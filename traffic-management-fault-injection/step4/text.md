@@ -10,7 +10,6 @@ The service is currently unavailable, please try again later
 
 Use the following configuration properties:
 
-
 *virtual service:*
 * name: `notification`
 * host: `notification-service`
@@ -28,10 +27,10 @@ kubectl exec -it tester -- \
                -X POST http://booking-service/book'
 ```{{exec}}
 
-You should see that the response now is an error: `The service is currently unavailable, please try again later` and that the response time is ~5 seconds.
+You should see that the response now is an error: `The service is currently unavailable, please try again later`
+and that the response time is ~5 seconds.
 
-
-In this case the booking-service REST client timeout kicks in, managing correctly the timeout error from the
+In this case the `booking-service` REST client timeout kicks in, managing correctly the timeout error from the
 upstream service which you simulated using the virtual service fault delay configuration.
 
 <br>

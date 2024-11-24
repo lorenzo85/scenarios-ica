@@ -14,7 +14,6 @@ that the `booking-service` handles the error correctly.
 * abort http status: `500`
 * abort percentage: `100`
 
-
 Verify that a booking **cannot** be placed using:
 ```bash
 kubectl exec -it tester -- \
