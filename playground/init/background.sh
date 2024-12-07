@@ -23,6 +23,5 @@ mv /tmp/demo.yaml /root/istio-${ISTIO_VERSION}/manifests/profiles/
 istioctl install --set profile=demo -y --manifests=/root/istio-${ISTIO_VERSION}/manifests
 touch /ks/.istiofinished
 
-# Init scenario
-# mark init finished
+# Init scenario# mark init finished
 touch /ks/.initfinished
