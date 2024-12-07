@@ -20,9 +20,6 @@ touch /ks/.istiofinished
 
 # Init scenario
 
-# allow pods to run on controlplane
-kubectl taint nodes controlplane node-role.kubernetes.io/control-plane:NoSchedule-
-
 # Install Sample Application
 kubectl label namespace default istio-injection=enabled
 kubectl apply -f /tmp/notification-deployment.yaml

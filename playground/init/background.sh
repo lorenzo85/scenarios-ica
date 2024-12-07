@@ -24,8 +24,5 @@ istioctl install --set profile=demo -y --manifests=/root/istio-${ISTIO_VERSION}/
 touch /ks/.istiofinished
 
 # Init scenario
-# allow pods to run on controlplane
-kubectl taint nodes controlplane node-role.kubernetes.io/control-plane:NoSchedule-
-
 # mark init finished
 touch /ks/.initfinished

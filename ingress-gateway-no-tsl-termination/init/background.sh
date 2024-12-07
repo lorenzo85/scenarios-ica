@@ -20,9 +20,6 @@ touch /ks/.istiofinished
 
 # Init scenario
 
-# allow pods to run on controlplane
-kubectl taint nodes controlplane node-role.kubernetes.io/control-plane:NoSchedule-
-
 # Create a root example.com certificate and private key to sign the certificates for your services subdomain:
 export TARGET_DIR=certificates
 mkdir $TARGET_DIR

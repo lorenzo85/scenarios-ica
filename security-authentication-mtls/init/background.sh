@@ -18,9 +18,6 @@ export PATH=/root/istio-${ISTIO_VERSION}/bin:$PATH
 istioctl install --set profile=demo -y --manifests=/root/istio-${ISTIO_VERSION}/manifests
 touch /ks/.istiofinished
 
-# Allow pods to run on controlplane
-kubectl taint nodes controlplane node-role.kubernetes.io/control-plane:NoSchedule-
-
 # Mark init finished
 kubectl create namespace foo
 kubectl label namespace foo istio-injection=enabled
