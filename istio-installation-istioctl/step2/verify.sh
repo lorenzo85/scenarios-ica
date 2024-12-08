@@ -1,7 +1,6 @@
 #!/bin/bash
 
-if command -v istioctl >/dev/null 2>&1
-then
+if [ -x "$(command -v istioctl)" ]; then
     exit 0
 else
     exit 1
