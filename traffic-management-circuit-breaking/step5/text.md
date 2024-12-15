@@ -13,14 +13,14 @@ Update the `notification` destination rule with the following properties:
 * name: `notification`
 * namespace: `default`
 * host: `notification-service`
-* traffic policy outlier detection `baseEjectionTime`: `3m`
-* traffic policy outlier detection `consecutive5xxErrors`: `2`
-* traffic policy outlier detection `interval`: `1m`
-* traffic policy outlier detection `maxEjectionPercent`: `100`
+* traffic policy outlier detection `baseEjectionTime: 3m`
+* traffic policy outlier detection `consecutive5xxErrors: 2`
+* traffic policy outlier detection `interval: 1m`
+* traffic policy outlier detection `maxEjectionPercent: 100`
 
 *default subset, targets notification-service pods with label `version=v3`:*
 * name: `default`
-* labels: `version=v3`
+* labels: `version: v3`
 
 Test the outlier detection configuration by calling the notification-service using fortio with
 one concurrent connection (`-c 1`) and send 20 requests (`-n 20`):
