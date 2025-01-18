@@ -38,20 +38,20 @@ introduced delay a booking can be placed successfully.
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
- name: // TODO
+  name: // TODO
 spec:
- hosts:
- - // TODO
- http:
- - fault:
+  hosts:
+  - // TODO
+  http:
+  - fault:
       delay:
         fixedDelay: // TODO
         percentage:
           value: // TODO
-   route:
-   - destination:
-      host: // TODO
-      subset: // TODO
+    route:
+    - destination:
+       host: // TODO
+       subset: // TODO
 ```{{copy}}
 </details>
 
@@ -62,19 +62,19 @@ spec:
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
- name: notification
+  name: notification
 spec:
- hosts:
- - notification-service
- http:
- - fault:
-      delay:
-        fixedDelay: 3s
-        percentage:
-          value: 100
-   route:
-   - destination:
-      host: notification-service
-      subset: v1
+  hosts:
+  - notification-service
+  http:
+  - fault:
+       delay:
+         fixedDelay: 3s
+         percentage:
+           value: 100
+    route:
+    - destination:
+       host: notification-service
+       subset: v1
 ```{{copy}}
 </details>

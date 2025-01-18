@@ -40,20 +40,20 @@ upstream service which you simulated using the virtual service fault delay confi
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
- name: notification
+  name: notification
 spec:
- hosts:
- - notification-service
- http:
- - fault:
+  hosts:
+  - notification-service
+  http:
+  - fault:
       delay:
         fixedDelay: // TODO
         percentage:
           value: // TODO
-   route:
-   - destination:
-      host: // TODO
-      subset: // TODO
+    route:
+    - destination:
+        host: // TODO
+        subset: // TODO
 ```{{copy}}
 </details>
 
@@ -64,19 +64,19 @@ spec:
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
- name: notification
+  name: notification
 spec:
- hosts:
- - notification-service
- http:
- - fault:
+  hosts:
+  - notification-service
+  http:
+  - fault:
       delay:
         fixedDelay: 10s
         percentage:
           value: 100
-   route:
-   - destination:
-      host: notification-service
-      subset: v1
+    route:
+    - destination:
+        host: notification-service
+        subset: v1
 ```{{copy}}
 </details>

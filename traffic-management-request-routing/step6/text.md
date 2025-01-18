@@ -46,24 +46,24 @@ kubectl exec -it tester -- \
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
- name: notification
+  name: notification
 spec:
- hosts:
- - notification-service
- http:
- - match:
-   - uri:
-      prefix: // TODO
-   rewrite:
+  hosts:
+  - notification-service
+  http:
+  - match:
+    - uri:
+        prefix: // TODO
+    rewrite:
       uri: // TODO
-   route:
-   - destination:
+    route:
+    - destination:
       host: // TODO
       subset: // TODO
- - route:
-   - destination:
-       host: // TODO
-       subset: // TODO
+  - route:
+    - destination:
+        host: // TODO
+        subset: // TODO
 ```{{copy}}
 </details>
 
@@ -74,23 +74,23 @@ spec:
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
- name: notification
+  name: notification
 spec:
- hosts:
- - notification-service
- http:
- - match:
-   - uri:
-      prefix: "/v2/notify"
-   rewrite:
+  hosts:
+  - notification-service
+  http:
+  - match:
+    - uri:
+        prefix: "/v2/notify"
+    rewrite:
       uri: "/notify"
-   route:
-   - destination:
-      host: notification-service
-      subset: v2
- - route:
-   - destination:
-       host: notification-service
-       subset: v1
+    route:
+    - destination:
+        host: notification-service
+        subset: v2
+  - route:
+    - destination:
+        host: notification-service
+        subset: v1
 ```{{copy}}
 </details>

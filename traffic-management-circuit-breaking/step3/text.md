@@ -33,15 +33,15 @@ kubectl exec -it tester -- \
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
- name: // TODO
+  name: // TODO
 spec:
- hosts:
- - // TODO
- http:
- - route:
-   - destination:
-      host: // TODO
-      subset: // TODO
+  hosts:
+  - // TODO
+  http:
+  - route:
+    - destination:
+        host: // TODO
+        subset: // TODO
 ```{{copy}}
 </details>
 
@@ -52,14 +52,14 @@ spec:
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
- name: notification
+  name: notification
 spec:
- hosts:
- - notification-service
- http:
- - route:
-   - destination:
-      host: notification-service
-      subset: default
+  hosts:
+  - notification-service
+  http:
+  - route:
+    - destination:
+        host: notification-service
+        subset: default
 ```{{copy}}
 </details>
