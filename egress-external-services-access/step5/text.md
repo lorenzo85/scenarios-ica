@@ -1,4 +1,3 @@
-
 Test the virtual service delayed request configuration to the `httpbin.org` service:
 ```bash
 kubectl exec tester -- curl -o /dev/null \
