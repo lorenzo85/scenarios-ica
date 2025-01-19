@@ -8,7 +8,7 @@ Use the following configuration properties:
 
 *gateway:*
 * name: `yahoo-egressgateway`
-* selector: `istio=egressgateway`
+* selector: `istio: egressgateway`
 
 *gateway server:*
 * server hosts: `finance.yahoo.com`

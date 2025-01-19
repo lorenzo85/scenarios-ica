@@ -15,7 +15,6 @@ HTTP/1.1 200 OK
 This time the output does not contain a second request contain to HTTPS because the Egress gateway used
 TLS to connect to the service on behalf of the client automatically.
 
-
 Check the Egress Gateway proxy logs for outbound HTTP traffic to `finance.yahoo.com`:
 ```bash
 kubectl logs -l istio=egressgateway \
