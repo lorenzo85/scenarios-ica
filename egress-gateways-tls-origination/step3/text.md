@@ -3,7 +3,7 @@ to the `finance.yahoo.com` over HTTP.
 
 ```bash
 kubectl exec tester -c tester -- \
-  curl -sSL -o /dev/null -D - http://finance.yahoo.com/markets/crypto | \
+  curl -sSL -o /dev/null -D - http://finance.yahoo.com/markets/crypto/all/ | \
   grep -e HTTP/ \
   -e location
 ```{{exec}}

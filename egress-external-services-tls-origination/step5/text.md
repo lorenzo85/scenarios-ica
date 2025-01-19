@@ -4,7 +4,7 @@ works correctly by making a request to the external `finance.yahoo.com` service 
 
 ```bash
 kubectl exec tester -c tester -- \
-  curl -sS -o /dev/null -D - http://finance.yahoo.com/markets/crypto | \
+  curl -sS -o /dev/null -D - http://finance.yahoo.com/markets/crypto/all/ | \
   grep -e HTTP/ -e location; \
   echo;
 ```{{exec}}

@@ -21,7 +21,7 @@ on the original request made over HTTP.
 Test that you *cannot* reach `finance.yahoo.com` with the following:
 ```bash
 kubectl exec tester -c tester -- \
-  curl -sSL -o /dev/null -D - http://finance.yahoo.com/markets/crypto | \
+  curl -sSL -o /dev/null -D - http://finance.yahoo.com/markets/crypto/all/ | \
   grep HTTP/
 ```{{exec}}
 
