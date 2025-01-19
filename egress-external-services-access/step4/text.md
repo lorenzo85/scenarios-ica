@@ -30,7 +30,6 @@ in the `default` namespace with the following configuration properties:
 * destination host: `httpbin.org`
 
 
-
 <br>
 <details><summary>Tip</summary>
 
