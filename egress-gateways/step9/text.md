@@ -2,13 +2,12 @@ The service entry resource added in the previous steps has just enabled *HTTPS* 
 service `httpbin.org` from the Istio sidecar proxies, but exactly as before,
 the *HTTPS* requests are not going through the egress gateway just yet.
 
-
 Update the `httpbin-egressgateway` gateway resource created previously to allow egress
 *HTTPS* traffic for host `httpbin.org`, using the following configuration properties:
 
 *gateway:*
 - name: `httpbin-egressgateway`
-- selector: `istio=egressgateway`
+- selector: `istio: egressgateway`
 
 *gateway server 1:*
 - server name: `httpbin`

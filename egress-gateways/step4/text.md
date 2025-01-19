@@ -8,7 +8,7 @@ Use the following configuration properties:
 
 *gateway:*
 * name: `httpbin-egressgateway`
-* selector: `istio=egressgateway`
+* selector: `istio: egressgateway`
 
 *gateway server 1:*
 * server name: `httpbin`

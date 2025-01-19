@@ -3,7 +3,6 @@ in the `default` namespace created previously to route *HTTPS* egress traffic ho
 the *mesh* to the Istio egress gateway service: `istio-egressgateway.istio-system.svc.cluster.local` and
 *from* *httpbin-egressgateway* *to* the final destination `httpbin.org`.
 
-
 Note that in this case both routing match conditions and destinations must use a
 [TLSRoute](https://istio.io/latest/docs/reference/config/networking/virtual-service/#TLSRoute) object
 and not a [HTTPRoute](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPRoute) object.
@@ -25,7 +24,7 @@ Use the following configuration properties:
 * destination host: `istio-egressgateway.istio-system.svc.cluster.local`
 * destination port: `443`
 
-**tls** route 2:*
+***tls** route 2:*
 * match gateways: `httpbin-egressgateway`
 * match port: `443`
 * match sni hosts: `httpbin.org`
