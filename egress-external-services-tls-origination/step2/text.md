@@ -1,7 +1,6 @@
 Test that the service entry resource configuration works correctly by making a request
 to the external `finance.yahoo.com` service over HTTP.
 
-
 The **-L** parameter tells curl to automatically follow redirects:
 
 ```bash
@@ -17,7 +16,6 @@ HTTP/1.1 301 Moved Permanently
 location: https://finance.yahoo.com/markets/crypto
 HTTP/2 200
 ```
-
 
 What just happened is that the *curl* command handled the redirection to HTTPS transparently for us.
 `finance.yahoo.com` accepts only connections over HTTPS.
