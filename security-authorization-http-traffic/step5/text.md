@@ -1,14 +1,13 @@
 Create an [AuthorizationPolicy](https://istio.io/latest/docs/reference/config/security/authorization-policy/)
 named `booking-service-policy` in the `default` namespace
-for the `booking-service` app to enable incoming POST request from any
-source.
+for the `booking-service` app to enable incoming POST request from any source.
 
 Use the following configuration properties:
 
 *authorization policy:*
 * name: `booking-service-policy`
 * namespace: `default`
-* selector: `app=booking-service`
+* selector: `app: booking-service`
 * action: `ALLOW`
 * rule to operation method: `POST`
 

@@ -5,7 +5,6 @@ resources.
 Create a service entry resource in the `default` namespace named `httpbin-ext` to allow
 access to host `httpbin.org` over HTTP, with the following configuration properties:
 
-
 *service entry:*
 * name: `httpbin-ext`
 * hosts: `httpbin.org`

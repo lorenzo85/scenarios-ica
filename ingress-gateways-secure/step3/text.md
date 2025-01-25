@@ -1,8 +1,8 @@
-Your task is to expose the `booking-service` APIs on host `booking.example.com` over HTTPs.
+Your task is to expose the `booking-service` APIs on host `booking.example.com` over HTTPS.
 
 Create a secure Istio [Gateway](https://istio.io/latest/docs/reference/config/networking/gateway/#Gateway)
 named `secure-booking-gateway` in the `default` namespace
-to expose HTTPs traffic on port 443 and for host `booking.example.com`.
+to expose HTTPS traffic on port 443 and for host `booking.example.com`.
 
 
 Configure the gateway resource with TLS mode `SIMPLE`, using the
@@ -14,7 +14,7 @@ Use the following configuration properties:
 *gateway:*
 * name: `secure-booking-gateway`
 * namespace: `default`
-* selector: `istio=ingressgateway`
+* selector: `istio: ingressgateway`
 
 *gateway server 1:*
 * name: `booking`

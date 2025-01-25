@@ -11,15 +11,18 @@ touch /ks/.k8sfinished
 
 # Install Istio
 export ISTIO_VERSION=1.18.2
-curl -s -L https://istio.io/downloadIstio | TARGET_ARCH=x86_64 sh -
+curl -L https://istio.io/downloadIstio | TARGET_ARCH=x86_64 sh -
+# Set PATH in .bashrc because no subshell can set parent environment variables
+echo "export PATH=/root/istio-${ISTIO_VERSION}/bin:\$PATH" >> ~/.bashrc
+export PATH=/root/istio-${ISTIO_VERSION}/bin:$PATH # set for istioctl below
+# Istio autocomplete
+echo "[[ -r \"/usr/local/etc/profile.d/bash_completion.sh\" ]] && . \"/usr/local/etc/profile.d/bash_completion.sh\"" >> ~/.bash_profile
+cp /root/istio-${ISTIO_VERSION}/tools/istioctl.bash ./istioctl.bash
+echo "source ~/istioctl.bash" >> ~/.bashrc
+# Deploy Istio with demo profile
 mv /tmp/demo.yaml /root/istio-${ISTIO_VERSION}/manifests/profiles/
-echo "export PATH=/root/istio-${ISTIO_VERSION}/bin:\$PATH" >> .bashrc
-export PATH=/root/istio-${ISTIO_VERSION}/bin:$PATH
 istioctl install --set profile=demo -y --manifests=/root/istio-${ISTIO_VERSION}/manifests
 touch /ks/.istiofinished
-
-# Allow pods to run on controlplane
-kubectl taint nodes controlplane node-role.kubernetes.io/control-plane:NoSchedule-
 
 # Mark init finished
 kubectl create namespace foo

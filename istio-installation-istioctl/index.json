@@ -10,8 +10,7 @@
       },
       {
         "title": "Add istioctl to the path",
-        "text": "step2/text.md",
-        "verify": "step2/verify.sh"
+        "text": "step2/text.md"
       },
       {
         "title": "Install Istio using the demo profile",

@@ -50,5 +50,5 @@ kubectl create -n istio-system secret generic booking-credential-mutual \
   --from-file=tls.key=/root/certificates/booking.example.com.key \
   --from-file=tls.crt=/root/certificates/booking.example.com.crt \
   --from-file=ca.crt=/root/certificates/example.com.crt
-```{{copy}}
+```{{exec}}
 </details>

@@ -1,7 +1,6 @@
 Test that the service entry resource configuration created in the previous step
 works correctly by making another request to the `httpbin.org` over HTTP.
 
-
 The response from the service should now be successful:
 
 ```bash

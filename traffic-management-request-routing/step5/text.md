@@ -1,6 +1,6 @@
 Update the `notification` virtual service resource to add a new route based on a matching HTTP header.
 
-If the request contains HTTP header `testing`: `true`, then route the request to `v2`,
+If the request contains HTTP header `testing: "true"`, then route the request to `v2`,
 otherwise default to `v1`.
 
 *http default route:*
@@ -9,11 +9,12 @@ otherwise default to `v1`.
 
 *http header match request route:*
 * header name: `testing`
-* matching type: `exact` on value `true`
+* matching type: `exact` on value `"true"`
 * destination host: `notification-service`
 * destination subset: `v2`
 
-The HTTP match request configuration parameters can be found here: [HTTPMatchRequest](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPMatchRequest).
+The HTTP match request configuration parameters can be found here:
+[HTTPMatchRequest](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPMatchRequest).
 
 Verify the result using:
 ```bash

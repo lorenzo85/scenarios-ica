@@ -3,7 +3,6 @@ named `finance-yahoo-com` in the `default` namespace and configure it to perform
 for HTTP requests to `finance.yahoo.com` using a
 [TrafficPolicy](https://istio.io/latest/docs/reference/config/networking/destination-rule/#TrafficPolicy).
 
-
 Configure the destination rule resource with the following properties:
 
 *destination rule:*

@@ -19,6 +19,5 @@ labels *app=notification-service* and *version=v1*.
 The notification-service-v2 pods have
 labels *app=notification-service* and *version=v2*.
 
-
 In this scenario you will mirror traffic both to *v1* and to *v2* so that we can test if the **SMS**
 notification channel implemented in v2 works correctly with live mirrored traffic.

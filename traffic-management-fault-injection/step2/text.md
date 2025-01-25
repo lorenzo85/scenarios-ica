@@ -11,9 +11,9 @@ for the `notification-service` host, with the following properties:
 * namespace: `default`
 * host: `notification-service`
 
-*subset 1, targets notification-service pods with label `version=v1`:*
+*subset 1 targets `notification-service` pods with label `version: v1`:*
 * name: `v1`
-* labels: `version=v1`
+* labels: `version: v1`
 
 <br>
 <details><summary>Tip</summary>

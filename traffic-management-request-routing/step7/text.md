@@ -1,6 +1,6 @@
 Update the `notification` virtual service resource to add a route based on matching query parameter.
 
-If the request contains query parameter `testing=true` then route the request to `v2`, otherwise to `v1`.
+If the request contains query parameter `testing="true"` then route the request to `v2`, otherwise to `v1`.
 
 *http default route:*
 * host: `notification-service`
@@ -8,12 +8,13 @@ If the request contains query parameter `testing=true` then route the request to
 
 *http query param match request route:*
 * query param key: `testing`
-* query key value: `true`
+* query key value: `"true"`
 * query value match type: `exact`
 * destination host: `notification-service`
 * destination subset: `v2`
 
-The HTTP match request configuration parameters can be found here: [HTTPMatchRequest](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPMatchRequest).
+The HTTP match request configuration parameters can be found here:
+[HTTPMatchRequest](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPMatchRequest).
 
 Verify the result using:
 ```bash
@@ -41,23 +42,23 @@ kubectl exec -it tester -- \
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
- name: notification
+  name: notification
 spec:
- hosts:
- - notification-service
- http:
- - match:
-   - queryParams:
-      testing:
-       exact: // TODO
-   route:
-   - destination:
-      host: // TODO
-      subset: // TODO
- - route:
-   - destination:
-       host: // TODO
-       subset: // TODO
+  hosts:
+  - notification-service
+  http:
+  - match:
+    - queryParams:
+        testing:
+          exact: // TODO
+    route:
+    - destination:
+        host: // TODO
+        subset: // TODO
+  - route:
+    - destination:
+        host: // TODO
+        subset: // TODO
 ```{{copy}}
 </details>
 
@@ -68,22 +69,22 @@ spec:
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
- name: notification
+  name: notification
 spec:
- hosts:
- - notification-service
- http:
- - match:
-   - queryParams:
-      testing:
-       exact: "true"
-   route:
-   - destination:
-      host: notification-service
-      subset: v2
- - route:
-   - destination:
-       host: notification-service
-       subset: v1
+  hosts:
+  - notification-service
+  http:
+  - match:
+    - queryParams:
+        testing:
+          exact: 'true'
+    route:
+    - destination:
+        host: notification-service
+        subset: v2
+  - route:
+    - destination:
+        host: notification-service
+        subset: v1
 ```{{copy}}
 </details>

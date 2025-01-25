@@ -1,14 +1,10 @@
-
 In the Kubernetes cluster there are two namespaces: `foo` and `bar`.
-
 
 Istio has been configured to automatically inject Istio sidecars solely within
 the `foo` and `bar` namespaces, while excluding auto-injection for the `default` namespace.
 
-
 Istio auto-injection is enabled by setting an `istio-injection` label on the namespace where
 automatic sidecar injection is required.
-
 
 Check that the `foo` and `bar` namespace resources have the `istio-injection` label and that
 the `default` namespace does not have it by listing the namespaces along with the label name:

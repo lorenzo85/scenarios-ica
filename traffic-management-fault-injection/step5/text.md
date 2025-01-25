@@ -14,7 +14,6 @@ that the `booking-service` handles the error correctly.
 * abort http status: `500`
 * abort percentage: `100`
 
-
 Verify that a booking **cannot** be placed using:
 ```bash
 kubectl exec -it tester -- \
@@ -31,47 +30,47 @@ Booking could not be placed, notification service returned HTTP status=500
 <br>
 <details><summary>Tip</summary>
 
-```plain
+```text
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
- name: // TODO
+  name: // TODO
 spec:
- hosts:
- - // TODO
- http:
- - fault:
+  hosts:
+  - // TODO
+  http:
+  - fault:
       abort:
         httpStatus: // TODO
         percentage:
           value: // TODO
-   route:
-   - destination:
-      host: // TODO
-      subset: // TODO
+    route:
+    - destination:
+        host: // TODO
+        subset: // TODO
 ```{{copy}}
 </details>
 
 <br>
 <details><summary>Solution</summary>
 
-```plain
+```text
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
- name: notification
+  name: notification
 spec:
- hosts:
- - notification-service
- http:
- - fault:
+  hosts:
+  - notification-service
+  http:
+  - fault:
       abort:
         httpStatus: 500
         percentage:
           value: 100
-   route:
-   - destination:
-      host: notification-service
-      subset: v1
+    route:
+    - destination:
+        host: notification-service
+        subset: v1
 ```{{copy}}
 </details>

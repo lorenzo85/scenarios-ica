@@ -3,7 +3,7 @@ to the `finance.yahoo.com` over HTTP.
 
 ```bash
 kubectl exec tester -c tester -- \
-  curl -sSL -o /dev/null -D - http://finance.yahoo.com/markets/crypto | \
+  curl -sSL -o /dev/null -D - http://finance.yahoo.com/markets/crypto/all/ | \
   grep -e HTTP/ \
   -e location
 ```{{exec}}
@@ -11,10 +11,10 @@ kubectl exec tester -c tester -- \
 You should see the following result:
 ```text
 HTTP/1.1 301 Moved Permanently
-location: https://finance.yahoo.com/markets/crypto
+location: https://finance.yahoo.com/markets/crypto/all/
 HTTP/2 200
 ```
 
 This means that the service entry configuration works correctly, but also that `finance.yahoo.com` does not accept
 requests over HTTP and therefore the server requested *curl* client to resend the
-request over HTTPs on `https://finance.yahoo.com/markets/crypto`.
+request over HTTPS on `https://finance.yahoo.com/markets/crypto/all/`.

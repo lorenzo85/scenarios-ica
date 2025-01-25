@@ -1,13 +1,13 @@
 Update the `booking-gateway` gateway definition to use TLS mode `PASSTHROUGH` and expose the service
-over HTTPs on port 443.
+over HTTPS on port 443.
 
-The `PASSTHROUGH` TLS mode instructs the gateway to pass the ingress traffic "as is", without terminating TLS.
+The `PASSTHROUGH` TLS mode instructs the gateway to pass the ingress traffic "as it is", without terminating TLS.
 
 Use the following configuration properties:
 
 *gateway:*
 * name: `booking-gateway`
-* selector: `istio=ingressgateway`
+* selector: `istio: ingressgateway`
 
 *gateway server 1:*
 * name: `booking`

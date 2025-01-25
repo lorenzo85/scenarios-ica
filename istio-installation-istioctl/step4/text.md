@@ -8,7 +8,6 @@ Label the `default` namespace resource for automatic injection with the followin
 - resource name: `default`
 - label: `istio-injection=enabled`
 
-
 ```bash
 kubectl label namespace default \
     istio-injection=enabled

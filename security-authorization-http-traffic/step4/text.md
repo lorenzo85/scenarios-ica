@@ -7,7 +7,6 @@ account named `booking-service-account`.
 You will also configure an authorization policy to allow any incoming **POST** request to the `booking-service`,
 so that a booking can be placed by external clients.
 
-
 First, create a service account resource named `booking-service-account`
 and update the `booking-service-v1` deployment to use this service account in the pods spec.
 
@@ -39,11 +38,11 @@ kubectl edit deploy booking-service-v1
 
 ```bash
 kubectl create serviceaccount booking-service-account
-```{{copy}}
+```{{exec}}
 
 ```bash
 kubectl edit deploy booking-service-v1
-```{{copy}}
+```{{exec}}
 
 Edit the booking-service-v1 deployment definition to add `booking-service-account`:
 ```yaml

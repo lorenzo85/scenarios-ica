@@ -1,3 +1,5 @@
+**The previous `namespace-wide-mtls` `PeerAuthentication` was deleted.**
+
 Now you will configure a `PeerAuthentication` resource to enforce workload-wide
 mTLS restricted to workloads with label `booking-service` running in the `foo` namespace.
 
@@ -9,7 +11,7 @@ having label `app=booking-service`, using the following configuration properties
 *peer authentication:*
 - name: `workload-wide-mtls`
 - namespace: `foo`
-- label selector: `app=booking-service`
+- label selector: `app: booking-service`
 - mTLS mode: `STRICT`
 
 

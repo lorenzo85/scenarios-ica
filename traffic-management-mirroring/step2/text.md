@@ -1,6 +1,5 @@
 Isto's traffic mirroring is configured using two resources:
-a [DestinationRule](https://istio.io/latest/docs/reference/config/networking/destination-rule/)
-and a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/).
+a DestinationRule and a VirtualService.
 
 Create a [DestinationRule](https://istio.io/latest/docs/reference/config/networking/destination-rule/)
 resource in the `default` namespace named `notification` containing
@@ -14,11 +13,11 @@ with the following properties:
 
 *subset 1, targets notification-service pods with label `version=v1`:*
 * name: `v1`
-* labels: `version=v1`
+* labels: `version: v1`
 
 *subset 2, targets notification-service pods with label `version=v2`:*
 * name: `v2`
-* labels: `version=v2`
+* labels: `version: v2`
 
 <br>
 <details><summary>Tip</summary>

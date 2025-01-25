@@ -3,7 +3,7 @@ to the `finance.yahoo.com` over HTTP:
 
 ```bash
 kubectl exec tester -c tester -- \
-  curl -sSL -o /dev/null -D - http://finance.yahoo.com/markets/crypto | \
+  curl -sSL -o /dev/null -D - http://finance.yahoo.com/markets/crypto/all/ | \
   grep HTTP/
 ```{{exec}}
 
@@ -12,9 +12,8 @@ The output should be:
 HTTP/1.1 200 OK
 ```
 
-This time the output does not contain a second request contain to HTTPs because the Egress gateway used
+This time the output does not contain a second request contain to HTTPS because the Egress gateway used
 TLS to connect to the service on behalf of the client automatically.
-
 
 Check the Egress Gateway proxy logs for outbound HTTP traffic to `finance.yahoo.com`:
 ```bash

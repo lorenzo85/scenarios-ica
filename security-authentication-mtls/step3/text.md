@@ -4,7 +4,6 @@ resource.
 
 Create a `PeerAuthentication` resource to enforce cluster-wide mutual TLS.
 
-
 To enforce cluster-wide mTLS the resource **must** be created in the `istio-system` namespace, otherwise it won't work.
 
 Use the following configuration properties:

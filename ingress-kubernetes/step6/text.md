@@ -26,24 +26,24 @@ Use the following configuration properties:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
- name: booking-ingress
+  name: booking-ingress
 spec:
- ingressClassName: istio
- tls:
+  ingressClassName: istio
+  tls:
   - hosts:
     - // TODO
     secretName: // TODO
- rules:
- - host: // TODO
-   http:
-    paths:
-    - path: // TODO
-      pathType: // TODO
-      backend:
-       service:
-        name: // TODO
-        port:
-         number: // TODO
+  rules:
+  - host: // TODO
+    http:
+      paths:
+      - path: // TODO
+        pathType: // TODO
+        backend:
+          service:
+            name: // TODO
+            port:
+              number: // TODO
 ```{{copy}}
 </details>
 
@@ -54,23 +54,23 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
- name: booking-ingress
+  name: booking-ingress
 spec:
- ingressClassName: istio
- tls:
+  ingressClassName: istio
+  tls:
   - hosts:
     - booking.example.com
     secretName: booking-credential
- rules:
- - host: booking.example.com
-   http:
-    paths:
-    - path: /
-      pathType: Prefix
-      backend:
-       service:
-        name: booking-service
-        port:
-         number: 80
+  rules:
+  - host: booking.example.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: booking-service
+            port:
+              number: 80
 ```{{copy}}
 </details>

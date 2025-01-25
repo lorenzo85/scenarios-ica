@@ -30,7 +30,6 @@ in the `default` namespace with the following configuration properties:
 * destination host: `httpbin.org`
 
 
-
 <br>
 <details><summary>Tip</summary>
 
@@ -41,14 +40,14 @@ metadata:
   name: // TODO
 spec:
   hosts:
-    - // TODO
+  - // TODO
   http:
   - timeout: // TODO
     route:
-      - destination:
-          host: // TODO
-          port:
-           number: // TODO
+    - destination:
+        host: // TODO
+        port:
+          number: // TODO
 ```{{copy}}
 </details>
 
@@ -62,13 +61,13 @@ metadata:
   name: httpbin-ext
 spec:
   hosts:
-    - httpbin.org
+  - httpbin.org
   http:
   - timeout: 3s
     route:
-      - destination:
-          host: httpbin.org
-          port:
-           number: 80
+    - destination:
+        host: httpbin.org
+        port:
+          number: 80
 ```{{copy}}
 </details>

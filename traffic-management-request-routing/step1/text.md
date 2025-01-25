@@ -2,8 +2,7 @@ There are two deployments installed in the Kubernetes cluster:
 - notification-service-v1
 - notification-service-v2
 
-The notification-service is used to send notifications using
-different channels.
+The notification-service is used to send notifications using different channels.
 
 The *notification-service-v1* sends notifications using **EMAIL**(s) only,
 while *notification-service-v2* sends notifications using both **EMAIL** and **SMS**.

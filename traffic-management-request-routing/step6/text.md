@@ -14,9 +14,11 @@ Additionally, rewrite the path `/v2/notify` to `/notify`.
 * destination host: `notification-service`
 * destination subset: `v2`
 
-The HTTP match request configuration parameters can be found here: [HTTPMatchRequest](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPMatchRequest).
+The HTTP match request configuration parameters can be found here:
+[HTTPMatchRequest](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPMatchRequest).
 
-The HTTP route parameters for path rewriting can be found here: [HTTPRoute](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPRoute)
+The HTTP route parameters for path rewriting can be found here:
+[HTTPRewrite](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPRewrite).
 
 Verify the result using:
 ```bash
@@ -44,24 +46,24 @@ kubectl exec -it tester -- \
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
- name: notification
+  name: notification
 spec:
- hosts:
- - notification-service
- http:
- - match:
-   - uri:
-      prefix: // TODO
-   rewrite:
+  hosts:
+  - notification-service
+  http:
+  - match:
+    - uri:
+        prefix: // TODO
+    rewrite:
       uri: // TODO
-   route:
-   - destination:
+    route:
+    - destination:
       host: // TODO
       subset: // TODO
- - route:
-   - destination:
-       host: // TODO
-       subset: // TODO
+  - route:
+    - destination:
+        host: // TODO
+        subset: // TODO
 ```{{copy}}
 </details>
 
@@ -72,23 +74,23 @@ spec:
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
- name: notification
+  name: notification
 spec:
- hosts:
- - notification-service
- http:
- - match:
-   - uri:
-      prefix: "/v2/notify"
-   rewrite:
+  hosts:
+  - notification-service
+  http:
+  - match:
+    - uri:
+        prefix: "/v2/notify"
+    rewrite:
       uri: "/notify"
-   route:
-   - destination:
-      host: notification-service
-      subset: v2
- - route:
-   - destination:
-       host: notification-service
-       subset: v1
+    route:
+    - destination:
+        host: notification-service
+        subset: v2
+  - route:
+    - destination:
+        host: notification-service
+        subset: v1
 ```{{copy}}
 </details>

@@ -16,7 +16,7 @@ Use the following configuration properties:
 *gateway:*
 * name: `booking-gateway`
 * namespace: `default`
-* selector: `istio=ingressgateway`
+* selector: `istio: ingressgateway`
 
 *gateway server 1:*
 * name: `booking`
