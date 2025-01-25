@@ -6,13 +6,11 @@ configuration properties:
 *authorization policy:*
 * name: `booking-service`
 * namespace: `default`
-* selector match label: `app=booking-service`
+* selector match label: `app: booking-service`
 * action: `ALLOW`
 
 *authorization policy rule 1:*
 * from source **requestPrincipals**: `testing@secure.istio.io/testing@secure.istio.io`
-
-
 
 <br>
 <details><summary>Tip</summary>
