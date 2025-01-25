@@ -7,7 +7,6 @@ account named `booking-service-account`.
 You will also configure an authorization policy to allow any incoming **POST** request to the `booking-service`,
 so that a booking can be placed by external clients.
 
-
 First, create a service account resource named `booking-service-account`
 and update the `booking-service-v1` deployment to use this service account in the pods spec.
 
