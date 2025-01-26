@@ -1,7 +1,7 @@
 Test that the traffic mirroring works correctly. Generate some traffic to the `notification-service`:
 ```bash
 kubectl exec -it tester -- \
-    bash -c 'for i in {1..20}; \yaml
+    bash -c 'for i in {1..20}; \
                 do curl -s -X POST http://notification-service/notify; \
                 echo; \
             done;'
