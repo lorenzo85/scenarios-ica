@@ -72,6 +72,11 @@
           "file": "booking-deployment.yaml",
           "target": "/tmp",
           "chmod": "+x"
+        },
+        {
+          "file": "installer.sh",
+          "target": "/tmp",
+          "chmod": "+x"
         }
       ]
     }
