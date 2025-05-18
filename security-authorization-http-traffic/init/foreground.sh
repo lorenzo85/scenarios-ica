@@ -3,7 +3,6 @@ bash ${FILE}
 source ${HOME}/.bashrc
 
 # Install Istio
-echo "Installing Istio."
 export ISTIO_VERSION=1.18.2
 curl -L https://istio.io/downloadIstio | ISTIO_VERSION=$ISTIO_VERSION TARGET_ARCH=x86_64 sh -
 # Set PATH in .bashrc because no subshell can set parent environment variables
@@ -17,11 +16,12 @@ echo "source ~/istioctl.bash" >> ~/.bashrc
 mv /tmp/demo.yaml /root/istio-${ISTIO_VERSION}/manifests/profiles/
 istioctl install --set profile=demo -y --manifests=/root/istio-${ISTIO_VERSION}/manifests
 
-# Init scenario Install Sample Application
+# Init scenario, install Sample Application
 kubectl label namespace default istio-injection=enabled
 kubectl apply -f /tmp/notification-deployment.yaml
 kubectl apply -f /tmp/booking-deployment.yaml
 kubectl run tester --image=nginx
+while ! kubectl get pods | grep -w "Running"; do echo -n "."; sleep 1; done
 
 clear
 echo "Scenario is ready"
