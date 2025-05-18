@@ -78,7 +78,7 @@ with_arch() {
     printf "\n%s is not found, please specify a valid ISTIO_VERSION and TARGET_ARCH\n" "$ARCH_URL"
     exit 1
   fi
-  curl -vfsLO "$ARCH_URL"
+  curl -vfsLO -A "ica-scenarios"  "$ARCH_URL"
   filename="istio-${ISTIO_VERSION}-${OSEXT}-${ISTIO_ARCH}.tar.gz"
   tar -xzf "${filename}"
   rm "${filename}"
