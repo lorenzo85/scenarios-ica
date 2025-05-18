@@ -74,11 +74,11 @@ ARCH_URL="https://github.com/istio/istio/releases/download/${ISTIO_VERSION}/isti
 
 with_arch() {
   printf "\nDownloading %s from %s ...\n" "$NAME" "$ARCH_URL"
-  if ! curl -o /dev/null -sIf "$ARCH_URL"; then
+  if ! curl -vo /dev/null -sIf "$ARCH_URL"; then
     printf "\n%s is not found, please specify a valid ISTIO_VERSION and TARGET_ARCH\n" "$ARCH_URL"
     exit 1
   fi
-  curl -fsLO "$ARCH_URL"
+  curl -vfsLO "$ARCH_URL"
   filename="istio-${ISTIO_VERSION}-${OSEXT}-${ISTIO_ARCH}.tar.gz"
   tar -xzf "${filename}"
   rm "${filename}"
