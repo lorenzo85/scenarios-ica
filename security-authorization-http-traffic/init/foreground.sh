@@ -18,10 +18,10 @@ mv /tmp/demo.yaml /root/istio-${ISTIO_VERSION}/manifests/profiles/
 istioctl install --set profile=demo -y --manifests=/root/istio-${ISTIO_VERSION}/manifests
 
 # Init scenario Install Sample Application
-echo "Installing sample application."
 kubectl label namespace default istio-injection=enabled
 kubectl apply -f /tmp/notification-deployment.yaml
 kubectl apply -f /tmp/booking-deployment.yaml
 kubectl run tester --image=nginx
 
+clear
 echo "Configuration loaded."
