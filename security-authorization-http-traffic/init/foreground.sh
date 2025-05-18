@@ -24,4 +24,4 @@ kubectl apply -f /tmp/booking-deployment.yaml
 kubectl run tester --image=nginx
 
 clear
-echo "Configuration loaded."
+echo "Scenario is ready"
