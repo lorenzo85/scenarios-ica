@@ -60,7 +60,7 @@ spec:
   http:
   - route:
     - destination:
-      host: notification-service
-      subset: v1
+        host: notification-service
+        subset: v1
 ```{{copy}}
 </details>
