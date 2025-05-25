@@ -1,5 +1,5 @@
 
-Istio has been installed like described [here](https://istio.io/latest/docs/setup/getting-started).
+Istio has been installed as described [here](https://istio.io/latest/docs/setup/getting-started).
 
 Check the Istio system pods and services:
 
