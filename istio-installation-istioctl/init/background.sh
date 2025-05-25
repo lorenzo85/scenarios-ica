@@ -8,6 +8,3 @@ done
 
 # mark k8s finished
 touch /ks/.k8sfinished
-
-# mark init finished
-touch /ks/.initfinished
