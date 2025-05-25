@@ -24,15 +24,7 @@ mv /tmp/demo.yaml /root/istio-${ISTIO_VERSION}/manifests/profiles/
 istioctl install --set profile=demo -y --manifests=/root/istio-${ISTIO_VERSION}/manifests
 touch /ks/.istiofinished
 
-# Init scenario
-# Install Sample Application
-kubectl label namespace default istio-injection=enabled
-kubectl apply -f /tmp/booking-deployment.yaml
-kubectl run tester --image=nginx
 
-export HOST_IP=$(kubectl get node -l kubernetes.io/hostname=controlplane -o jsonpath='{.items[0].status.addresses[?(@.type=="InternalIP")].address}')
-echo $HOST_IP booking.example.com >> /etc/hosts
-echo $HOST_IP notification.example.com >> /etc/hosts
 
 # mark init finished
 touch /ks/.initfinished
