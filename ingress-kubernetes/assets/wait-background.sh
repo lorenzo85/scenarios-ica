@@ -13,18 +13,4 @@ while [ ! -f /ks/.k8sfinished ]; do
 done;
 echo " done"
 
-echo -n "Installing Istio..."
-while [ ! -f /ks/.istiofinished ]; do
-    echo -n '.'
-    sleep 1;
-done;
-echo " done"
-
-echo -n "Initialising Scenario..."
-while [ ! -f /ks/.initfinished ]; do
-    echo -n '.'
-    sleep 1;
-done;
-echo " done"
-
 echo
