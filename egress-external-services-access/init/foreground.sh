@@ -19,7 +19,7 @@ source ${HOME}/.bashrc
 mv /tmp/demo.yaml /root/istio-${ISTIO_VERSION}/manifests/profiles/
 istioctl install --set profile=demo -y --manifests=/root/istio-${ISTIO_VERSION}/manifests
 
-# Init scenario, install Sample Application
+# Init scenario, install tester application
 kubectl label namespace default istio-injection=enabled
 kubectl run tester --image=nginx
 while ! kubectl get pods | grep -w "Running"; do echo -n "."; sleep 1; done
