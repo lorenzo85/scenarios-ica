@@ -19,7 +19,8 @@ source ${HOME}/.bashrc
 mv /tmp/demo.yaml /root/istio-${ISTIO_VERSION}/manifests/profiles/
 istioctl install --set profile=demo -y --manifests=/root/istio-${ISTIO_VERSION}/manifests
 
-# Init scenario, install booking application
+# Init scenario
+
 # Create a root example.com certificate and private key to sign the certificates for your services subdomain:
 export TARGET_DIR=certificates
 mkdir $TARGET_DIR
@@ -34,13 +35,11 @@ kubectl create secret tls booking-server-certs \
   --key $TARGET_DIR/booking.example.com.key \
   --cert $TARGET_DIR/booking.example.com.crt
 
-
 export HOST_IP=$(kubectl get node -l kubernetes.io/hostname=controlplane -o jsonpath='{.items[0].status.addresses[?(@.type=="InternalIP")].address}')
 echo $HOST_IP booking.example.com >> /etc/hosts
 
 kubectl label namespace default istio-injection=enabled
 kubectl apply -f /tmp/booking-deployment.yaml
-
 while ! kubectl get pods | grep -w "Running"; do echo -n "."; sleep 1; done
 
 clear

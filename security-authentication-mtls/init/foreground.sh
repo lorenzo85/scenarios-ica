@@ -19,7 +19,7 @@ source ${HOME}/.bashrc
 mv /tmp/demo.yaml /root/istio-${ISTIO_VERSION}/manifests/profiles/
 istioctl install --set profile=demo -y --manifests=/root/istio-${ISTIO_VERSION}/manifests
 
-# Init scenario, install scenario applications
+# Init scenario
 kubectl create namespace foo
 kubectl label namespace foo istio-injection=enabled
 kubectl create namespace bar
