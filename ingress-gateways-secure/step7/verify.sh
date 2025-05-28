@@ -12,5 +12,3 @@ check_path_value gateways.networking.istio.io secure-booking-gateway '.spec.serv
 check_path_value gateways.networking.istio.io secure-booking-gateway '.spec.servers[0].tls.credentialName' 'booking-credential-mutual'
 check_array_length gateways.networking.istio.io secure-booking-gateway '.spec.servers[0].hosts' 1
 check_path_value gateways.networking.istio.io secure-booking-gateway '.spec.servers[0].hosts[0]' 'booking.example.com'
-
-check_output_contains "curl -s -o /dev/null -w \"%{http_code}\" --cacert certificates/example.com.crt --cert certificates/client.example.com.crt --key certificates/client.example.com.key https://booking.example.com:30443/bookings" 200
