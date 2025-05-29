@@ -19,7 +19,7 @@ on the original request made over HTTP.
 Test that you *cannot* reach `finance.yahoo.com` with the following:
 ```bash
 kubectl exec tester -c tester -- \
-  curl -sSL -o /dev/null -D - http://finance.yahoo.com/markets/crypto/all/ | \
+  curl -sSL --user-agent "Istio ICA Client" -o /dev/null -D - http://finance.yahoo.com/markets/crypto/all/ | \
   grep HTTP/
 ```{{exec}}
 

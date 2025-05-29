@@ -3,7 +3,7 @@ to the `finance.yahoo.com` over HTTP:
 
 ```bash
 kubectl exec tester -c tester -- \
-  curl -sSL -o /dev/null -D - http://finance.yahoo.com/markets/crypto/all/ | \
+  curl -sSL --user-agent "Istio ICA Client" -o /dev/null -D - http://finance.yahoo.com/markets/crypto/all/ | \
   grep HTTP/
 ```{{exec}}
 
