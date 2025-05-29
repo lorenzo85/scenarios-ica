@@ -1,7 +1,7 @@
 Test that the ingress gateway pass-through works correctly by making a request
 to retrieve all bookings using `https://booking.example.com` on **NodePort** `30443`.
 
-Because the internal `booking-service` service uses HTTPS we also must pass the certificate authority certificate to `curl`,
+Because the internal `booking-service` service uses HTTPs we also must pass the certificate authority certificate to `curl`,
 so that TLS handshake can be performed correctly:
 
 ```bash

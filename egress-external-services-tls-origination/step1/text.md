@@ -4,7 +4,7 @@ and a [DestinationRule](https://istio.io/latest/docs/reference/config/networking
 resource.
 
 Create a service entry resource in the `default` namespace named `finance-yahoo-com` to allow
-access to host `finance.yahoo.com` over HTTP and HTTPS, with the following properties:
+access to host `finance.yahoo.com` over HTTP and HTTPs, with the following properties:
 
 *service entry:*
 - name: `finance-yahoo-com`

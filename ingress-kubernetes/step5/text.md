@@ -1,5 +1,5 @@
 We now want to secure the Kubernetes Ingress we created in the previous steps in order to expose the `booking-service`
-over HTTPS.
+over HTTPs.
 
 You can secure an [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/#tls)
 by specifying a Secret that contains a TLS private key and certificate.

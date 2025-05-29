@@ -17,8 +17,8 @@ location: https://finance.yahoo.com/markets/crypto/all/
 HTTP/2 200
 ```
 
-What just happened is that the *curl* command handled the redirection to HTTPS transparently for us,
-since `finance.yahoo.com` accepts only connections over HTTPS.
+What just happened is that the *curl* command handled the redirection to HTTPs transparently for us,
+since `finance.yahoo.com` accepts only connections over HTTPs.
 
 There are two problems with this communication flow:
 

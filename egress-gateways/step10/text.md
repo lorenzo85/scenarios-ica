@@ -1,5 +1,5 @@
 Update the virtual service resource named `direct-httbin-through-egress-gateway`
-in the `default` namespace created previously to route *HTTPS* egress traffic host `httpbin.org` from
+in the `default` namespace created previously to route *HTTPs* egress traffic host `httpbin.org` from
 the *mesh* to the Istio egress gateway service: `istio-egressgateway.istio-system.svc.cluster.local` and
 *from* *httpbin-egressgateway* *to* the final destination `httpbin.org`.
 

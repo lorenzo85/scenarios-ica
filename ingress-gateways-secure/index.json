@@ -1,6 +1,6 @@
 {
   "title": "Ingress - Gateway Secure",
-  "description": "Practice configuring secure Istio Gateway to expose secure HTTPS services and mutual TLS.",
+  "description": "Practice configuring secure Istio Gateway to expose secure HTTPs services and mutual TLS.",
   "details": {
     "steps": [
       {

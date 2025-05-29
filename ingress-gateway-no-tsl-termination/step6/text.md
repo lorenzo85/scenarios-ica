@@ -2,7 +2,7 @@ Update the `booking` virtual service
 to use a [TLSRoute](https://istio.io/latest/docs/reference/config/networking/virtual-service/#TLSRoute)
 instead of an [HTTPRoute](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPRoute)
 which allows to describe match conditions and actions for routing unterminated
-TLS traffic (TLS/HTTPS) based on the SNI hosts.
+TLS traffic (TLS/HTTPs) based on the SNI hosts.
 
 Configure the virtual service to forward unterminated TLS traffic on port 443 of the `booking-gateway`gateway
 to the internal `booking-service`.

@@ -31,7 +31,7 @@
         "text": "step6/text.md"
       },
       {
-        "title": "Create ServiceEntry for HTTPS traffic",
+        "title": "Create ServiceEntry for HTTPs traffic",
         "text": "step7/text.md",
         "verify": "step7/verify.sh"
       },
@@ -50,7 +50,7 @@
         "verify": "step10/verify.sh"
       },
       {
-        "title": "Test Egress Gateway for HTTPS",
+        "title": "Test Egress Gateway for HTTPs",
         "text": "step11/text.md"
       }
     ],

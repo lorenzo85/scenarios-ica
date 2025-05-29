@@ -34,7 +34,7 @@ openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -subj '/O=example In
 openssl req -out $TARGET_DIR/booking.example.com.csr -newkey rsa:2048 -nodes -keyout $TARGET_DIR/booking.example.com.key -subj "/CN=booking.example.com/O=Booking Org."
 openssl x509 -req -sha256 -days 365 -CA $TARGET_DIR/example.com.crt -CAkey $TARGET_DIR/example.com.key -set_serial 0 -in $TARGET_DIR/booking.example.com.csr -out $TARGET_DIR/booking.example.com.crt
 
-# Setup secret containing the booking server secrets for HTTPS.
+# Setup secret containing the booking server secrets for HTTPs.
 kubectl create secret tls booking-server-certs \
   --key $TARGET_DIR/booking.example.com.key \
   --cert $TARGET_DIR/booking.example.com.crt

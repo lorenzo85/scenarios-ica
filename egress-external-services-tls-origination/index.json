@@ -4,7 +4,7 @@
   "details": {
     "steps": [
       {
-        "title": "Configure service entry for HTTP and HTTPS traffic access",
+        "title": "Configure service entry for HTTP and HTTPs traffic access",
         "text": "step1/text.md",
         "verify": "step1/verify.sh"
       },
@@ -13,7 +13,7 @@
         "text": "step2/text.md"
       },
       {
-        "title": "Configure service entry to redirect HTTP traffic to HTTPS",
+        "title": "Configure service entry to redirect HTTP traffic to HTTPs",
         "text": "step3/text.md",
         "verify": "step3/verify.sh"
       },

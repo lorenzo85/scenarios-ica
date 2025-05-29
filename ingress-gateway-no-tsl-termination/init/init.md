@@ -5,7 +5,7 @@ In this scenario, you will practice configuring Istio Gateway to perform TLS pas
 instead of TLS termination on incoming requests.
 
 TLS pass-through is useful for use cases where services **within** the mesh need to
-securely serve traffic over HTTPS for security reasons. More precisely, the Istio gateway pods
+securely serve traffic over HTTPs for security reasons. More precisely, the Istio gateway pods
 do not terminate the TLS encryption, the connection is forwarded without modification to the 
 Envoy sidecar which forwarded it to the container application of the destination (end-to-end encryption).
 

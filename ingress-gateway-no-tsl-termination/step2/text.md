@@ -3,7 +3,7 @@ a [Gateway](https://istio.io/latest/docs/reference/config/networking/gateway/#Ga
 and a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/).
 
 You will first create an ingress gateway exposing the booking-service on HTTP to do some initial testing
-and verify the results by calling the service over HTTP instead of HTTPS protocol.
+and verify the results by calling the service over HTTP instead of HTTPs protocol.
 
 Create an Istio [Gateway](https://istio.io/latest/docs/reference/config/networking/gateway/#Gateway)
 resource exposing HTTP traffic on port 80 for host `booking.example.com`.

@@ -1,4 +1,4 @@
-Test that the service entry resource configuration works correctly by making an HTTPS request
+Test that the service entry resource configuration works correctly by making an HTTPs request
 to `httpbin.org`:
 
 ```bash
