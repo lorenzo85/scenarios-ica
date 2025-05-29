@@ -7,4 +7,4 @@ outside the mesh with a Kubernetes Ingress resource
 using Isto's ingress controller.
 
 You will configure a Kubernetes Ingress resource to expose a service
-first on HTTP and then on HTTPS protocol.
+first on HTTP and then on HTTPs protocol.

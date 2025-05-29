@@ -13,6 +13,10 @@ export PATH=/root/istio-${ISTIO_VERSION}/bin:$PATH
 echo "[[ -r \"/usr/local/etc/profile.d/bash_completion.sh\" ]] && . \"/usr/local/etc/profile.d/bash_completion.sh\"" >> ~/.bash_profile
 cp /root/istio-${ISTIO_VERSION}/tools/istioctl.bash ./istioctl.bash
 echo "source ~/istioctl.bash" >> ~/.bashrc
+
+# Kubectl alias
+echo "alias k='kubectl'" >> ~/.bashrc
+
 source ${HOME}/.bashrc
 
 # Deploy Istio with demo profile
