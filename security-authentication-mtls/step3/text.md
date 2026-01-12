@@ -1,4 +1,4 @@
-Isto's mTLS is configured using a
+Istio's mTLS is configured using a
 [PeerAuthentication](https://istio.io/latest/docs/reference/config/security/peer_authentication/)
 resource.
 
