@@ -1,6 +1,6 @@
 ![Istio logo](https://raw.githubusercontent.com/lorenzo85/scenarios-ica/master/istio-logo.svg)
 
-Isto's traffic shifting allows to shift traffic from one version of a service to another.
+Istio's traffic shifting allows to shift traffic from one version of a service to another.
 
 Traffic shifting proves beneficial in scenarios employing a canary rollout strategy for deploying features to production.
 
