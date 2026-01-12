@@ -1,4 +1,4 @@
-Isto's service registry entries are configured using
+Istio's service registry entries are configured using
 [ServiceEntry](https://istio.io/latest/docs/reference/config/networking/service-entry/#ServiceEntry)
 resources.
 
