@@ -1,4 +1,4 @@
-Isto's ingress traffic is configured using two resources:
+Istio's ingress traffic is configured using two resources:
 a [Gateway](https://istio.io/latest/docs/reference/config/networking/gateway/#Gateway)
 and a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/).
 
