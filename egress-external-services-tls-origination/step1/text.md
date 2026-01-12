@@ -1,4 +1,4 @@
-Isto's TLS origination for external services is configured using
+Istio's TLS origination for external services is configured using
 a [ServiceEntry](https://istio.io/latest/docs/reference/config/networking/service-entry/#ServiceEntry)
 and a [DestinationRule](https://istio.io/latest/docs/reference/config/networking/destination-rule/)
 resource.
