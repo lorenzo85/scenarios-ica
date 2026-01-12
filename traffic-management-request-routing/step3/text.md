@@ -1,4 +1,4 @@
-Isto's request routing is configured using two resources:
+Istio's request routing is configured using two resources:
 a [DestinationRule](https://istio.io/latest/docs/reference/config/networking/destination-rule/)
 and a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/).
 
