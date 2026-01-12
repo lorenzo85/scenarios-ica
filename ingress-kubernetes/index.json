@@ -1,6 +1,6 @@
 {
   "title": "Ingress - Kubernetes",
-  "description": "Practice configuring a Kubernetes Ingress resource to expose a service outside of the service mesh over HTTP and HTTPs using Isto's ingress controller.",
+  "description": "Practice configuring a Kubernetes Ingress resource to expose a service outside of the service mesh over HTTP and HTTPs using Istio's ingress controller.",
 
   "details": {
     "steps": [
