@@ -1,4 +1,4 @@
-Isto's secure ingress gateway is configured using three resources:
+Istio's secure ingress gateway is configured using three resources:
 a [Gateway](https://istio.io/latest/docs/reference/config/networking/gateway/#Gateway),
 a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/)
 and a Kubernetes [Secret](https://kubernetes.io/docs/concepts/configuration/secret/#tls-secrets)

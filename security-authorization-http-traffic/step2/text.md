@@ -1,4 +1,4 @@
-Isto's security authorization is configured using
+Istio's security authorization is configured using
 a set of [AuthorizationPolicy](https://istio.io/latest/docs/reference/config/security/authorization-policy/)
 resources.
 

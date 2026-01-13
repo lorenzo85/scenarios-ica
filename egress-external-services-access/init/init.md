@@ -8,9 +8,9 @@ resources.
 A service entry offers the capability to reference external services, like web APIs, or internal mesh services
 that exist outside the Kubernetes cluster.
 
-By leveraging service entries external services are seamlessly incorporated into Isto's internal service registry.
+By leveraging service entries external services are seamlessly incorporated into Istio's internal service registry.
 
-The integration of these services allows to also fully leverage Isto's features such as
+The integration of these services allows to also fully leverage Istio's features such as
 simulating timeouts, introducing service faults, and implementing advanced request routing
 through the configuration of
 [VirtualServices](https://istio.io/latest/docs/reference/config/networking/virtual-service/)

@@ -1,4 +1,4 @@
-Isto's circuit breaking is configured using two resources:
+Istio's circuit breaking is configured using two resources:
 a DestinationRule and a VirtualService.
 
 Your task is to configure an HTTP connection pool traffic policy which allows

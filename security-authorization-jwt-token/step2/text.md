@@ -1,4 +1,4 @@
-Isto's JWT token authorization is configured using
+Istio's JWT token authorization is configured using
 a [RequestAuthentication](https://istio.io/latest/docs/reference/config/security/request_authentication/)
 and an [AuthorizationPolicy](https://istio.io/latest/docs/reference/config/security/authorization-policy/)
 resource.

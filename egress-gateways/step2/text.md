@@ -1,4 +1,4 @@
-Isto's Egress traffic is configured using
+Istio's Egress traffic is configured using
 a [ServiceEntry](https://istio.io/latest/docs/reference/config/networking/service-entry/#ServiceEntry),
 a [Gateway](https://istio.io/latest/docs/reference/config/networking/gateway/)
 and a [VirtualService](https://istio.io/latest/docs/reference/config/networking/virtual-service/)

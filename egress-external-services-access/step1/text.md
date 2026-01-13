@@ -3,7 +3,7 @@ automatically to its Istio sidecar proxy by default.
 Therefore, the accessibility of external URLs outside the cluster depends on the configuration of the sidecar proxies.
 By default, Istio proxy is configured to pass through requests for unknown services.
 
-The Isto's `outboundTrafficPolicy` configuration option configures the way sidecar proxies handle communications
+The Istio's `outboundTrafficPolicy` configuration option configures the way sidecar proxies handle communications
 with external services, that is, those services that are or are not listed in the Istio’s
 internal [service registry](https://istio.io/latest/docs/concepts/traffic-management/#introducing-istio-traffic-management).
 

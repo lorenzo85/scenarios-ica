@@ -1,4 +1,4 @@
-We now want to verify that external services added to Isto's service registry using service
+We now want to verify that external services added to Istio's service registry using service
 entry resources can be treated like any other inter-cluster request within the mesh.
 
 For instance, we want to configure a [request timeout](https://istio.io/latest/docs/tasks/traffic-management/request-timeouts/#request-timeouts)

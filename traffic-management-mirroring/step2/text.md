@@ -1,4 +1,4 @@
-Isto's traffic mirroring is configured using two resources:
+Istio's traffic mirroring is configured using two resources:
 a DestinationRule and a VirtualService.
 
 Create a [DestinationRule](https://istio.io/latest/docs/reference/config/networking/destination-rule/)
