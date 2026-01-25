@@ -10,7 +10,7 @@ done
 touch /ks/.k8sfinished
 
 # Install Istio
-export ISTIO_VERSION=1.18.2
+export ISTIO_VERSION=1.26.0
 curl -L https://istio.io/downloadIstio | TARGET_ARCH=x86_64 sh -
 # Set PATH in .bashrc because no subshell can set parent environment variables
 echo "export PATH=/root/istio-${ISTIO_VERSION}/bin:\$PATH" >> ~/.bashrc
