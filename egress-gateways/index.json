@@ -5,7 +5,8 @@
     "steps": [
       {
         "title": "Intro",
-        "text": "step1/text.md"
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
       },
       {
         "title": "Create service entry for HTTP traffic",
@@ -14,7 +15,8 @@
       },
       {
         "title": "Test service entry",
-        "text": "step3/text.md"
+        "text": "step3/text.md",
+        "verify": "step3/verify.sh"
       },
       {
         "title": "Create egress gateway",
@@ -28,7 +30,8 @@
       },
       {
         "title": "Test egress gateway for HTTP",
-        "text": "step6/text.md"
+        "text": "step6/text.md",
+        "verify": "step6/verify.sh"
       },
       {
         "title": "Create ServiceEntry for HTTPs traffic",
@@ -37,7 +40,8 @@
       },
       {
         "title": "Test Service Entry",
-        "text": "step8/text.md"
+        "text": "step8/text.md",
+        "verify": "step8/verify.sh"
       },
       {
         "title": "Update egress Gateway",
@@ -51,7 +55,8 @@
       },
       {
         "title": "Test Egress Gateway for HTTPs",
-        "text": "step11/text.md"
+        "text": "step11/text.md",
+        "verify": "step11/verify.sh"
       }
     ],
     "finish": {

@@ -5,7 +5,8 @@
     "steps": [
       {
         "title": "Intro",
-        "text": "step1/text.md"
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
       },
       {
         "title": "Configure TLS secret",
@@ -24,7 +25,8 @@
       },
       {
         "title": "Test the ingress gateway",
-        "text": "step5/text.md"
+        "text": "step5/text.md",
+        "verify": "step5/verify.sh"
       },
       {
         "title": "Configure mutual TLS secret",
@@ -38,7 +40,8 @@
       },
       {
         "title": "Verify mutual TLS ",
-        "text": "step8/text.md"
+        "text": "step8/text.md",
+        "verify": "step8/verify.sh"
       }
     ],
     "finish": {

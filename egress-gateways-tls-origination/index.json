@@ -5,7 +5,8 @@
     "steps": [
       {
         "title": "Intro",
-        "text": "step1/text.md"
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
       },
       {
         "title": "Create service entry",
@@ -14,7 +15,8 @@
       },
       {
         "title": "Test service entry",
-        "text": "step3/text.md"
+        "text": "step3/text.md",
+        "verify": "step3/verify.sh"
       },
       {
         "title": "Create egress gateway",
@@ -33,7 +35,8 @@
       },
       {
         "title": "Test egress gateway for HTTP",
-        "text": "step7/text.md"
+        "text": "step7/text.md",
+        "verify": "step7/verify.sh"
       }
     ],
     "finish": {

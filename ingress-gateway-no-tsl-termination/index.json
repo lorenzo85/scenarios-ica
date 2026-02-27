@@ -5,7 +5,8 @@
     "steps": [
       {
         "title": "Intro",
-        "text": "step1/text.md"
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
       },
       {
         "title": "Configure Istio gateway",
@@ -19,7 +20,8 @@
       },
       {
         "title": "Test the ingress gateway",
-        "text": "step4/text.md"
+        "text": "step4/text.md",
+        "verify": "step4/verify.sh"
       },
       {
         "title": "Configure Istio gateway pass-through mode",
@@ -33,7 +35,8 @@
       },
       {
         "title": "Test the ingress gateway",
-        "text": "step7/text.md"
+        "text": "step7/text.md",
+        "verify": "step7/verify.sh"
       }
     ],
     "finish": {

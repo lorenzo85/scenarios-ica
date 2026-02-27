@@ -19,7 +19,7 @@ istioctl version --remote=false
 
 You should see output similar to:
 ```text
-client version: 1.20.3
+1.20.3
 ```
 
 > **Note:** The `PATH` change is session-scoped. In a persistent environment, add the export to your shell profile (e.g. `~/.bashrc` or `~/.zshrc`).

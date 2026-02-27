@@ -5,11 +5,13 @@
     "steps": [
       {
         "title": "Intro",
-        "text": "step1/text.md"
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
       },
       {
         "title": "Test default mTLS",
-        "text": "step2/text.md"
+        "text": "step2/text.md",
+        "verify": "step2/verify.sh"
       },
       {
         "title": "Enforce cluster-wide mTLS ",
@@ -38,7 +40,8 @@
       },
       {
         "title": "Test workload-wide mTLS",
-        "text": "step8/text.md"
+        "text": "step8/text.md",
+        "verify": "step8/verify.sh"
       }
     ],
     "finish": {

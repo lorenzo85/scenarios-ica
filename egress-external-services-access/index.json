@@ -15,7 +15,8 @@
       },
       {
         "title": "Test Service Entry",
-        "text": "step3/text.md"
+        "text": "step3/text.md",
+        "verify": "step3/verify.sh"
       },
       {
         "title": "Configure virtual service timeout rule for external service",
@@ -24,7 +25,8 @@
       },
       {
         "title": "Test delayed service entry",
-        "text": "step5/text.md"
+        "text": "step5/text.md",
+        "verify": "step5/verify.sh"
       }
     ],
     "finish": {

@@ -12,17 +12,25 @@ kubectl get po,svc -n istio-system
 ## Things to try
 
 - Deploy a sample app to the `default` namespace — pods will automatically receive Envoy sidecar proxies
-```plain
-kubectl run test-pod \
-  --image=nginx
-```{{exec}}
-<br>
 
-Check that `istio-proxy` container was injected into the pod:
-```plain
-kubectl get pod test-pod -o jsonpath='{.spec.containers[*].name}{"\n"}'
+```bash
+kubectl run test --image=nginx
 ```{{exec}}
-<br>
+
+Wait until the pod is ready and then test that the pod has 2 containers:
+- 1 with nginx image named *test*
+- 1 with the istio proxy named *istio-proxy* (automatically injected by Istio)
+
+```bash
+kubectl get pods -o \
+    jsonpath='{range .items[*].spec.containers[*]}{.name}{"\n"}{end}'
+```{{exec}}
+
+You should see two containers listed:
+```text
+test
+istio-proxy
+```
 
 - Use `istioctl analyze` to inspect the mesh configuration for errors or warnings
 - Use `istioctl proxy-status` to verify sidecar proxy synchronization across all workloads
