@@ -25,6 +25,11 @@
           "chmod": "+x"
         },
         {
+          "file": "check-utils.sh",
+          "target": "/tmp",
+          "chmod": "+x"
+        },
+        {
           "file": "demo.yaml",
           "target": "/tmp",
           "chmod": "+x"
