@@ -10,7 +10,8 @@
       },
       {
         "title": "Test service entry",
-        "text": "step2/text.md"
+        "text": "step2/text.md",
+        "verify": "step2/verify.sh"
       },
       {
         "title": "Configure service entry to redirect HTTP traffic to HTTPs",
@@ -24,7 +25,8 @@
       },
       {
         "title": "Test service entry",
-        "text": "step5/text.md"
+        "text": "step5/text.md",
+        "verify": "step5/verify.sh"
       }
     ],
     "finish": {

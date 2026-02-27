@@ -1,12 +1,12 @@
 {
   "title": "Ingress - Kubernetes",
   "description": "Practice configuring a Kubernetes Ingress resource to expose a service outside of the service mesh over HTTP and HTTPs using Istio's ingress controller.",
-
   "details": {
     "steps": [
       {
         "title": "Intro",
-        "text": "step1/text.md"
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
       },
       {
         "title": "Configure Ingress class",
@@ -20,7 +20,8 @@
       },
       {
         "title": "Test the Kubernetes Ingress",
-        "text": "step4/text.md"
+        "text": "step4/text.md",
+        "verify": "step4/verify.sh"
       },
       {
         "title": "Configure TLS secret",
@@ -34,7 +35,8 @@
       },
       {
         "title": "Test the Kubernetes Ingress",
-        "text": "step7/text.md"
+        "text": "step7/text.md",
+        "verify": "step7/verify.sh"
       }
     ],
     "finish": {
