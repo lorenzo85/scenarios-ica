@@ -23,5 +23,8 @@ source ${HOME}/.bashrc
 mv /tmp/demo.yaml /root/istio-${ISTIO_VERSION}/manifests/profiles/
 istioctl install --set profile=demo -y --manifests=/root/istio-${ISTIO_VERSION}/manifests
 
+# Label Default namespace for automatic Istio sidecar injection
+kubectl label namespace default istio-injection=enabled
+
 clear
 echo "Scenario is ready"
