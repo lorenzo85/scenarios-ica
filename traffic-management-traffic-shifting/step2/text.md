@@ -1,9 +1,10 @@
-The Kubernetes *notification-service* service is currently routing 50% to *v1*
-and 50% to *v2*, load balancing the requests evenly, therefore:
-- ~ 50% of the notifications are sent via *EMAIL*
-- ~ 50% of the notifications are sent both via *EMAIL* and *SMS*
+Before applying any Istio traffic rules, the standard Kubernetes `Service` object performs round-robin load balancing across all pods matching its selector — regardless of version label.
 
-Verify it using:
+Since there are equal numbers of `v1` and `v2` pods, Kubernetes distributes traffic approximately 50/50:
+- ~50% of notifications are sent via *EMAIL* (v1)
+- ~50% of notifications are sent via *EMAIL* and *SMS* (v2)
+
+Verify the current default Kubernetes routing by sending 20 requests:
 
 ```bash
 kubectl exec -it tester -- bash -c \
@@ -12,3 +13,7 @@ kubectl exec -it tester -- bash -c \
         echo; \
      done;'
 ```{{exec}}
+
+You should observe a roughly even mix of EMAIL-only and EMAIL+SMS responses.
+
+> **Key insight:** Kubernetes `Service` load balancing is unweighted and version-unaware. To implement precise weighted routing (e.g. 90% v1, 10% v2), you need Istio's `VirtualService` with a `DestinationRule` that defines named subsets per version. You will configure this in the next steps.
