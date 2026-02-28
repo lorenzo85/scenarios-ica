@@ -69,7 +69,7 @@ metadata:
 spec:
   ingressClassName: istio
   rules:
-  - host: *.killercoda.com
+  - host: "*.killercoda.com"
     http:
       paths:
       - path: /
