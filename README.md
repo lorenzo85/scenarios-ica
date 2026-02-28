@@ -57,6 +57,7 @@ This repository contains all the Killercoda scenarios that help you practise the
 | Scenario | Description |
 |----------|-------------|
 | [Istio Installation](istio-installation-istioctl) | Install, configure, and uninstall Istio using the istioctl CLI tool |
+| [Istio Ambient Mode](istio-installation-ambient) | Install Istio in ambient mode, enroll workloads into the mesh without sidecars, and verify transparent mTLS through ztunnel |
 | [Playground](playground) | Free-form environment with Istio pre-installed to explore at your own pace |
 
 ---

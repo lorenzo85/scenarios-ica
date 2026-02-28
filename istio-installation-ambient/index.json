@@ -1,0 +1,68 @@
+{
+  "title": "Istio Ambient Mode - Installation",
+  "description": "Practice installing Istio in ambient mode, enrolling workloads into the mesh without sidecars, and verifying transparent mTLS through ztunnel.",
+  "details": {
+    "steps": [
+      {
+        "title": "Install Istio with the ambient profile",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      },
+      {
+        "title": "Explore the data plane components",
+        "text": "step2/text.md",
+        "verify": "step2/verify.sh"
+      },
+      {
+        "title": "Deploy sample applications",
+        "text": "step3/text.md",
+        "verify": "step3/verify.sh"
+      },
+      {
+        "title": "Enroll the namespace in the ambient mesh",
+        "text": "step4/text.md",
+        "verify": "step4/verify.sh"
+      },
+      {
+        "title": "Test connectivity and verify ztunnel",
+        "text": "step5/text.md",
+        "verify": "step5/verify.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish/finish.md"
+    },
+    "intro": {
+      "text": "init/init.md",
+      "background": "init/background.sh",
+      "foreground": "init/foreground.sh"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "wait-background.sh",
+          "target": "/ks",
+          "chmod": "+x"
+        },
+        {
+          "file": "check-utils.sh",
+          "target": "/tmp",
+          "chmod": "+x"
+        },
+        {
+          "file": "booking-deployment.yaml",
+          "target": "/tmp",
+          "chmod": "+x"
+        },
+        {
+          "file": "notification-deployment.yaml",
+          "target": "/tmp",
+          "chmod": "+x"
+        }
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}
