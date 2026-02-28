@@ -37,7 +37,7 @@ metadata:
 spec:
   host: # TODO
   subsets:
-  - name: //TODO
+  - name: # TODO
   - name: # TODO
 ```{{copy}}
 Apply the resource:

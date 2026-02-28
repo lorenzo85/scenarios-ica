@@ -37,9 +37,9 @@ authority certificate: `/root/certificates/example.com.crt`.
 
 ```bash
 kubectl create -n istio-system secret generic booking-credential-mutual \
-  --from-file=tls.key=//TODO \
-  --from-file=tls.crt=//TODO \
-  --from-file=ca.crt=//TODO
+  --from-file=tls.key=# TODO \
+  --from-file=tls.crt=# TODO \
+  --from-file=ca.crt=#  TODO
 ```{{copy}}
 </details>
 
