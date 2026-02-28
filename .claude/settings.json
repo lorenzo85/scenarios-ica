@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(jq:*)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'FILE=$(echo \"$CLAUDE_TOOL_INPUT\" | python3 -c \"import json,sys; d=json.load(sys.stdin); print(d.get(\\\"file_path\\\",\\\"\\\"))\" 2>/dev/null); [ -z \"$FILE\" ] && exit 0; case \"$FILE\" in *.json) jq empty \"$FILE\" 2>&1 && echo \"\u2713 valid JSON: $FILE\" || echo \"\u2717 invalid JSON: $FILE\" ;; *.sh) bash -n \"$FILE\" 2>&1 && echo \"\u2713 valid shell: $FILE\" || echo \"\u2717 invalid shell: $FILE\" ;; *.yaml) python3 -c \"import yaml,sys; list(yaml.safe_load_all(open(sys.argv[1])))\" \"$FILE\" 2>&1 && echo \"\u2713 valid YAML: $FILE\" || echo \"\u2717 invalid YAML: $FILE\" ;; esac'"
+          }
+        ]
+      }
+    ]
+  }
+}
