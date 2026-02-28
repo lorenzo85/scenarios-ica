@@ -8,7 +8,7 @@ which exposes port `80` via a **NodePort**. You can look up the assigned NodePor
 kubectl get svc -n istio-system istio-ingressgateway
 ```{{exec}}
 
-Look for the entry `80:`**`30000`**`/TCP` in the `PORT(S)` column — `30000` is the NodePort you will use to reach the ingress gateway from outside the cluster.
+Look for the entry `80:30000/TCP` in the `PORT(S)` column — `30000` is the NodePort you will use to reach the ingress gateway from outside the cluster.
 
 Make a request using that NodePort:
 

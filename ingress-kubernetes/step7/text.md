@@ -8,7 +8,7 @@ which exposes port `443` via a **NodePort**. You can look up the assigned NodePo
 kubectl get svc -n istio-system istio-ingressgateway
 ```{{exec}}
 
-Look for the entry `443:`**`30443`**`/TCP` in the `PORT(S)` column — `30443` is the NodePort you will use to reach the ingress gateway over HTTPS from outside the cluster.
+Look for the entry `443:30443/TCP` in the `PORT(S)` column — `30443` is the NodePort you will use to reach the ingress gateway over HTTPS from outside the cluster.
 
 Because the endpoint is secure we must pass the certificate authority certificate to *curl*, so that
 the TLS handshake can be performed correctly:
