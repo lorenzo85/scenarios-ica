@@ -1,0 +1,24 @@
+apiVersion: install.istio.io/v1alpha1
+kind: IstioOperator
+spec:
+  profile: ambient
+  components:
+    pilot:
+      k8s:
+        resources:
+          requests:
+            cpu: 0m
+            memory: 0Mi
+  values:
+    pilot:
+      autoscaleEnabled: false
+    ztunnel:
+      resources:
+        requests:
+          cpu: 0m
+          memory: 0Mi
+    cni:
+      resources:
+        requests:
+          cpu: 0m
+          memory: 0Mi

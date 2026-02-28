@@ -1,4 +1,4 @@
-![Istio logo](https://raw.githubusercontent.com/lorenzogirardi/scenarios-ica/master/istio-logo.svg)
+![Istio logo](https://raw.githubusercontent.com/lorenzo85/scenarios-ica/master/istio-logo.svg)
 
 Istio **ambient mode** is a sidecar-free data plane that captures and routes traffic using a shared, per-node component called **ztunnel** (zero-trust tunnel), instead of injecting a per-pod proxy container.
 

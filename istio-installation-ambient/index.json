@@ -50,6 +50,11 @@
           "chmod": "+x"
         },
         {
+          "file": "ambient.yaml",
+          "target": "/tmp",
+          "chmod": "+x"
+        },
+        {
           "file": "booking-deployment.yaml",
           "target": "/tmp",
           "chmod": "+x"

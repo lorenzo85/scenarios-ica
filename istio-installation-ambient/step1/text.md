@@ -9,7 +9,7 @@ kubectl get crd gateways.gateway.networking.k8s.io
 Install Istio using the `ambient` profile:
 
 ```bash
-istioctl install --set profile=ambient -y
+istioctl install -f /tmp/ambient.yaml -y
 ```{{exec}}
 
 The `ambient` profile installs:
