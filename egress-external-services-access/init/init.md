@@ -17,7 +17,7 @@ By default, Istio configures Envoy proxies to pass through requests to unknown e
 
 - How Istio controls outbound traffic from the mesh using `ServiceEntry` resources
 - How to create a `ServiceEntry` to register an external HTTP or HTTPS service in Istio's service registry
-- How to apply Istio traffic management features (timeouts, retries) to external services via `VirtualService`
+- How to apply Istio traffic management features (timeouts) to external services via `VirtualService`
 - How to configure `outboundTrafficPolicy` to block access to unregistered external services
 - How to verify that external service access is working correctly from within the mesh
 

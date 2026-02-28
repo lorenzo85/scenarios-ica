@@ -14,7 +14,7 @@ You have completed the **Accessing External Services** scenario.
 ## Key Istio Resources Used
 
 - `ServiceEntry` — registers external hostnames (e.g., `httpbin.org`) in the Istio service registry
-- `VirtualService` — applies traffic policies such as timeouts and retries to external services
+- `VirtualService` — applies traffic policies such as timeouts to external services
 - `meshConfig.outboundTrafficPolicy` — global setting controlling egress behavior (`ALLOW_ANY` vs `REGISTRY_ONLY`)
 
 **Official Istio Docs:** [Accessing External Services](https://istio.io/latest/docs/tasks/traffic-management/egress/egress-control/)
