@@ -1,6 +1,6 @@
 {
   "title": "Traffic Management - Request Routing",
-  "description": "Practice configuring Istio to dynamically route requests to multiple versions of a microservice.",
+  "description": "Practice routing requests to different service versions based on HTTP headers, URI prefix, and query parameters.",
   "details": {
     "steps": [
       {

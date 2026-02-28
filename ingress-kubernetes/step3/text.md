@@ -22,7 +22,7 @@ Use an ingress class named `istio` (which we created in the previous step) and t
 
 Create a file using `vi`:
 ```bash
-vi ingress.yaml
+> ingress.yaml && vi ingress.yaml
 ```{{exec}}
 Copy, edit and paste the following content:
 ```yaml
@@ -56,7 +56,7 @@ kubectl apply -f ingress.yaml
 Create a file using `vi`:
 
 ```bash
-vi ingress.yaml
+> ingress.yaml && vi ingress.yaml
 ```{{exec}}
 
 Copy and paste the following content:

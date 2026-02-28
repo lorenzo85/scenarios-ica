@@ -26,7 +26,7 @@ with the following properties:
 
 Create a file using `vi`:
 ```bash
-vi destination-rule.yaml
+> destination-rule.yaml && vi destination-rule.yaml
 ```{{exec}}
 Copy, edit and paste the following content:
 ```yaml
@@ -56,7 +56,7 @@ kubectl apply -f destination-rule.yaml
 Create a file using `vi`:
 
 ```bash
-vi destination-rule.yaml
+> destination-rule.yaml && vi destination-rule.yaml
 ```{{exec}}
 
 Copy and paste the following content:

@@ -1,6 +1,6 @@
 {
   "title": "Traffic Management - Circuit Breaking",
-  "description": "Practice configuring Istio's circuit breaking rules and then test the configuration by intentionally \"firing\" the circuit breaker.",
+  "description": "Practice configuring Istio circuit breaking using connection pool limits and outlier detection, then test with Fortio.",
   "details": {
     "steps": [
       {

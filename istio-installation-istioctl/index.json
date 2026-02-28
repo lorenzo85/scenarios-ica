@@ -1,6 +1,6 @@
 {
   "title": "Istio Installation using istioctl",
-  "description": "Practice installing Istio using istioctl CLI tool.",
+  "description": "Practice installing, configuring, and uninstalling Istio on Kubernetes using the istioctl CLI tool.",
   "details": {
     "steps": [
       {

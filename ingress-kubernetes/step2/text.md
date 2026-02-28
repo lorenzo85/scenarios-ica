@@ -20,7 +20,7 @@ Create an ingress class resource named `istio` in the `default` namespace using 
 
 Create a file using `vi`:
 ```bash
-vi ingress-class.yaml
+> ingress-class.yaml && vi ingress-class.yaml
 ```{{exec}}
 Copy, edit and paste the following content:
 ```yaml
@@ -43,7 +43,7 @@ kubectl apply -f ingress-class.yaml
 Create a file using `vi`:
 
 ```bash
-vi ingress-class.yaml
+> ingress-class.yaml && vi ingress-class.yaml
 ```{{exec}}
 
 Copy and paste the following content:

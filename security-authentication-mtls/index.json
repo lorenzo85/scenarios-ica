@@ -1,6 +1,6 @@
 {
   "title": "Security - Authentication Policy - mTLS",
-  "description": "Practice configuring Istio authentication policies to enforce mutual TLS.",
+  "description": "Practice enforcing mutual TLS (mTLS) using Istio PeerAuthentication at cluster, namespace, and workload scope.",
   "details": {
     "steps": [
       {

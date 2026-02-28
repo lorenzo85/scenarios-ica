@@ -20,7 +20,7 @@ Create a `PeerAuthentication` resource to enforce in the `foo` namespace with th
 
 Create a file using `vi`:
 ```bash
-vi peer-authentication.yaml
+> peer-authentication.yaml && vi peer-authentication.yaml
 ```{{exec}}
 Copy, edit and paste the following content:
 ```yaml
@@ -45,7 +45,7 @@ kubectl apply -f peer-authentication.yaml
 Create a file using `vi`:
 
 ```bash
-vi peer-authentication.yaml
+> peer-authentication.yaml && vi peer-authentication.yaml
 ```{{exec}}
 
 Copy and paste the following content:

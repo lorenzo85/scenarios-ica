@@ -1,6 +1,6 @@
 {
   "title": "Security - Authorization - HTTP traffic",
-  "description": "Practice configuring Istio's access control for HTTP traffic.",
+  "description": "Practice configuring Istio AuthorizationPolicy to control HTTP access between workloads with allow/deny rules.",
   "details": {
     "steps": [
       {

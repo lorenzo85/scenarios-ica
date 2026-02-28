@@ -1,6 +1,6 @@
 {
   "title": "Security - Authorization - JWT Token",
-  "description": "Practice configuring Istio authorization based on JSON Web Token (JWT).",
+  "description": "Practice configuring Istio JWT authentication and authorization using RequestAuthentication and AuthorizationPolicy.",
   "details": {
     "steps": [
       {

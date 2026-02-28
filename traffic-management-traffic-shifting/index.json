@@ -1,6 +1,6 @@
 {
   "title": "Traffic Management - Traffic Shifting",
-  "description": "Practice configuring Istio to migrate traffic from an old to a new version of a microservice.",
+  "description": "Practice gradually shifting traffic between service versions using weighted routing for a canary release.",
   "details": {
     "steps": [
       {

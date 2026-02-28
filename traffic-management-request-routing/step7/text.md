@@ -41,7 +41,7 @@ kubectl exec -it tester -- \
 
 Create a file using `vi`:
 ```bash
-vi virtual-service.yaml
+> virtual-service.yaml && vi virtual-service.yaml
 ```{{exec}}
 Copy, edit and paste the following content:
 ```yaml
@@ -78,7 +78,7 @@ kubectl apply -f virtual-service.yaml
 Create a file using `vi`:
 
 ```bash
-vi virtual-service.yaml
+> virtual-service.yaml && vi virtual-service.yaml
 ```{{exec}}
 
 Copy and paste the following content:

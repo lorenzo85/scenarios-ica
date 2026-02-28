@@ -28,7 +28,7 @@ Configure the `finance-yahoo-com` service entry with the following properties:
 
 Create a file using `vi`:
 ```bash
-vi service-entry.yaml
+> service-entry.yaml && vi service-entry.yaml
 ```{{exec}}
 Copy, edit and paste the following content:
 ```yaml
@@ -62,7 +62,7 @@ kubectl apply -f service-entry.yaml
 Create a file using `vi`:
 
 ```bash
-vi service-entry.yaml
+> service-entry.yaml && vi service-entry.yaml
 ```{{exec}}
 
 Copy and paste the following content:

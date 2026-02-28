@@ -1,6 +1,6 @@
 {
   "title": "Egress - External services TLS origination",
-  "description": "Practice configuring Istio's to perform TLS origination for outbound traffic to an external service.",
+  "description": "Practice configuring Istio to perform TLS origination for outbound traffic to an external service.",
   "details": {
     "steps": [
       {

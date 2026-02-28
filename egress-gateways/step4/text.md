@@ -24,7 +24,7 @@ Use the following configuration properties:
 
 Create a file using `vi`:
 ```bash
-vi gateway.yaml
+> gateway.yaml && vi gateway.yaml
 ```{{exec}}
 Copy, edit and paste the following content:
 ```yaml
@@ -56,7 +56,7 @@ kubectl apply -f gateway.yaml
 Create a file using `vi`:
 
 ```bash
-vi gateway.yaml
+> gateway.yaml && vi gateway.yaml
 ```{{exec}}
 
 Copy and paste the following content:

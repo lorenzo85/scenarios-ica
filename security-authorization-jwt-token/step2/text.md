@@ -34,7 +34,7 @@ Use the following configuration properties:
 
 Create a file using `vi`:
 ```bash
-vi request-authentication.yaml
+> request-authentication.yaml && vi request-authentication.yaml
 ```{{exec}}
 Copy, edit and paste the following content:
 ```yaml
@@ -62,7 +62,7 @@ kubectl apply -f request-authentication.yaml
 Create a file using `vi`:
 
 ```bash
-vi request-authentication.yaml
+> request-authentication.yaml && vi request-authentication.yaml
 ```{{exec}}
 
 Copy and paste the following content:

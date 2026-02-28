@@ -18,7 +18,7 @@ using the following configuration properties:
 
 Create a file using `vi`:
 ```bash
-vi authorization-policy.yaml
+> authorization-policy.yaml && vi authorization-policy.yaml
 ```{{exec}}
 Copy, edit and paste the following content:
 ```yaml
@@ -42,7 +42,7 @@ kubectl apply -f authorization-policy.yaml
 Create a file using `vi`:
 
 ```bash
-vi authorization-policy.yaml
+> authorization-policy.yaml && vi authorization-policy.yaml
 ```{{exec}}
 
 Copy and paste the following content:
