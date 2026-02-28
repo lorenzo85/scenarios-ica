@@ -1,15 +1,9 @@
 [Kiali](https://kiali.io/) is the Istio service mesh observability console. It provides a real-time topology graph of your mesh, showing how services communicate, their health, and traffic flow — all without changing any application code.
 
-Port-forward the Kiali service to access its API:
+Kiali is exposed on NodePort `30001`. Verify it is accessible and list the namespaces it is monitoring:
 
 ```bash
-kubectl port-forward svc/kiali -n istio-system 20001:20001 &
-```{{exec}}
-
-Verify Kiali is accessible and list the namespaces it is monitoring:
-
-```bash
-curl -s http://localhost:20001/kiali/api/namespaces | python3 -m json.tool | grep '"name"'
+curl -s http://localhost:30001/kiali/api/namespaces | python3 -m json.tool | grep '"name"'
 ```{{exec}}
 
 You should see the `default` and `istio-system` namespaces listed.
@@ -17,7 +11,7 @@ You should see the `default` and `istio-system` namespaces listed.
 Query the Kiali workload graph for the `default` namespace to see how services are connected:
 
 ```bash
-curl -s "http://localhost:20001/kiali/api/namespaces/graph?namespaces=default&graphType=workload" | \
+curl -s "http://localhost:30001/kiali/api/namespaces/graph?namespaces=default&graphType=workload" | \
     python3 -m json.tool | grep -E '"app"|"version"' | head -20
 ```{{exec}}
 
@@ -26,14 +20,14 @@ This returns the nodes and edges of the service graph — each edge represents l
 Check the health of all services in the `default` namespace:
 
 ```bash
-curl -s "http://localhost:20001/kiali/api/namespaces/default/services" | \
+curl -s "http://localhost:30001/kiali/api/namespaces/default/services" | \
     python3 -m json.tool | grep -E '"name"' | head -10
 ```{{exec}}
 
 Use Kiali's built-in configuration validator to detect any Istio misconfigurations in the `default` namespace:
 
 ```bash
-curl -s "http://localhost:20001/kiali/api/namespaces/default/validations" | \
+curl -s "http://localhost:30001/kiali/api/namespaces/default/validations" | \
     python3 -m json.tool
 ```{{exec}}
 
