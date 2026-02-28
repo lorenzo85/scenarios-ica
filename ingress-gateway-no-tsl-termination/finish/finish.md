@@ -15,6 +15,5 @@ You have completed the **Ingress Gateway without TLS Termination** scenario.
 
 - `Gateway` — configured with `tls.mode: PASSTHROUGH` on a TLS port
 - `VirtualService` — uses `tls` routes with `sniHosts` matching to forward to backend subsets
-- `DestinationRule` — may define subsets for the TLS-terminating backend service
 
 **Official Istio Docs:** [Ingress Gateway without TLS Termination](https://istio.io/latest/docs/tasks/traffic-management/ingress/ingress-sni-passthrough/)
