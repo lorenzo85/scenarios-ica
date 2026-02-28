@@ -7,9 +7,7 @@ without a service entry defined in the Istio service registry.
 
 You can check the configured traffic policy mode with the following command:
 ```bash
-kubectl get -n istio-system istiooperators \
-    installed-state -o jsonpath={'.spec.meshConfig.outboundTrafficPolicy.mode'}; \
-    echo;
+kubectl -n istio-system get configmap istio -o yaml | grep -A 1 outboundTrafficPolicy
 ```{{exec}}
 
 Your task is to enable external access to `httpbin.org` using a egress gateway for HTTP protocol.
