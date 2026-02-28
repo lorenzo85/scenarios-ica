@@ -33,8 +33,6 @@ kubectl create -n istio-system secret tls booking-credential \
 ```{{copy}}
 </details>
 
-
-<br>
 <details>
 <summary>Solution</summary>
 

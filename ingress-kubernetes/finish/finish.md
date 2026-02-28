@@ -7,8 +7,7 @@ You have completed the **Kubernetes Ingress with Istio** scenario.
 - How to use a standard Kubernetes `Ingress` resource with the Istio ingress gateway as the controller
 - How to set `kubernetes.io/ingress.class: istio` to target the Istio ingress gateway
 - How Istio translates Kubernetes `Ingress` rules into internal gateway routing configuration
-- How path-based and host-based routing rules in a Kubernetes `Ingress` are handled by Istio's Envoy proxy
-- The limitations of the Kubernetes `Ingress` API compared to Istio-native `Gateway` and `VirtualService`
+- The differences of the Kubernetes `Ingress` API compared to Istio-native `Gateway` and `VirtualService`
 - How to verify ingress routing behavior using the ingress gateway's external IP and port
 
 ## Key Istio Resources Used
