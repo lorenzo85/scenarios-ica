@@ -6,9 +6,8 @@ You have successfully completed the **Kiali** scenario and explored Istio's mesh
 
 - How to install Istio's observability addons (Prometheus and Kiali) from the bundled sample manifests
 - How Istio's Envoy sidecar proxies automatically generate metrics without application code changes
-- How to query Istio metrics in **Prometheus** using PromQL — including request rate, error rate, and P99 latency
 - How to use **Kiali** to visualize the service mesh topology, traffic flow, and service health
-- How to validate Istio configuration using Kiali's built-in validation engine
+- How to query Istio metrics in **Prometheus** using PromQL — including request rate, error rate, and P99 latency
 
 ## Key Istio Resources and Metrics
 
