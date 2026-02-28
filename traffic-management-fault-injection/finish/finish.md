@@ -6,7 +6,6 @@ You have completed the **Fault Injection** scenario.
 
 - How to inject HTTP delays into service-to-service communication to simulate latency
 - How to inject HTTP abort faults (e.g., 503 errors) to test failure handling in services
-- How fault injection rules are scoped per user via HTTP header matching in a `VirtualService`
 - How upstream timeout settings interact with injected delays to expose resilience gaps
 - How to observe the effect of faults through application responses and `curl` output
 - Why fault injection is a safer alternative to chaos testing in production environments
