@@ -1,5 +1,5 @@
 Test that the Kubernetes ingress configuration works correctly by making a request
-to retrieve all bookings using `http://booking.example.com`.
+to retrieve all bookings using [Ingress Gateway port]({{TRAFFIC_HOST1_30000}}/bookings).
 
 The traffic enters the cluster through the `istio-ingressgateway` service in the `istio-system` namespace,
 which exposes port `80` via a **NodePort**. You can look up the assigned NodePort with:
@@ -13,7 +13,7 @@ Look for the entry `80:30000/TCP` in the `PORT(S)` column — `30000` is the Nod
 Make a request using that NodePort:
 
 ```bash
-curl http://booking.example.com:30000/bookings
+curl {{TRAFFIC_HOST1_30000}}/bookings
 ```{{exec}}
 
 The result should be a list of bookings along with their dates:

@@ -10,7 +10,7 @@ Use an ingress class named `istio` (which we created in the previous step) and t
 * ingress class name: `istio`
 
 *ingress rule 1:*
-* host: `booking.example.com`
+* host: `*.killercoda.com`
 * http path: `/`
 * http path type: `Prefix`
 * backend service name: `booking-service`
@@ -69,7 +69,7 @@ metadata:
 spec:
   ingressClassName: istio
   rules:
-  - host: booking.example.com
+  - host: *.killercoda.com
     http:
       paths:
       - path: /
