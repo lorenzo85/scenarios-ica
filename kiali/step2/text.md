@@ -18,14 +18,23 @@ kubectl rollout status deployment/prometheus -n istio-system
 kubectl rollout status deployment/kiali -n istio-system
 ```{{exec}}
 
-Verify all addon pods are running:
+By default, the addon services are deployed as `ClusterIP` — only reachable from inside the cluster. Patch both services to `NodePort` with fixed ports so they are accessible from outside:
 
 ```bash
-kubectl get po -n istio-system
+kubectl patch svc prometheus -n istio-system \
+  -p '{"spec": {"type": "NodePort", "ports": [{"port": 9090, "nodePort": 30090, "targetPort": 9090}]}}'
+kubectl patch svc kiali -n istio-system \
+  -p '{"spec": {"type": "NodePort", "ports": [{"port": 20001, "nodePort": 30001, "targetPort": 20001}]}}'
 ```{{exec}}
 
-You should see pods for `prometheus` and `kiali` all in `Running` status.
+Verify the services are now exposed as `NodePort`:
 
-> **Note:** By default, the addon services are only accessible within the cluster (ClusterIP). To access them from your browser, you can use `istioctl dashboard` which automatically port-forwards the correct port. You will do this in the following steps.
+```bash
+kubectl get svc -n istio-system prometheus kiali
+```{{exec}}
+
+You should see `NodePort` in the `TYPE` column and the fixed ports in `PORT(S)`:
+- Prometheus: `9090:30090/TCP`
+- Kiali: `20001:30001/TCP`
 
 For more information on Istio integrations see the [official docs](https://istio.io/latest/docs/ops/integrations/).
