@@ -16,11 +16,4 @@ You have completed the **Kubernetes Ingress with Istio** scenario.
 - `istio-ingressgateway` — the Envoy gateway that processes Kubernetes `Ingress` rules
 - Kubernetes `Secret` — stores TLS credentials for HTTPS ingress
 
-## Next Steps
-
-- **Ingress Gateways** — use Istio-native `Gateway` and `VirtualService` for richer traffic control
-- **Secure Ingress Gateways** — add TLS termination to ingress resources
-- **Traffic Shifting** — graduate to `VirtualService`-based weighted routing for canary deployments
-- Explore [Kubernetes Gateway API support in Istio](https://istio.io/latest/docs/tasks/traffic-management/ingress/gateway-api/)
-
 **Official Istio Docs:** [Kubernetes Ingress](https://istio.io/latest/docs/tasks/traffic-management/ingress/kubernetes-ingress/)

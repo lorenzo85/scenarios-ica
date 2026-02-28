@@ -17,11 +17,4 @@ You have completed the **Accessing External Services** scenario.
 - `VirtualService` — applies traffic policies such as timeouts and retries to external services
 - `meshConfig.outboundTrafficPolicy` — global setting controlling egress behavior (`ALLOW_ANY` vs `REGISTRY_ONLY`)
 
-## Next Steps
-
-- **Egress TLS Origination** — have the sidecar upgrade HTTP calls to external services to HTTPS automatically
-- **Egress Gateways** — route external traffic through a dedicated egress gateway for centralized control
-- **Circuit Breaking** — add resilience policies to external service calls via `DestinationRule`
-- Explore [ServiceEntry reference](https://istio.io/latest/docs/reference/config/networking/service-entry/)
-
 **Official Istio Docs:** [Accessing External Services](https://istio.io/latest/docs/tasks/traffic-management/egress/egress-control/)

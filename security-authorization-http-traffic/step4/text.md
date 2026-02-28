@@ -32,8 +32,6 @@ kubectl edit deploy booking-service-v1
 ```{{copy}}
 </details>
 
-
-<br>
 <details><summary>Solution</summary>
 
 ```bash

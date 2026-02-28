@@ -17,11 +17,4 @@ You have completed the **Circuit Breaking** scenario.
 - `connectionPool.http` — limits `http1MaxPendingRequests` and `http2MaxRequests`
 - `outlierDetection` — defines ejection thresholds based on consecutive errors and intervals
 
-## Next Steps
-
-- **Fault Injection** — simulate failures upstream and verify the circuit breaker responds correctly
-- **Traffic Shifting** — route overflow traffic to a fallback service version
-- **Request Routing** — combine circuit breaking with header-based routing for canary protection
-- Explore [outlier detection reference](https://istio.io/latest/docs/reference/config/networking/destination-rule/#OutlierDetection)
-
 **Official Istio Docs:** [Circuit Breaking](https://istio.io/latest/docs/tasks/traffic-management/circuit-breaking/)

@@ -17,11 +17,4 @@ You have completed the **Secure Ingress Gateways** scenario.
 - `VirtualService` — routes HTTPS traffic from the secured gateway to backend services
 - Kubernetes `Secret` — stores TLS credentials referenced by the gateway via `credentialName`
 
-## Next Steps
-
-- **Ingress Gateway without TLS Termination** — pass encrypted traffic directly to the backend
-- **Ingress Gateways (basic)** — review the foundational HTTP gateway setup
-- **mTLS Authentication** — extend mutual TLS to service-to-service communication inside the mesh
-- Explore [Secure Gateway TLS settings](https://istio.io/latest/docs/reference/config/networking/gateway/#ServerTLSSettings)
-
 **Official Istio Docs:** [Secure Ingress Gateways](https://istio.io/latest/docs/tasks/traffic-management/ingress/secure-ingress/)

@@ -17,11 +17,4 @@ You have completed the **Authorization for HTTP Traffic** scenario.
 - `PeerAuthentication` — provides the mTLS-authenticated source identity consumed by authorization rules
 - Service accounts — Kubernetes service accounts form the basis of Istio workload SPIFFE identities
 
-## Next Steps
-
-- **Authorization with JWT** — add end-user token validation on top of workload-level authorization
-- **mTLS Authentication** — ensure all traffic has authenticated identities before applying authorization
-- **Request Routing** — combine routing rules with authorization to create role-based traffic policies
-- Explore [AuthorizationPolicy reference](https://istio.io/latest/docs/reference/config/security/authorization-policy/)
-
 **Official Istio Docs:** [Authorization for HTTP Traffic](https://istio.io/latest/docs/tasks/security/authorization/authz-http/)

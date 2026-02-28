@@ -17,11 +17,4 @@ You have completed the **Authorization with JWT Tokens** scenario.
 - `AuthorizationPolicy` — enforces access rules using `request.auth.claims` conditions in `when` blocks
 - `PeerAuthentication` — provides the underlying mTLS workload identity layer beneath JWT auth
 
-## Next Steps
-
-- **Authorization for HTTP Traffic** — apply workload-identity-based policies without JWTs
-- **mTLS Authentication** — combine JWT end-user identity with mutual TLS peer authentication
-- **Secure Ingress Gateways** — terminate TLS and validate JWTs at the cluster boundary
-- Explore [RequestAuthentication reference](https://istio.io/latest/docs/reference/config/security/request_authentication/)
-
 **Official Istio Docs:** [Authorization with JWT Tokens](https://istio.io/latest/docs/tasks/security/authorization/authz-jwt/)

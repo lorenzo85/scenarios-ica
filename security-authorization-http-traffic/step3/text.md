@@ -8,6 +8,8 @@ kubectl exec -it tester -- \
     echo;'
 ```{{exec}}
 
+> **Note:** Authorization policies can take a few seconds to propagate to all Envoy sidecars. If the request is still successful, wait a moment and retry the command above.
+
 You should receive:
 ```text
 RBAC: access denied

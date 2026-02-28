@@ -17,11 +17,4 @@ You have completed the **Ingress Gateways** scenario.
 - `VirtualService` — binds to the gateway and routes traffic to the target service inside the mesh
 - `istio-ingressgateway` — the Envoy-based gateway deployment managed by Istio
 
-## Next Steps
-
-- **Secure Ingress Gateways** — add TLS termination with server certificates to the gateway
-- **Ingress Gateway without TLS Termination** — pass TLS through to the backend (SNI passthrough)
-- **Kubernetes Ingress** — use a standard Kubernetes `Ingress` resource with the Istio gateway class
-- Explore [Gateway reference docs](https://istio.io/latest/docs/reference/config/networking/gateway/)
-
 **Official Istio Docs:** [Ingress Gateways](https://istio.io/latest/docs/tasks/traffic-management/ingress/ingress-control/)

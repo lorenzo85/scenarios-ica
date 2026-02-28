@@ -18,11 +18,4 @@ You have completed the **Egress Gateway with TLS Origination** scenario.
 - `DestinationRule` — configures mTLS from sidecars to the gateway, and TLS origination from the gateway outward
 - `ServiceEntry` — registers the external host with HTTP and HTTPS port definitions
 
-## Next Steps
-
-- **Egress Gateways (basic)** — understand the egress gateway routing pattern without TLS origination
-- **Egress TLS Origination (sidecar)** — perform TLS origination directly at the sidecar instead of the gateway
-- **Secure Ingress Gateways** — apply TLS handling patterns on the inbound traffic path
-- Explore [Egress Gateway TLS origination docs](https://istio.io/latest/docs/tasks/traffic-management/egress/egress-gateway-tls-origination/)
-
 **Official Istio Docs:** [Egress Gateway with TLS Origination](https://istio.io/latest/docs/tasks/traffic-management/egress/egress-gateway-tls-origination/)

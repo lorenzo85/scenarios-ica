@@ -18,11 +18,4 @@ You have completed the **Egress Gateways** scenario.
 - `DestinationRule` — configures mTLS between the application sidecar and the egress gateway
 - `ServiceEntry` — registers the external service in the Istio service registry
 
-## Next Steps
-
-- **Egress Gateway with TLS Origination** — combine egress gateway routing with automatic HTTPS upgrading
-- **Accessing External Services** — understand direct sidecar-to-external routing before adding a gateway
-- **Secure Ingress Gateways** — apply similar gateway patterns on the ingress side
-- Explore [Egress Gateway reference](https://istio.io/latest/docs/reference/config/networking/gateway/)
-
 **Official Istio Docs:** [Egress Gateways](https://istio.io/latest/docs/tasks/traffic-management/egress/egress-gateway/)

@@ -17,11 +17,4 @@ You have completed the **Traffic Shifting** scenario.
 - `DestinationRule` — declares `v1` and `v2` subsets using pod label selectors
 - Envoy route configuration — the proxy-level mechanism applying the traffic weights
 
-## Next Steps
-
-- **Request Routing** — add header-based overrides on top of weighted splits for targeted testing
-- **Fault Injection** — validate the new version's error handling before completing the cutover
-- **Traffic Mirroring** — shadow live traffic to the new version without affecting real users
-- Explore [traffic management concepts](https://istio.io/latest/docs/concepts/traffic-management/)
-
 **Official Istio Docs:** [Traffic Shifting](https://istio.io/latest/docs/tasks/traffic-management/traffic-shifting/)

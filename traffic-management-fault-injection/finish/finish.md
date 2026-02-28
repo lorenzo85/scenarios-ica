@@ -16,11 +16,4 @@ You have completed the **Fault Injection** scenario.
 - `DestinationRule` — provides service subsets targeted by the virtual service
 - `HTTPFaultInjection` — the fault specification within a VirtualService route
 
-## Next Steps
-
-- **Request Routing** — control which version of a service receives traffic before adding faults
-- **Traffic Shifting** — combine gradual rollouts with fault injection for canary validation
-- **Circuit Breaking** — automatically stop sending traffic to failing service instances
-- Explore [fault injection reference](https://istio.io/latest/docs/reference/config/networking/virtual-service/#HTTPFaultInjection)
-
 **Official Istio Docs:** [Fault Injection](https://istio.io/latest/docs/tasks/traffic-management/fault-injection/)

@@ -17,11 +17,4 @@ You have completed the **Ingress Gateway without TLS Termination** scenario.
 - `VirtualService` — uses `tls` routes with `sniHosts` matching to forward to backend subsets
 - `DestinationRule` — may define subsets for the TLS-terminating backend service
 
-## Next Steps
-
-- **Secure Ingress Gateways** — terminate TLS at the gateway instead of passing it through
-- **Egress Gateway TLS Origination** — initiate TLS for outbound traffic at an egress gateway
-- **mTLS Authentication** — require mutual TLS between services inside the mesh
-- Explore [Gateway TLS settings reference](https://istio.io/latest/docs/reference/config/networking/gateway/#ServerTLSSettings)
-
 **Official Istio Docs:** [Ingress Gateway without TLS Termination](https://istio.io/latest/docs/tasks/traffic-management/ingress/ingress-sni-passthrough/)

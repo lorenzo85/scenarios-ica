@@ -18,11 +18,4 @@ You have completed the **Istio Installation with istioctl** scenario.
 - `istio-system` namespace — the standard namespace for Istio control plane components (Istiod, gateways)
 - Istiod — the unified control plane daemon handling service discovery, certificate management, and configuration
 
-## Next Steps
-
-- **Request Routing** — start configuring traffic management rules with the installed mesh
-- **Ingress Gateways** — expose services externally through the installed ingress gateway
-- **mTLS Authentication** — verify automatic mTLS is active after installation
-- Explore [IstioOperator reference](https://istio.io/latest/docs/reference/config/istio.operator.v1alpha1/)
-
 **Official Istio Docs:** [Install with istioctl](https://istio.io/latest/docs/setup/install/istioctl/)
