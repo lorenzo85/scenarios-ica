@@ -24,14 +24,9 @@ kubectl get configmap istio -n istio-system \
 
 > **Note:** With `REGISTRY_ONLY` active, pods attempting to reach unregistered external services (e.g. `curl https://httpbin.org`) will receive a `502` error. A `ServiceEntry` must be created to permit access to each external host.
 
-Test the behaviour by creating a test pod:
-```bash
-kubectl run tester --image=nginx
-```
-
 Test that requests to `httpbin.org` fail with `502 Bad Gateway`
 ```bash
-kubectl exec tester -c tester -- \
+kubectl exec test -c test -- \
     curl -sS -o /dev/null -D - http://httpbin.org | \
     grep HTTP/
 ```{{exec}}
