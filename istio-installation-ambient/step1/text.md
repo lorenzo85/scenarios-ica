@@ -23,10 +23,4 @@ Wait for all components to reach `Running` status:
 kubectl get pod,service -n istio-system
 ```{{exec}}
 
-Verify that `istioctl` confirms a healthy installation:
-
-```bash
-istioctl analyze
-```{{exec}}
-
 > **Note:** Unlike the `demo` profile, the `ambient` profile does not install `istio-ingressgateway` by default. Ambient mode uses the Kubernetes Gateway API for ingress traffic instead of an Istio-specific gateway resource.
