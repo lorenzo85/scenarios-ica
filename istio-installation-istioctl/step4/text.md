@@ -2,11 +2,6 @@ Istio uses a [sidecar injection](https://istio.io/latest/docs/setup/additional-s
 
 To enable **automatic sidecar injection** for the `default` namespace, apply the `istio-injection=enabled` label:
 
-*label:*
-- resource: namespace
-- resource name: `default`
-- label: `istio-injection=enabled`
-
 ```bash
 kubectl label namespace default \
     istio-injection=enabled

@@ -2,13 +2,6 @@
 
 You have completed the **Istio Playground** scenario.
 
-## What You Explored
-
-- The Istio service mesh environment with full control plane and data plane components
-- Freely creating, modifying, and deleting Istio resources without guided steps
-- How different Istio subsystems (traffic management, security, observability) interact in a live cluster
-- Using `kubectl` and `istioctl` together to inspect mesh state and diagnose issues
-
 ## Key Istio Resources Available
 
 - `VirtualService`, `DestinationRule`, `Gateway` — traffic management primitives
