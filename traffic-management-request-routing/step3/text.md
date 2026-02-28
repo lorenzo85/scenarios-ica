@@ -23,23 +23,24 @@ with the following properties:
 <br>
 <details><summary>Tip</summary>
 
-```plain
+```yaml
+# File destination-rule.yaml
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
-  name: // TODO
+  name: # TODO
 spec:
-  host: // TODO
+  host: # TODO
   subsets:
-  - name: //TODO
-  - name: // TODO
+  - name: #TODO
+  - name: # TODO
 ```{{copy}}
 </details>
-
 <br>
 <details><summary>Solution</summary>
 
-```plain
+```yaml
+# File destination-rule.yaml
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
@@ -54,4 +55,11 @@ spec:
     labels:
       version: v2
 ```{{copy}}
+
+Apply the resource:
+```bash
+kubectl apply -f destination-rule.yaml
+```{{exec}}
 </details>
+
+
