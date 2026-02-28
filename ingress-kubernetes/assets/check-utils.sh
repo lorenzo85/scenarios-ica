@@ -35,28 +35,6 @@ function check_path_value() {
     fi
 }
 
-function check_path_host() {
-    arguments_count=$#
-
-    if [ "$arguments_count" == 4 ]; then
-        # Get the value from default namespace
-        check=$(kubectl get "$1" "$2" -n default -o jsonpath="{$3}")
-        pattern="$4"
-    else
-        # Get the value from specified namespace
-        check=$(kubectl get "$1" "$2" -n "$3" -o jsonpath="{$4}")
-        pattern="$5"
-    fi
-
-    # Escape regex special characters (*, ., [, ], \, ^, $) for literal match
-    re=$(printf '%s' "$pattern" | sed 's/[][\\.^$*]/\\&/g')
-
-    # Perform the check
-    if ! [[ $check =~ $re ]]; then
-        exit 1
-    fi
-}
-
 function check_output_does_not_contain() {
   FILE=/tmp/$RANDOM
   eval $1 > $FILE
