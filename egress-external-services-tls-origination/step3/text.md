@@ -23,9 +23,16 @@ Configure the `finance-yahoo-com` service entry with the following properties:
 
 
 <br>
-<details><summary>Tip</summary>
+<details>
+<summary>Tip</summary>
 
-```plain
+Create a file using `vi`:
+```bash
+vi service-entry.yaml
+```{{exec}}
+Copy, edit and paste the following content:
+```yaml
+# File service-entry.yaml
 apiVersion: networking.istio.io/v1alpha3
 kind: ServiceEntry
 metadata:
@@ -37,19 +44,30 @@ spec:
     - number: 80
       name: http-port
       protocol: HTTP
-      targetPort: // TODO
+      targetPort: # TODO
     - number: 443
       name: https-port
       protocol: HTTPS
   resolution: DNS
   location: MESH_EXTERNAL
 ```{{copy}}
+Apply the resource:
+```bash
+kubectl apply -f service-entry.yaml
+```{{exec}}
 </details>
+<details>
+<summary>Solution</summary>
 
-<br>
-<details><summary>Solution</summary>
+Create a file using `vi`:
 
-```plain
+```bash
+vi service-entry.yaml
+```{{exec}}
+
+Copy and paste the following content:
+```yaml
+# File service-entry.yaml
 apiVersion: networking.istio.io/v1alpha3
 kind: ServiceEntry
 metadata:
@@ -68,4 +86,9 @@ spec:
   resolution: DNS
   location: MESH_EXTERNAL
 ```{{copy}}
+
+Apply the resource:
+```bash
+kubectl apply -f service-entry.yaml
+```{{exec}}
 </details>

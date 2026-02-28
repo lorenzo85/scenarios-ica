@@ -24,7 +24,7 @@ Use the following configuration properties:
 <details><summary>Tip</summary>
 
 ```bash
-kubectl create serviceaccount // TODO
+kubectl create serviceaccount # TODO
 ```{{copy}}
 
 ```bash

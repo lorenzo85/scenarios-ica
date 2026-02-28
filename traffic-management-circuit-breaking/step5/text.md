@@ -40,36 +40,54 @@ Code 507 : 2 (10.0 %)
 ```
 
 <br>
-<details><summary>Tip</summary>
+<details>
+<summary>Tip</summary>
 
-```plain
+Create a file using `vi`:
+```bash
+vi destination-rule.yaml
+```{{exec}}
+Copy, edit and paste the following content:
+```yaml
+# File destination-rule.yaml
 apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
- name: // TODO
+  name: # TODO
 spec:
-  host: // TODO
+  host: # TODO
   trafficPolicy:
     outlierDetection:
-      baseEjectionTime: // TODO
-      consecutive5xxErrors: // TODO
-      interval: // TODO
-      maxEjectionPercent: // TODO
+      baseEjectionTime: # TODO
+      consecutive5xxErrors: # TODO
+      interval: # TODO
+      maxEjectionPercent: # TODO
   subsets:
   - name: default
     labels:
       version: v3
 ```{{copy}}
+Apply the resource:
+```bash
+kubectl apply -f destination-rule.yaml
+```{{exec}}
 </details>
+<details>
+<summary>Solution</summary>
 
-<br>
-<details><summary>Solution</summary>
+Create a file using `vi`:
 
-```plain
+```bash
+vi destination-rule.yaml
+```{{exec}}
+
+Copy and paste the following content:
+```yaml
+# File destination-rule.yaml
 apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
- name: notification
+  name: notification
 spec:
   host: notification-service
   trafficPolicy:
@@ -83,4 +101,9 @@ spec:
     labels:
       version: v3
 ```{{copy}}
+
+Apply the resource:
+```bash
+kubectl apply -f destination-rule.yaml
+```{{exec}}
 </details>

@@ -27,9 +27,16 @@ the correct SNI hosts must be routed to the booking service:
 
 
 <br>
-<details><summary>Tip</summary>
+<details>
+<summary>Tip</summary>
 
-```plain
+Create a file using `vi`:
+```bash
+vi virtual-service.yaml
+```{{exec}}
+Copy, edit and paste the following content:
+```yaml
+# File virtual-service.yaml
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
@@ -41,21 +48,32 @@ spec:
   - booking-gateway
   tls:
   - match:
-    - port: // TODO
+    - port: # TODO
       sniHosts:
-      - // TODO
+      - # TODO
     route:
     - destination:
-        host: // TODO
+        host: # TODO
         port:
-          number: // TODO
+          number: # TODO
 ```{{copy}}
+Apply the resource:
+```bash
+kubectl apply -f virtual-service.yaml
+```{{exec}}
 </details>
+<details>
+<summary>Solution</summary>
 
-<br>
-<details><summary>Solution</summary>
+Create a file using `vi`:
 
-```plain
+```bash
+vi virtual-service.yaml
+```{{exec}}
+
+Copy and paste the following content:
+```yaml
+# File virtual-service.yaml
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
@@ -76,4 +94,9 @@ spec:
         port:
           number: 443
 ```{{copy}}
+
+Apply the resource:
+```bash
+kubectl apply -f virtual-service.yaml
+```{{exec}}
 </details>

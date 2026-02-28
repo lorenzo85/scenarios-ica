@@ -11,7 +11,7 @@ curl http://booking.example.com:30000/bookings
 ```{{exec}}
 
 The expected response confirms the mismatch:
-```plain
+```text
 Client sent an HTTP request to an HTTPs server
 ```
 

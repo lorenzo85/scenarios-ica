@@ -15,22 +15,40 @@ Create an ingress class resource named `istio` in the `default` namespace using 
 * controller: `istio.io/ingress-controller`
 
 <br>
-<details><summary>Tip</summary>
+<details>
+<summary>Tip</summary>
 
-```plain
+Create a file using `vi`:
+```bash
+vi ingress-class.yaml
+```{{exec}}
+Copy, edit and paste the following content:
+```yaml
+# File ingress-class.yaml
 apiVersion: networking.k8s.io/v1
 kind: IngressClass
 metadata:
-  name: // TODO
+  name: # TODO
 spec:
-  controller: // TODO
+  controller: # TODO
 ```{{copy}}
+Apply the resource:
+```bash
+kubectl apply -f ingress-class.yaml
+```{{exec}}
 </details>
+<details>
+<summary>Solution</summary>
 
-<br>
-<details><summary>Solution</summary>
+Create a file using `vi`:
 
-```plain
+```bash
+vi ingress-class.yaml
+```{{exec}}
+
+Copy and paste the following content:
+```yaml
+# File ingress-class.yaml
 apiVersion: networking.k8s.io/v1
 kind: IngressClass
 metadata:
@@ -38,4 +56,9 @@ metadata:
 spec:
   controller: istio.io/ingress-controller
 ```{{copy}}
+
+Apply the resource:
+```bash
+kubectl apply -f ingress-class.yaml
+```{{exec}}
 </details>

@@ -18,30 +18,48 @@ Use the following configuration properties:
 
 
 <br>
-<details><summary>Tip</summary>
+<details>
+<summary>Tip</summary>
 
-```plain
+Create a file using `vi`:
+```bash
+vi gateway.yaml
+```{{exec}}
+Copy, edit and paste the following content:
+```yaml
+# File gateway.yaml
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: // TODO
+  name: # TODO
 spec:
   selector:
-    istio: // TODO
+    istio: # TODO
   servers:
   - port:
-      number: // TODO
-      name: // TODO
-      protocol: // TODO
+      number: # TODO
+      name: # TODO
+      protocol: # TODO
     hosts:
-    - // TODO
+    - # TODO
 ```{{copy}}
+Apply the resource:
+```bash
+kubectl apply -f gateway.yaml
+```{{exec}}
 </details>
+<details>
+<summary>Solution</summary>
 
-<br>
-<details><summary>Solution</summary>
+Create a file using `vi`:
 
-```plain
+```bash
+vi gateway.yaml
+```{{exec}}
+
+Copy and paste the following content:
+```yaml
+# File gateway.yaml
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
@@ -57,4 +75,9 @@ spec:
     hosts:
     - finance.yahoo.com
 ```{{copy}}
+
+Apply the resource:
+```bash
+kubectl apply -f gateway.yaml
+```{{exec}}
 </details>

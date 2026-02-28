@@ -32,9 +32,10 @@ authority certificate: `/root/certificates/example.com.crt`.
 
 
 <br>
-<details><summary>Tip</summary>
+<details>
+<summary>Tip</summary>
 
-```plain
+```bash
 kubectl create -n istio-system secret generic booking-credential-mutual \
   --from-file=tls.key=//TODO \
   --from-file=tls.crt=//TODO \
@@ -43,9 +44,10 @@ kubectl create -n istio-system secret generic booking-credential-mutual \
 </details>
 
 <br>
-<details><summary>Solution</summary>
+<details>
+<summary>Solution</summary>
 
-```plain
+```bash
 kubectl create -n istio-system secret generic booking-credential-mutual \
   --from-file=tls.key=/root/certificates/booking.example.com.key \
   --from-file=tls.crt=/root/certificates/booking.example.com.crt \

@@ -16,9 +16,16 @@ Use the following configuration properties:
 
 
 <br>
-<details><summary>Tip</summary>
+<details>
+<summary>Tip</summary>
 
-```plain
+Create a file using `vi`:
+```bash
+vi authorization-policy.yaml
+```{{exec}}
+Copy, edit and paste the following content:
+```yaml
+# File authorization-policy.yaml
 apiVersion: security.istio.io/v1
 kind: AuthorizationPolicy
 metadata:
@@ -26,23 +33,33 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: // TODO
-  action: // TODO
+      app: # TODO
+  action: # TODO
   rules:
   - from:
     - source:
-       requestPrincipals: // TODO
+       requestPrincipals: # TODO
     when:
       - key: request.auth.claims[groups]
-        values: // TODO
+        values: # TODO
 ```{{copy}}
+Apply the resource:
+```bash
+kubectl apply -f authorization-policy.yaml
+```{{exec}}
 </details>
+<details>
+<summary>Solution</summary>
 
+Create a file using `vi`:
 
-<br>
-<details><summary>Solution</summary>
+```bash
+vi authorization-policy.yaml
+```{{exec}}
 
-```plain
+Copy and paste the following content:
+```yaml
+# File authorization-policy.yaml
 apiVersion: security.istio.io/v1
 kind: AuthorizationPolicy
 metadata:
@@ -60,4 +77,9 @@ spec:
       - key: request.auth.claims[groups]
         values: ["group2"]
 ```{{copy}}
+
+Apply the resource:
+```bash
+kubectl apply -f authorization-policy.yaml
+```{{exec}}
 </details>

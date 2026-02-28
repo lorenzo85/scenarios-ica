@@ -26,34 +26,52 @@ Use the following configuration properties:
 * TLS credential name: `booking-credential`
 
 <br>
-<details><summary>Tip</summary>
+<details>
+<summary>Tip</summary>
 
-```plain
+Create a file using `vi`:
+```bash
+vi gateway.yaml
+```{{exec}}
+Copy, edit and paste the following content:
+```yaml
+# File gateway.yaml
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: // TODO
+  name: # TODO
 spec:
   # The selector matches the ingress gateway pod labels.
   selector:
-    // TODO
+    # TODO
   servers:
   - port:
-      number: // TODO
-      name: // TODO
-      protocol: // TODO
+      number: # TODO
+      name: # TODO
+      protocol: # TODO
     tls:
-      mode: // TODO
-      credentialName: // TODO
+      mode: # TODO
+      credentialName: # TODO
     hosts:
-     // TODO
+     # TODO
 ```{{copy}}
+Apply the resource:
+```bash
+kubectl apply -f gateway.yaml
+```{{exec}}
 </details>
+<details>
+<summary>Solution</summary>
 
-<br>
-<details><summary>Solution</summary>
+Create a file using `vi`:
 
-```plain
+```bash
+vi gateway.yaml
+```{{exec}}
+
+Copy and paste the following content:
+```yaml
+# File gateway.yaml
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
@@ -73,4 +91,9 @@ spec:
     hosts:
     - booking.example.com
 ```{{copy}}
+
+Apply the resource:
+```bash
+kubectl apply -f gateway.yaml
+```{{exec}}
 </details>

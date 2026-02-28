@@ -21,7 +21,7 @@ The following service is pre-deployed:
 Check the running pods and services and wait until they are all in `Running` status:
 
 ```bash
-kubectl get po,svc -L app,version
+kubectl get pod,service -L app,version
 ```{{exec}}
 
 Test the `booking-service` is reachable from within the cluster:

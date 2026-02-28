@@ -26,46 +26,64 @@ Use the following configuration properties:
 
 
 <br>
-<details><summary>Tip</summary>
+<details>
+<summary>Tip</summary>
 
-```plain
+Create a file using `vi`:
+```bash
+vi virtual-service.yaml
+```{{exec}}
+Copy, edit and paste the following content:
+```yaml
+# File virtual-service.yaml
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: // TODO
+  name: # TODO
 spec:
   hosts:
-  - // TODO
+  - # TODO
   gateways:
-  - // TODO
-  - // TODO
+  - # TODO
+  - # TODO
   http:
   - match:
     - gateways:
-      - // TODO
-      port: // TODO
+      - # TODO
+      port: # TODO
     route:
     - destination:
-        host: // TODO
-        subset: // TODO
+        host: # TODO
+        subset: # TODO
         port:
-          number: // TODO
+          number: # TODO
   - match:
     - gateways:
-      - // TODO
-      port: // TODO
+      - # TODO
+      port: # TODO
     route:
     - destination:
-        host: // TODO
+        host: # TODO
         port:
-          number: // TODO
+          number: # TODO
 ```{{copy}}
+Apply the resource:
+```bash
+kubectl apply -f virtual-service.yaml
+```{{exec}}
 </details>
+<details>
+<summary>Solution</summary>
 
-<br>
-<details><summary>Solution</summary>
+Create a file using `vi`:
 
-```plain
+```bash
+vi virtual-service.yaml
+```{{exec}}
+
+Copy and paste the following content:
+```yaml
+# File virtual-service.yaml
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
@@ -96,4 +114,9 @@ spec:
         port:
           number: 443
 ```{{copy}}
+
+Apply the resource:
+```bash
+kubectl apply -f virtual-service.yaml
+```{{exec}}
 </details>

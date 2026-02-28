@@ -19,9 +19,16 @@ Update the `httpbin-egressgateway` gateway resource created previously to allow 
 
 
 <br>
-<details><summary>Tip</summary>
+<details>
+<summary>Tip</summary>
 
-```plain
+Create a file using `vi`:
+```bash
+vi gateway.yaml
+```{{exec}}
+Copy, edit and paste the following content:
+```yaml
+# File gateway.yaml
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
@@ -31,20 +38,31 @@ spec:
     istio: egressgateway
   servers:
   - port:
-      number: // TODO
-      name: // TODO
-      protocol: // TODO
+      number: # TODO
+      name: # TODO
+      protocol: # TODO
     hosts:
-    - // TODO
+    - # TODO
     tls:
-      mode: // TODO
+      mode: # TODO
 ```{{copy}}
+Apply the resource:
+```bash
+kubectl apply -f gateway.yaml
+```{{exec}}
 </details>
+<details>
+<summary>Solution</summary>
 
-<br>
-<details><summary>Solution</summary>
+Create a file using `vi`:
 
-```plain
+```bash
+vi gateway.yaml
+```{{exec}}
+
+Copy and paste the following content:
+```yaml
+# File gateway.yaml
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
@@ -63,4 +81,9 @@ spec:
     tls:
       mode: PASSTHROUGH
 ```{{copy}}
+
+Apply the resource:
+```bash
+kubectl apply -f gateway.yaml
+```{{exec}}
 </details>

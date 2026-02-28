@@ -15,5 +15,5 @@ You will use *fortio* to intentionally "fire" the circuit breaker.
 Check the running pods and services and wait until they are all in status `Running`.
 
 ```bash
-kubectl get po,svc -L app,version
+kubectl get pod,service -L app,version
 ```{{exec}}

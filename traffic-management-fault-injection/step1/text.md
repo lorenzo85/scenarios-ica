@@ -10,7 +10,7 @@ You will inject faults into the communication between these two services to test
 Check the running pods and services and wait until they are all in `Running` status:
 
 ```bash
-kubectl get po,svc -L app,version
+kubectl get pod,service -L app,version
 ```{{exec}}
 
 Both the `booking-service` and `notification-service` pods should have the `istio-proxy` sidecar injected (2/2 containers ready). The sidecar is what allows Istio to intercept and manipulate traffic between services.

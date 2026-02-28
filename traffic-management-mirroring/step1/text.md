@@ -11,7 +11,7 @@ while *notification-service-v2* sends notifications using both **EMAIL** and **S
 Check the running pods and services and wait until they are all in status `Running`.
 
 ```bash
-kubectl get po,svc -L app,version
+kubectl get pod,service -L app,version
 ```{{exec}}
 
 Note that the notification-service-v1 pods have

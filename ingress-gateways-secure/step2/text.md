@@ -23,20 +23,22 @@ Create a Kubernetes **tls** secret in the `istio-system` namespace with the foll
 
 
 <br>
-<details><summary>Tip</summary>
+<details>
+<summary>Tip</summary>
 
-```plain
+```bash
 kubectl create -n istio-system secret tls booking-credential \
   --key= //TODO
-  --cert= // TODO
+  --cert= # TODO
 ```{{copy}}
 </details>
 
 
 <br>
-<details><summary>Solution</summary>
+<details>
+<summary>Solution</summary>
 
-```plain
+```bash
 kubectl create -n istio-system secret tls booking-credential \
   --key=/root/certificates/booking.example.com.key \
   --cert=/root/certificates/booking.example.com.crt

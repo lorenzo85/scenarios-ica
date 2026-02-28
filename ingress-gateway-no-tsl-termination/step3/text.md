@@ -18,31 +18,49 @@ The virtual service host to which traffic is sent is `booking.example.com`.
 
 
 <br>
-<details><summary>Tip</summary>
+<details>
+<summary>Tip</summary>
 
-```plain
+Create a file using `vi`:
+```bash
+vi virtual-service.yaml
+```{{exec}}
+Copy, edit and paste the following content:
+```yaml
+# File virtual-service.yaml
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: // TODO
+  name: # TODO
 spec:
   hosts:
-  - // TODO
+  - # TODO
   gateways:
-  - // TODO
+  - # TODO
   http:
   - route:
     - destination:
         port:
-          number: // TODO
-        host: // TODO
+          number: # TODO
+        host: # TODO
 ```{{copy}}
+Apply the resource:
+```bash
+kubectl apply -f virtual-service.yaml
+```{{exec}}
 </details>
+<details>
+<summary>Solution</summary>
 
-<br>
-<details><summary>Solution</summary>
+Create a file using `vi`:
 
-```plain
+```bash
+vi virtual-service.yaml
+```{{exec}}
+
+Copy and paste the following content:
+```yaml
+# File virtual-service.yaml
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
@@ -59,4 +77,9 @@ spec:
           number: 443
         host: booking-service
 ```{{copy}}
+
+Apply the resource:
+```bash
+kubectl apply -f virtual-service.yaml
+```{{exec}}
 </details>

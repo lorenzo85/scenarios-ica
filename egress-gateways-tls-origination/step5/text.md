@@ -13,28 +13,46 @@ connections to `finance.yahoo.com`.
 
 
 <br>
-<details><summary>Tip</summary>
+<details>
+<summary>Tip</summary>
 
-```plain
+Create a file using `vi`:
+```bash
+vi destination-rule.yaml
+```{{exec}}
+Copy, edit and paste the following content:
+```yaml
+# File destination-rule.yaml
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
-  name: // TODO
+  name: # TODO
 spec:
-  host: // TODO
+  host: # TODO
   trafficPolicy:
     portLevelSettings:
       - port:
-          number: // TODO
+          number: # TODO
         tls:
-          mode: // TODO
+          mode: # TODO
 ```{{copy}}
+Apply the resource:
+```bash
+kubectl apply -f destination-rule.yaml
+```{{exec}}
 </details>
+<details>
+<summary>Solution</summary>
 
-<br>
-<details><summary>Solution</summary>
+Create a file using `vi`:
 
-```plain
+```bash
+vi destination-rule.yaml
+```{{exec}}
+
+Copy and paste the following content:
+```yaml
+# File destination-rule.yaml
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
@@ -48,4 +66,9 @@ spec:
         tls:
           mode: SIMPLE # initiates HTTPS for connections to finance.yahoo.com
 ```{{copy}}
+
+Apply the resource:
+```bash
+kubectl apply -f destination-rule.yaml
+```{{exec}}
 </details>

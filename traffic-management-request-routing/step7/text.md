@@ -36,9 +36,16 @@ kubectl exec -it tester -- \
 ```{{exec}}
 
 <br>
-<details><summary>Tip</summary>
+<details>
+<summary>Tip</summary>
 
-```plain
+Create a file using `vi`:
+```bash
+vi virtual-service.yaml
+```{{exec}}
+Copy, edit and paste the following content:
+```yaml
+# File virtual-service.yaml
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
@@ -50,22 +57,33 @@ spec:
   - match:
     - queryParams:
         testing:
-          exact: // TODO
+          exact: # TODO
     route:
     - destination:
-        host: // TODO
-        subset: // TODO
+        host: # TODO
+        subset: # TODO
   - route:
     - destination:
-        host: // TODO
-        subset: // TODO
+        host: # TODO
+        subset: # TODO
 ```{{copy}}
+Apply the resource:
+```bash
+kubectl apply -f virtual-service.yaml
+```{{exec}}
 </details>
+<details>
+<summary>Solution</summary>
 
-<br>
-<details><summary>Solution</summary>
+Create a file using `vi`:
 
-```plain
+```bash
+vi virtual-service.yaml
+```{{exec}}
+
+Copy and paste the following content:
+```yaml
+# File virtual-service.yaml
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
@@ -87,4 +105,9 @@ spec:
         host: notification-service
         subset: v1
 ```{{copy}}
+
+Apply the resource:
+```bash
+kubectl apply -f virtual-service.yaml
+```{{exec}}
 </details>

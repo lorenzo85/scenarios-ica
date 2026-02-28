@@ -20,9 +20,9 @@ There are three deployments installed in the Kubernetes cluster:
 Check the running pods and services and wait until they are all in status `Running`.
 
 ```bash
-kubectl get po,svc -n foo
+kubectl get pod,service -n foo
 ```{{exec}}
 
 ```bash
-kubectl get po,svc -n bar
+kubectl get pod,service -n bar
 ```{{exec}}

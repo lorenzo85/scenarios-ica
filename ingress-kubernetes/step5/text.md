@@ -23,21 +23,24 @@ Note that the secret **must** be in the `istio-system` namespace:
 
 
 <br>
-<details><summary>Tip</summary>
+<details>
+<summary>Tip</summary>
 
-```plain
+```bash
 kubectl create -n istio-system secret tls booking-credential \
-  --key=// TODO \
-  --cert=// TODO
+  --key=# TODO \
+  --cert=# TODO
 ```{{copy}}
 </details>
 
 
 <br>
-<details><summary>Solution</summary>
+<details>
+<summary>Solution</summary>
 
-```plain
+```bash
 kubectl create -n istio-system secret tls booking-credential \
   --key=/root/certificates/booking.example.com.key \
   --cert=/root/certificates/booking.example.com.crt
 ```{{exec}}
+</details>

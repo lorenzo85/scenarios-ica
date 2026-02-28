@@ -12,7 +12,7 @@ In this scenario, `booking-service-v2` already serves HTTPS on port 443 and hand
 Check the running pods and services and wait until they are all in `Running` status:
 
 ```bash
-kubectl get po,svc -L app,version
+kubectl get pod,service -L app,version
 ```{{exec}}
 
 The booking-service is exposed using HTTPS on port **443/TCP** and does **not** accept plain HTTP requests.

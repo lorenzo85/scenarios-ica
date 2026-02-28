@@ -29,28 +29,45 @@ Use the following configuration properties:
 
 
 <br>
-<details><summary>Tip</summary>
+<details>
+<summary>Tip</summary>
 
-```plain
+Create a file using `vi`:
+```bash
+vi request-authentication.yaml
+```{{exec}}
+Copy, edit and paste the following content:
+```yaml
+# File request-authentication.yaml
 apiVersion: security.istio.io/v1
 kind: RequestAuthentication
 metadata:
-  name: // TODO
+  name: # TODO
 spec:
   selector:
     matchLabels:
-      app: // TODO
+      app: # TODO
   jwtRules:
-  - issuer: // TODO
-    jwksUri: // TODO
+  - issuer: # TODO
+    jwksUri: # TODO
 ```{{copy}}
+Apply the resource:
+```bash
+kubectl apply -f request-authentication.yaml
+```{{exec}}
 </details>
+<details>
+<summary>Solution</summary>
 
+Create a file using `vi`:
 
-<br>
-<details><summary>Solution</summary>
+```bash
+vi request-authentication.yaml
+```{{exec}}
 
-```plain
+Copy and paste the following content:
+```yaml
+# File request-authentication.yaml
 apiVersion: security.istio.io/v1
 kind: RequestAuthentication
 metadata:
@@ -63,4 +80,9 @@ spec:
   - issuer: "testing@secure.istio.io"
     jwksUri: "https://raw.githubusercontent.com/lorenzo85/scenarios-ica/master/security-authorization-jwt-token/jwks.json"
 ```{{copy}}
+
+Apply the resource:
+```bash
+kubectl apply -f request-authentication.yaml
+```{{exec}}
 </details>

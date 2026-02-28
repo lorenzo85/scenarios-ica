@@ -18,9 +18,16 @@ Use the following configuration properties:
 * TLS credential name: `booking-credential-mutual`
 
 <br>
-<details><summary>Tip</summary>
+<details>
+<summary>Tip</summary>
 
-```plain
+Create a file using `vi`:
+```bash
+vi gateway.yaml
+```{{exec}}
+Copy, edit and paste the following content:
+```yaml
+# File gateway.yaml
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
@@ -34,18 +41,28 @@ spec:
       name: https
       protocol: HTTPS
     tls:
-      mode: // TODO
-      credentialName: // TODO
+      mode: # TODO
+      credentialName: # TODO
     hosts:
     - booking.example.com
 ```{{copy}}
+Apply the resource:
+```bash
+kubectl apply -f gateway.yaml
+```{{exec}}
 </details>
+<details>
+<summary>Solution</summary>
 
+Create a file using `vi`:
 
-<br>
-<details><summary>Solution</summary>
+```bash
+vi gateway.yaml
+```{{exec}}
 
-```plain
+Copy and paste the following content:
+```yaml
+# File gateway.yaml
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
@@ -64,4 +81,9 @@ spec:
     hosts:
     - booking.example.com
 ```{{copy}}
+
+Apply the resource:
+```bash
+kubectl apply -f gateway.yaml
+```{{exec}}
 </details>

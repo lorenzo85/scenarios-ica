@@ -20,37 +20,55 @@ to mirror 100% of the traffic to subset `v2`, created in the previous step.
 
 
 <br>
-<details><summary>Tip</summary>
+<details>
+<summary>Tip</summary>
 
-```plain
+Create a file using `vi`:
+```bash
+vi virtual-service.yaml
+```{{exec}}
+Copy, edit and paste the following content:
+```yaml
+# File virtual-service.yaml
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
- name: // TODO
+  name: # TODO
 spec:
   hosts:
-  - // TODO
+  - # TODO
   http:
   - route:
     - destination:
-        host: // TODO
-        subset: // TODO
+        host: # TODO
+        subset: # TODO
     mirror:
-      host: // TODO
-      subset: // TODO
+      host: # TODO
+      subset: # TODO
     mirrorPercentage:
-      value: // TODO
+      value: # TODO
 ```{{copy}}
+Apply the resource:
+```bash
+kubectl apply -f virtual-service.yaml
+```{{exec}}
 </details>
+<details>
+<summary>Solution</summary>
 
-<br>
-<details><summary>Solution</summary>
+Create a file using `vi`:
 
-```plain
+```bash
+vi virtual-service.yaml
+```{{exec}}
+
+Copy and paste the following content:
+```yaml
+# File virtual-service.yaml
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
- name: notification
+  name: notification
 spec:
   hosts:
   - notification-service
@@ -65,4 +83,9 @@ spec:
     mirrorPercentage:
       value: 100
 ```{{copy}}
+
+Apply the resource:
+```bash
+kubectl apply -f virtual-service.yaml
+```{{exec}}
 </details>

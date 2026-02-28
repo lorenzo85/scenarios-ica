@@ -12,7 +12,7 @@ You will start with an **allow-nothing** policy (deny all) and progressively lay
 Check the running pods and services and wait until they are all in `Running` status:
 
 ```bash
-kubectl get po,svc -L app,version
+kubectl get pod,service -L app,version
 ```{{exec}}
 
 Both pods should show `2/2` containers ready (application + `istio-proxy` sidecar). The sidecar is what enforces authorization decisions made by `istiod`.

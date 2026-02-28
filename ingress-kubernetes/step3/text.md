@@ -17,33 +17,51 @@ Use an ingress class named `istio` (which we created in the previous step) and t
 * backend service port: `80`
 
 <br>
-<details><summary>Tip</summary>
+<details>
+<summary>Tip</summary>
 
-```plain
+Create a file using `vi`:
+```bash
+vi ingress.yaml
+```{{exec}}
+Copy, edit and paste the following content:
+```yaml
+# File ingress.yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: // TODO
+  name: # TODO
 spec:
-  ingressClassName: // TODO
+  ingressClassName: # TODO
   rules:
-  - host: // TODO
+  - host: # TODO
     http:
       paths:
-      - path: // TODO
-        pathType: // TODO
+      - path: # TODO
+        pathType: # TODO
         backend:
           service:
-            name: // TODO
+            name: # TODO
             port:
-              number: // TODO
+              number: # TODO
 ```{{copy}}
+Apply the resource:
+```bash
+kubectl apply -f ingress.yaml
+```{{exec}}
 </details>
+<details>
+<summary>Solution</summary>
 
-<br>
-<details><summary>Solution</summary>
+Create a file using `vi`:
 
-```plain
+```bash
+vi ingress.yaml
+```{{exec}}
+
+Copy and paste the following content:
+```yaml
+# File ingress.yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -62,4 +80,9 @@ spec:
             port:
               number: 80
 ```{{copy}}
+
+Apply the resource:
+```bash
+kubectl apply -f ingress.yaml
+```{{exec}}
 </details>
