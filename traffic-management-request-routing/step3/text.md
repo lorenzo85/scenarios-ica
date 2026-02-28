@@ -22,7 +22,12 @@ with the following properties:
 
 <br>
 <details><summary>Tip</summary>
+Create a file using `vi`
+```bash
+vi destination-rule.yaml
+```{{exec}}
 
+Copy, edit and paste the following content:
 ```yaml
 # File destination-rule.yaml
 apiVersion: networking.istio.io/v1alpha3
@@ -38,7 +43,12 @@ spec:
 </details>
 <br>
 <details><summary>Solution</summary>
+Create a file using `vi`
+```bash
+vi destination-rule.yaml
+```{{exec}}
 
+Copy and paste the following content:
 ```yaml
 # File destination-rule.yaml
 apiVersion: networking.istio.io/v1alpha3
