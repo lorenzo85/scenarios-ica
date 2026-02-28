@@ -1,8 +1,7 @@
 Test that the secure ingress gateway configuration works correctly by making a request
 to retrieve all bookings using `https://booking.example.com` on **NodePort** `30443`.
 
-Because the endpoint is secure we must pass the certificate authority certificate to *curl*,
-so that the TLS handshake can be performed correctly:
+The certificate used here is **self-signed**, so curl cannot verify it against a trusted CA by default and would reject the connection. We pass `--cacert` explicitly to give curl the CA certificate that signed the server certificate, allowing it to verify the TLS handshake:
 
 ```bash
 curl -v --cacert certificates/example.com.crt \

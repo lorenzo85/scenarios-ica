@@ -17,15 +17,12 @@ authority certificate: `/root/certificates/example.com.crt`.
 *generic secret:*
 * name: `booking-credential-mutual`
 * namespace: `istio-system`
-
 * key1 type: `from-file`
 * key1 name: `ca.crt`
 * key1 file path: `/root/certificates/example.com.crt`
-
 * key2 type: `from-file`
 * key2 name: `tls.crt`
 * key2 file path: `/root/certificates/booking.example.com.crt`
-
 * key3 type: `from-file`
 * key3 name: `tls.key`
 * key3 file path: `/root/certificates/booking.example.com.key`
@@ -43,7 +40,6 @@ kubectl create -n istio-system secret generic booking-credential-mutual \
 ```{{copy}}
 </details>
 
-<br>
 <details>
 <summary>Solution</summary>
 

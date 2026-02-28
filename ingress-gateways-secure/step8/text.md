@@ -1,12 +1,13 @@
 Test that the secure ingress gateway mutual TLS configuration works correctly by making a request
 to retrieve all bookings using `https://booking.example.com` on **NodePort** `30443`.
 
-Because the endpoint now uses mutual TLS we also must pass to *curl* the client certificate and key
-using the *--cert* and *--key* parameters.
+Mutual TLS requires both sides to present a certificate. The curl command therefore needs three extra flags:
 
-The client certificate and key have been already prepared and signed using *example.com.crt* CA
-in the `/root/certificates` directory.
+- `--cacert` — the self-signed CA certificate, so curl can verify the **server** certificate (same reason as in the previous step)
+- `--cert` — the **client** certificate, so the gateway can verify the caller's identity
+- `--key` — the private key that belongs to the client certificate
 
+The client certificate and key have been already prepared and signed using the `example.com.crt` CA in the `/root/certificates` directory.
 
 Verify that mutual TLS is working correctly using *curl*:
 

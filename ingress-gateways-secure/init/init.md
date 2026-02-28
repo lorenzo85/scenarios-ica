@@ -15,7 +15,6 @@ With standard TLS, only the server presents a certificate to prove its identity 
 - How to create and reference Kubernetes `Secret` resources containing TLS certificates and private keys
 - How to extend a TLS `Gateway` to require mutual TLS (mTLS) from clients
 - How to test HTTPS and mTLS connections using `curl` with the appropriate certificate flags
-- How Istio handles certificate rotation and secret management for the ingress gateway
 
 ## Prerequisites
 

@@ -22,7 +22,6 @@ Create a Kubernetes **tls** secret in the `istio-system` namespace with the foll
 * cert path: `/root/certificates/booking.example.com.crt`
 
 
-<br>
 <details>
 <summary>Tip</summary>
 
@@ -33,8 +32,6 @@ kubectl create -n istio-system secret tls booking-credential \
 ```{{copy}}
 </details>
 
-
-<br>
 <details>
 <summary>Solution</summary>
 
