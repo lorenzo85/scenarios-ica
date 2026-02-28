@@ -1,35 +1,15 @@
-[Prometheus](https://prometheus.io/) stores time-series metrics scraped from Istio's Envoy proxies. You can query it using **PromQL** (Prometheus Query Language).
+With only successful traffic flowing, all edges in the Kiali graph appear **green**. Now introduce a second background loop that hits a non-existent endpoint every 3 seconds to generate `404` errors:
 
-Prometheus is exposed on NodePort `30090`. Explore key Istio metrics using PromQL:
-
-**Total requests to booking-service (all time):**
 ```bash
-curl -s "http://localhost:30090/api/v1/query?query=sum(istio_requests_total{destination_service_name='booking-service'})" | \
-    python3 -m json.tool
+while true; do
+  kubectl exec tester -- curl -s http://booking-service/notfound > /dev/null
+  sleep 3
+done &
 ```{{exec}}
 
-**Request rate per second (last 1 minute):**
-```bash
-curl -s "http://localhost:30090/api/v1/query?query=rate(istio_requests_total{destination_service_name='booking-service'}[1m])" | \
-    python3 -m json.tool
-```{{exec}}
+Wait 15–20 seconds for Kiali to pick up the error metrics, then open the views again to see the difference:
 
-**Error rate (5xx responses):**
-```bash
-curl -s "http://localhost:30090/api/v1/query?query=sum(rate(istio_requests_total{destination_service_name='booking-service',response_code=~'5.*'}[1m]))" | \
-    python3 -m json.tool
-```{{exec}}
+- [Graph]({{TRAFFIC_HOST1_30001}}/kiali/console/graph/namespaces/?traffic=namespaces%3Ddefault%2Chttp%2ChttpRequest&graphType=app&namespaces=default&duration=120&refresh=15000&layout=dagre&edges=responseTime%2Crt95&namespaceLayout=dagre) — edges with elevated error rates will now appear in **red**
+- [Workloads]({{TRAFFIC_HOST1_30001}}/kiali/console/workloads?duration=120&refresh=15000&namespaces=default) — `booking-service` will show a degraded health indicator
 
-**P99 request latency in milliseconds:**
-```bash
-curl -s "http://localhost:30090/api/v1/query?query=histogram_quantile(0.99,sum(rate(istio_request_duration_milliseconds_bucket{destination_service_name='booking-service'}[1m]))by(le))" | \
-    python3 -m json.tool
-```{{exec}}
-
-> **Key Istio Prometheus metrics:**
-> - `istio_requests_total` — counter of all requests, labelled by source/destination service, response code, method
-> - `istio_request_duration_milliseconds` — histogram of request latency
-> - `istio_request_bytes` / `istio_response_bytes` — request/response payload sizes
-> - `istio_tcp_connections_opened_total` — TCP connections (for non-HTTP traffic)
-
-For the full list of Istio standard metrics see the [official reference](https://istio.io/latest/docs/reference/config/metrics/).
+> **Why red?** Istio counts `4xx` and `5xx` responses as errors in its telemetry. Kiali highlights edges and workloads with elevated error rates in red to draw your attention to degraded traffic paths — making it easy to spot failing services at a glance without digging through logs.

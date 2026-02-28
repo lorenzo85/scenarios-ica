@@ -1,44 +1,23 @@
-[Kiali](https://kiali.io/) is the Istio service mesh observability console. It provides a real-time topology graph of your mesh, showing how services communicate, their health, and traffic flow — all without changing any application code.
+[Prometheus](https://prometheus.io/) stores time-series metrics scraped from Istio's Envoy proxies. You can query it using **PromQL** (Prometheus Query Language).
 
-Kiali is exposed on NodePort `30001`. Verify it is accessible and list the namespaces it is monitoring:
+Click each link below to open the Prometheus UI with the query pre-filled and ready to run:
 
-```bash
-curl -s http://localhost:30001/kiali/api/namespaces | python3 -m json.tool | grep '"name"'
-```{{exec}}
+**Total requests to booking-service (all time):**
+[Run query]({{TRAFFIC_HOST1_30090}}/graph?g0.expr=sum%28istio_requests_total%7Bdestination_service_name%3D%27booking-service%27%7D%29&g0.tab=1&g0.range_input=5m)
 
-You should see the `default` and `istio-system` namespaces listed.
+**Request rate per second (last 1 minute):**
+[Run query]({{TRAFFIC_HOST1_30090}}/graph?g0.expr=rate%28istio_requests_total%7Bdestination_service_name%3D%27booking-service%27%7D%5B1m%5D%29&g0.tab=1&g0.range_input=5m)
 
-Query the Kiali workload graph for the `default` namespace to see how services are connected:
+**Error rate (4xx and 5xx responses):**
+[Run query]({{TRAFFIC_HOST1_30090}}/graph?g0.expr=sum%28rate%28istio_requests_total%7Bdestination_service_name%3D%27booking-service%27%2Cresponse_code%3D~%27%5B45%5D.%2A%27%7D%5B1m%5D%29%29&g0.tab=1&g0.range_input=5m)
 
-```bash
-curl -s "http://localhost:30001/kiali/api/namespaces/graph?namespaces=default&graphType=workload" | \
-    python3 -m json.tool | grep -E '"app"|"version"' | head -20
-```{{exec}}
+**P99 request latency in milliseconds:**
+[Run query]({{TRAFFIC_HOST1_30090}}/graph?g0.expr=histogram_quantile%280.99%2Csum%28rate%28istio_request_duration_milliseconds_bucket%7Bdestination_service_name%3D%27booking-service%27%7D%5B1m%5D%29%29by%28le%29%29&g0.tab=1&g0.range_input=5m)
 
-This returns the nodes and edges of the service graph — each edge represents live traffic between workloads, annotated with request rates and error rates.
+> **Key Istio Prometheus metrics:**
+> - `istio_requests_total` — counter of all requests, labelled by source/destination service, response code, method
+> - `istio_request_duration_milliseconds` — histogram of request latency
+> - `istio_request_bytes` / `istio_response_bytes` — request/response payload sizes
+> - `istio_tcp_connections_opened_total` — TCP connections (for non-HTTP traffic)
 
-Check the health of all services in the `default` namespace:
-
-```bash
-curl -s "http://localhost:30001/kiali/api/namespaces/default/services" | \
-    python3 -m json.tool | grep -E '"name"' | head -10
-```{{exec}}
-
-Use Kiali's built-in configuration validator to detect any Istio misconfigurations in the `default` namespace:
-
-```bash
-curl -s "http://localhost:30001/kiali/api/namespaces/default/validations" | \
-    python3 -m json.tool
-```{{exec}}
-
-An empty result or `{}` means all Istio resources are valid. Any issues found (e.g. a `VirtualService` referencing a non-existent `DestinationRule` subset) would appear here.
-
-> **What Kiali shows you:**
-> - **Graph view** — real-time topology with traffic rates, error rates, and response times on each edge
-> - **Health indicators** — green/yellow/red status for each service based on error rate thresholds
-> - **Configuration validation** — detects misconfigurations in `VirtualService`, `DestinationRule`, and `Gateway` resources
-> - **Workload details** — logs, metrics, and traces for individual pods
->
-> In production, Kiali is the fastest way to spot which service is causing elevated error rates or latency in your mesh.
-
-For more information see [Kiali integration docs](https://istio.io/latest/docs/ops/integrations/kiali/).
+For the full list of Istio standard metrics see the [official reference](https://istio.io/latest/docs/reference/config/metrics/).

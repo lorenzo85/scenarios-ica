@@ -1,44 +1,21 @@
-Before exploring the dashboards, you need to generate some live traffic so there is telemetry data to visualise.
+Before exploring the dashboards, you need to generate some live traffic so Kiali and Prometheus have data to visualise.
 
-Send a burst of requests to the `booking-service` from the `tester` pod:
-
-```bash
-kubectl exec -it tester -- bash -c \
-    'for i in {1..50}; \
-        do curl -s -X POST http://booking-service/book; \
-        echo; \
-     done;'
-```{{exec}}
-
-Now send 10 requests that will deliberately fail by calling a non-existent endpoint:
+Start a continuous background loop that sends a booking request every 2 seconds:
 
 ```bash
-kubectl exec -it tester -- bash -c \
-    'for i in {1..10}; \
-        do curl -s http://booking-service/notfound; \
-        echo; \
-     done;'
+while true; do
+  kubectl exec tester -- curl -s -X POST http://booking-service/book > /dev/null
+  sleep 2
+done &
 ```{{exec}}
 
-Run a continuous background traffic loop to keep metrics flowing (this will run in the background):
+The loop runs in the background and keeps traffic flowing throughout the rest of the scenario — you do not need to keep it running manually.
 
-```bash
-kubectl exec -it tester -- bash -c \
-    'for i in {1..200}; \
-        do curl -s -X POST http://booking-service/book > /dev/null; \
-        sleep 0.5; \
-     done;' &
-```{{exec}}
+Now open the Kiali views in your browser — watch the service graph populate and inspect the workload health as traffic flows:
 
-Verify that telemetry is being collected by querying Prometheus directly via `kubectl exec`:
+- [Graph]({{TRAFFIC_HOST1_30001}}/kiali/console/graph/namespaces/?traffic=namespaces%3Ddefault%2Chttp%2ChttpRequest&graphType=app&namespaces=default&duration=120&refresh=15000&layout=dagre&edges=responseTime%2Crt95&namespaceLayout=dagre) — live service topology with response time and request rate on each edge
+- [Workloads]({{TRAFFIC_HOST1_30001}}/kiali/console/workloads?duration=120&refresh=15000&namespaces=default) — per-pod health, traffic metrics, and sidecar status
 
-```bash
-kubectl exec -n istio-system \
-    $(kubectl get pod -n istio-system -l app=prometheus -o jsonpath='{.items[0].metadata.name}') \
-    -- wget -qO- 'http://localhost:9090/api/v1/query?query=istio_requests_total' | \
-    python3 -m json.tool | grep "destination_service" | head -5
-```{{exec}}
+> **Tip:** If the graph appears empty, wait 15–20 seconds for the first metrics to be scraped and click the refresh button. Both views are configured to auto-refresh every 15 seconds.
 
-You should see metrics with labels referencing `booking-service` — confirming that Prometheus is scraping Istio telemetry.
-
-> **How does Istio generate metrics?** Every Envoy sidecar proxy exposes a `/stats/prometheus` endpoint. Prometheus scrapes these endpoints using the `PodMonitor` configuration included in the addon manifests. No application changes are needed.
+> **How does Istio generate metrics?** Every Envoy sidecar proxy exposes a `/stats/prometheus` endpoint. Prometheus scrapes these endpoints automatically using the configuration included in the addon manifests. No application changes are needed.

@@ -14,17 +14,17 @@
         "verify": "step2/verify.sh"
       },
       {
-        "title": "Generate traffic",
+        "title": "Generate traffic and explore Kiali",
         "text": "step3/text.md",
         "verify": "step3/verify.sh"
       },
       {
-        "title": "Explore metrics with Prometheus",
+        "title": "Introduce error traffic",
         "text": "step4/text.md",
         "verify": "step4/verify.sh"
       },
       {
-        "title": "Visualize the mesh with Kiali",
+        "title": "Explore metrics with Prometheus",
         "text": "step5/text.md",
         "verify": "step5/verify.sh"
       }
