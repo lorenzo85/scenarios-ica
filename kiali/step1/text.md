@@ -21,7 +21,7 @@ Verify that Istio is running in the `istio-system` namespace:
 kubectl get po -n istio-system
 ```{{exec}}
 
-You should see `istiod`, `istio-ingressgateway`, and `istio-egressgateway` all in `Running` status.
+You should see `istiod` in `Running` status.
 
 In the next step you will install the observability addons: Prometheus and Kiali.
 
