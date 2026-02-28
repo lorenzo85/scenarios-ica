@@ -21,12 +21,13 @@ with the following properties:
 * labels: `version: v2`
 
 <br>
-<details><summary>Tip</summary>
-Create a file using `vi`
+<details>
+<summary>Tip</summary>
+
+Create a file using `vi`:
 ```bash
 vi destination-rule.yaml
-```{{exec}}
-
+```
 Copy, edit and paste the following content:
 ```yaml
 # File destination-rule.yaml
@@ -39,14 +40,20 @@ spec:
   subsets:
   - name: #TODO
   - name: # TODO
-```{{copy}}
+```
+Apply the resource:
+```bash
+kubectl apply -f destination-rule.yaml
+```
 </details>
-<br>
-<details><summary>Solution</summary>
-Create a file using `vi`
+<details>
+<summary>Solution</summary>
+
+Create a file using `vi`:
+
 ```bash
 vi destination-rule.yaml
-```{{exec}}
+```
 
 Copy and paste the following content:
 ```yaml
@@ -64,12 +71,12 @@ spec:
   - name: v2
     labels:
       version: v2
-```{{copy}}
+```
 
 Apply the resource:
 ```bash
 kubectl apply -f destination-rule.yaml
-```{{exec}}
+```
 </details>
 
 
