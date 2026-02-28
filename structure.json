@@ -17,6 +17,7 @@
     { "path": "egress-gateways-tls-origination"},
     { "path": "security-authentication-mtls"},
     { "path": "security-authorization-http-traffic"},
-    { "path": "security-authorization-jwt-token"}
+    { "path": "security-authorization-jwt-token"},
+    { "path": "kiali"}
   ]
 }

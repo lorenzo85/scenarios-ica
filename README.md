@@ -48,6 +48,11 @@ This repository contains all the Killercoda scenarios that help you practise the
 | [Authorization HTTP Traffic](security-authorization-http-traffic) | Configure AuthorizationPolicy to control HTTP access between workloads |
 | [Authorization JWT Token](security-authorization-jwt-token) | Enforce JWT-based access control using RequestAuthentication and AuthorizationPolicy |
 
+### 📊 Observability
+| Scenario | Description |
+|----------|-------------|
+| [Kiali](kiali) | Visualize the Istio service mesh topology, traffic flow, and configuration health using Kiali |
+
 ### 🛠️ Other
 | Scenario | Description |
 |----------|-------------|
