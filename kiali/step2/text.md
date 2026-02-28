@@ -37,4 +37,11 @@ You should see `NodePort` in the `TYPE` column and the fixed ports in `PORT(S)`:
 - Prometheus: `9090:30090/TCP`
 - Kiali: `20001:30001/TCP`
 
+Open both UIs in your browser to confirm they are reachable from outside the cluster:
+
+- [Kiali]({{TRAFFIC_HOST1_30001}}/kiali/console/applications?duration=60&refresh=60000&namespaces=default)
+- [Prometheus]({{TRAFFIC_HOST1_30090}}/query)
+
 For more information on Istio integrations see the [official docs](https://istio.io/latest/docs/ops/integrations/).
+
+In the next step you will generate live traffic to the services so the Kiali graph and Prometheus metrics have data to display.

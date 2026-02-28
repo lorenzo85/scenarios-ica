@@ -1,19 +1,18 @@
-There are two deployments installed in the Kubernetes cluster:
-- notification-service-v1
-- notification-service-v2
+The following two versions of the `notification-service` are pre-deployed in the cluster:
 
-The notification-service is used to send notifications using different channels.
+| Service | Notification Channel |
+|---------|----------------------|
+| `notification-service-v1` | **EMAIL** only |
+| `notification-service-v2` | **EMAIL** + **SMS** |
 
-The *notification-service-v1* sends notifications using **EMAIL**(s) only,
-while *notification-service-v2* sends notifications using both **EMAIL** and **SMS**.
-
-Check the running pods and services and wait until they are all in status `Running`.
+Check the running pods and services and wait until they are all in `Running` status:
 
 ```bash
 kubectl get pod,service -L app,version
 ```{{exec}}
 
-Note that the notification-service-v1 pods have
-labels *app=notification-service* and *version=v1*.
-The notification-service-v2 pods have
-labels *app=notification-service* and *version=v2*.
+Notice the pod labels:
+- `notification-service-v1` pods: `app=notification-service`, `version=v1`
+- `notification-service-v2` pods: `app=notification-service`, `version=v2`
+
+These version labels are key — Istio `DestinationRule` subsets use them to identify which pods to route traffic to.

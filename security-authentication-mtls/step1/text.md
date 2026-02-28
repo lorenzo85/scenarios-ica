@@ -12,12 +12,15 @@ the `default` namespace does not have it by listing the namespaces along with th
 kubectl get namespaces -L istio-injection
 ```{{exec}}
 
-There are three deployments installed in the Kubernetes cluster:
-- notification-service-v1 in the `foo` namespace.
-- notification-service-v1 in the `bar` namespace.
-- booking-service-v1 in the `foo` namespace.
+The following services are pre-deployed across the `foo` and `bar` namespaces:
 
-Check the running pods and services and wait until they are all in status `Running`.
+| Service | Namespace | Description |
+|---------|-----------|-------------|
+| `notification-service-v1` | `foo` | Sends EMAIL notifications |
+| `notification-service-v1` | `bar` | Sends EMAIL notifications |
+| `booking-service-v1` | `foo` | Accepts booking requests and calls `notification-service` |
+
+Check the running pods and services and wait until they are all in `Running` status.
 
 ```bash
 kubectl get pod,service -n foo

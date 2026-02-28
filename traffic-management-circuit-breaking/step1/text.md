@@ -1,18 +1,14 @@
-There are three deployments installed in the Kubernetes cluster:
-- notification-service-v2
-- notification-service-v3
-- fortio
+The following services are pre-deployed in the cluster:
 
-The *notification-service-v2* sends notifications using both **EMAIL** and **SMS**,
-while the *notification-service-v3* is **faulty** and always returns **507**
-(insufficient storage) HTTP response code.
+| Service | Description |
+|---------|-------------|
+| `notification-service-v2` | Sends notifications via **EMAIL** and **SMS** |
+| `notification-service-v3` | **Faulty** — always returns `507 Insufficient Storage` |
+| `fortio` | Load testing client for controlling connections, concurrency, and delays |
 
-[Fortio](https://github.com/fortio/fortio) is a load testing client which lets you control the number of connections,
-concurrency, and delays for outgoing HTTP calls.
+You will use `fortio` to intentionally "fire" the circuit breaker by generating concurrent load against the faulty `notification-service-v3`.
 
-You will use *fortio* to intentionally "fire" the circuit breaker.
-
-Check the running pods and services and wait until they are all in status `Running`.
+Check the running pods and services and wait until they are all in `Running` status:
 
 ```bash
 kubectl get pod,service -L app,version
