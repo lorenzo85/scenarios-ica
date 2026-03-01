@@ -15,6 +15,5 @@ You have completed the **Traffic Shifting** scenario.
 
 - `VirtualService` — defines weighted route destinations using the `weight` field
 - `DestinationRule` — declares `v1` and `v2` subsets using pod label selectors
-- Envoy route configuration — the proxy-level mechanism applying the traffic weights
 
 **Official Istio Docs:** [Traffic Shifting](https://istio.io/latest/docs/tasks/traffic-management/traffic-shifting/)
