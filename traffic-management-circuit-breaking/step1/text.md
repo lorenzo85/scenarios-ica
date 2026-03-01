@@ -8,8 +8,8 @@ The following services are pre-deployed in the cluster:
 
 You will use `fortio` to intentionally "fire" the circuit breaker by generating concurrent load against the faulty `notification-service-v3`.
 
-Check the running pods and services and wait until they are all in `Running` status:
+Check the running pods and wait until they are all in `Running` status:
 
 ```bash
-kubectl get pod,service -L app,version
+kubectl get pod -L app,version
 ```{{exec}}

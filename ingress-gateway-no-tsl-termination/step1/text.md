@@ -9,10 +9,10 @@ This scenario demonstrates how to configure an Istio `Gateway` for **TLS pass-th
 
 In this scenario, `booking-service-v2` already serves HTTPS on port 443 and handles its own TLS certificates. The Istio gateway will pass the encrypted connection through unmodified.
 
-Check the running pods and services and wait until they are all in `Running` status:
+Check the running pods and wait until they are all in `Running` status:
 
 ```bash
-kubectl get pod,service -L app,version
+kubectl get pod -L app,version
 ```{{exec}}
 
 The booking-service is exposed using HTTPS on port **443/TCP** and does **not** accept plain HTTP requests.

@@ -20,7 +20,7 @@ The following services are pre-deployed across the `foo` and `bar` namespaces:
 | `notification-service-v1` | `bar` | Sends EMAIL notifications |
 | `booking-service-v1` | `foo` | Accepts booking requests and calls `notification-service` |
 
-Check the running pods and services and wait until they are all in `Running` status.
+Check the running pods and wait until they are all in `Running` status.
 
 ```bash
 kubectl get pod,service -n foo

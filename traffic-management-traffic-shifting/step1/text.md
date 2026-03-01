@@ -7,10 +7,10 @@ This scenario uses two versions of a `notification-service` to demonstrate Istio
 
 You will gradually shift traffic from `v1` to `v2` using a **canary release** strategy — starting with a 90/10 split, then moving to a full 0/100 cutover — all without redeploying anything.
 
-Check the running pods and services and wait until they are all in `Running` status:
+Check the running pods and wait until they are all in `Running` status:
 
 ```bash
-kubectl get pod,service -L app,version
+kubectl get pod -L app,version
 ```{{exec}}
 
 Notice the pod labels:

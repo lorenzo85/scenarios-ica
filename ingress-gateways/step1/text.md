@@ -12,10 +12,10 @@ The following service is pre-deployed in the cluster:
 |---------|-------------|
 | `booking-service-v1` | A sample booking API (HTTP on port 8080) |
 
-Check the running pods and services and wait until they are all in `Running` status:
+Check the running pods and wait until they are all in `Running` status:
 
 ```bash
-kubectl get pod,service -L app,version
+kubectl get pod -L app,version
 ```{{exec}}
 
 Both the `booking-service` pod and the `tester` pod should show `2/2` containers (app + `istio-proxy` sidecar).

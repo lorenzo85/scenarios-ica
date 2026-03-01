@@ -5,10 +5,10 @@ The following two versions of the `notification-service` are pre-deployed in the
 | `notification-service-v1` | **EMAIL** only |
 | `notification-service-v2` | **EMAIL** + **SMS** |
 
-Check the running pods and services and wait until they are all in `Running` status:
+Check the running pods and wait until they are all in `Running` status:
 
 ```bash
-kubectl get pod,service -L app,version
+kubectl get pod -L app,version
 ```{{exec}}
 
 Notice the pod labels:

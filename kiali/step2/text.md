@@ -39,6 +39,8 @@ You should see `NodePort` in the `TYPE` column and the fixed ports in `PORT(S)`:
 
 Open both UIs in your browser to confirm they are reachable from outside the cluster:
 
+> **Tip:** Once the UIs open, it may take up to 15 seconds for the first metrics data to be populated. If the dashboards appear empty, wait a moment and refresh.
+
 - [Kiali]({{TRAFFIC_HOST1_30001}}/kiali/console/applications?duration=60&refresh=60000&namespaces=default)
 - [Prometheus]({{TRAFFIC_HOST1_30090}}/query)
 

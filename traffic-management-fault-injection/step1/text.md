@@ -7,10 +7,10 @@ This scenario uses two sample services to demonstrate Istio fault injection:
 
 You will inject faults into the communication between these two services to test how the `booking-service` handles upstream failures — without changing any application code.
 
-Check the running pods and services and wait until they are all in `Running` status:
+Check the running pods and wait until they are all in `Running` status:
 
 ```bash
-kubectl get pod,service -L app,version
+kubectl get pod -L app,version
 ```{{exec}}
 
 Both the `booking-service` and `notification-service` pods should have the `istio-proxy` sidecar injected (2/2 containers ready). The sidecar is what allows Istio to intercept and manipulate traffic between services.

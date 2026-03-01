@@ -39,6 +39,8 @@ You should see `NodePort` in the `TYPE` column and the fixed ports in `PORT(S)`:
 
 Open both UIs in your browser to confirm they are reachable:
 
+> **Tip:** Once the UIs open, it may take up to 15 seconds for the first metrics data to be populated. If the dashboards appear empty, wait a moment and refresh.
+
 - [Grafana]({{TRAFFIC_HOST1_30300}})
 - [Prometheus]({{TRAFFIC_HOST1_30090}})
 
