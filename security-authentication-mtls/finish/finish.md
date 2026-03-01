@@ -14,7 +14,5 @@ You have completed the **Mutual TLS (mTLS) Authentication** scenario.
 ## Key Istio Resources Used
 
 - `PeerAuthentication` — configures the mTLS mode (`PERMISSIVE`, `STRICT`, or `DISABLE`) per workload or namespace
-- `DestinationRule` — sets client-side TLS mode (`ISTIO_MUTUAL`) to match the server's `PeerAuthentication`
-- Istiod — issues and rotates SPIFFE-compliant X.509 certificates for workload identities
 
 **Official Istio Docs:** [mTLS Migration](https://istio.io/latest/docs/tasks/security/authentication/mtls-migration/)

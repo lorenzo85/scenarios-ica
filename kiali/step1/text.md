@@ -10,7 +10,7 @@ Both services have the Istio `istio-proxy` sidecar injected, which automatically
 Check the running pods and wait until they are all in `Running` status:
 
 ```bash
-kubectl get pod,service -L app,version
+kubectl get pod -L app,version
 ```{{exec}}
 
 Each pod should show `2/2` containers ready — the application container plus the `istio-proxy` sidecar.
