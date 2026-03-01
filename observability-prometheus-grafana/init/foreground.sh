@@ -36,4 +36,5 @@ kubectl run tester --image=nginx
 # Wait for all pods to be running
 while ! kubectl get pods | grep -w "Running"; do echo -n "."; sleep 1; done
 
-exec bash --init-file <(echo '. ~/.bashrc; echo "Scenario is ready"')
+clear
+echo "Scenario is ready"
