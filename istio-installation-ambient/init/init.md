@@ -33,6 +33,8 @@ For Layer 7 features (routing, retries, header manipulation), ambient mode intro
 - How `ztunnel` and `istio-cni` work as the ambient data plane
 - How to enroll a namespace into the ambient mesh without restarting pods
 - How to verify transparent mTLS through ztunnel
+- How to deploy a **waypoint proxy** to enable L7 policy enforcement
+- How to apply an **HTTPRoute** and verify L7 traffic routing through the waypoint
 
 ## Prerequisites
 
