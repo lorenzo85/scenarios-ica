@@ -9,10 +9,10 @@ The following services are pre-deployed:
 
 You will start with an **allow-nothing** policy (deny all) and progressively layer `AuthorizationPolicy` resources to enable only the specific HTTP access paths you want.
 
-Check the running pods and services and wait until they are all in `Running` status:
+Check the running pods and wait until they are all in `Running` status:
 
 ```bash
-kubectl get pod,service -L app,version
+kubectl get pod -L app,version
 ```{{exec}}
 
 Both pods should show `2/2` containers ready (application + `istio-proxy` sidecar). The sidecar is what enforces authorization decisions made by `istiod`.
