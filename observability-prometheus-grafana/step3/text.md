@@ -23,11 +23,11 @@ Both loops run in the background throughout the rest of the scenario — you do 
 Confirm traffic is flowing by checking the response codes directly:
 
 ```bash
-kubectl exec tester -- curl -s -o /dev/null -w "%{http_code}" -X POST http://booking-service/book
+kubectl exec tester -- curl -s -o /dev/null -w "%{http_code}" -X POST http://booking-service/book; echo
 ```{{exec}}
 
 ```bash
-kubectl exec tester -- curl -s -o /dev/null -w "%{http_code}" http://booking-service/notfound
+kubectl exec tester -- curl -s -o /dev/null -w "%{http_code}" http://booking-service/notfound; echo
 ```{{exec}}
 
 You should see `200` for the first command and `404` for the second.

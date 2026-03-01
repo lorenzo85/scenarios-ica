@@ -41,7 +41,7 @@ Open both UIs in your browser to confirm they are reachable:
 
 > **Tip:** Once the UIs open, it may take up to 15 seconds for the first metrics data to be populated. If the dashboards appear empty, wait a moment and refresh.
 
-- [Grafana]({{TRAFFIC_HOST1_30300}})
+- [Grafana - Istio Control Plane Dashboard]({{TRAFFIC_HOST1_30300}}/d/1813f692a8e4ac77155348d4c7d2fba8/istio-control-plane-dashboard?orgId=1&from=now-5m&to=now&refresh=15s)
 - [Prometheus]({{TRAFFIC_HOST1_30090}})
 
 For more information on Istio integrations see the [official docs](https://istio.io/latest/docs/ops/integrations/).

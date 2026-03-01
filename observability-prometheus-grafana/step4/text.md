@@ -19,7 +19,7 @@ Open the **Istio Mesh Dashboard**. At the top of the page you will see:
 - **Global Success Rate** — percentage of non-5xx responses (note that `404` is counted as a client error, not a mesh failure)
 - **4xx / 5xx error breakdown** — per-service counts of client and server errors
 
-Scroll down to the **Services** table. You should see `booking-service` and `notification-service` listed with their individual request rates and P50/P90/P99 latency columns populated.
+Scroll down to the **HTTP/gRPC Workloads** section. You should see `booking-service` and `notification-service` listed with their individual request rates and P50/P90/P99 latency columns populated.
 
 ### Istio Service Dashboard
 

@@ -17,13 +17,6 @@ Click each link below to open the Prometheus UI with the query pre-filled and re
 **Requests broken down by response code:**
 [Run query]({{TRAFFIC_HOST1_30090}}/graph?g0.expr=sum+by%28response_code%29+%28rate%28istio_requests_total%7Bdestination_service_name%3D%22booking-service%22%7D%5B1m%5D%29%29&g0.tab=0&g0.range_input=5m)
 
-You can also run these queries directly in the terminal using `kubectl exec` to hit the Prometheus API:
-
-```bash
-kubectl exec -n istio-system deploy/prometheus -- \
-  wget -qO- 'http://localhost:9090/api/v1/query?query=sum(istio_requests_total{destination_service_name="booking-service"})' \
-  | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['data']['result'])"
-```{{exec}}
 
 > **Key Istio Prometheus metrics:**
 > - `istio_requests_total` — counter of all requests, labelled by source/destination service, response code, method
