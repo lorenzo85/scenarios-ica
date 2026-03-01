@@ -1,0 +1,18 @@
+## Congratulations!
+
+You have successfully completed the **Prometheus & Grafana** scenario and explored Istio's metrics collection and visualization tooling.
+
+## What You Learned
+
+- How to install Istio's observability addons (Prometheus and Grafana) from the bundled sample manifests
+- How Istio's Envoy sidecar proxies automatically generate metrics without application code changes
+- How to use **Grafana** to explore the Istio Mesh, Service, and Workload pre-built dashboards
+- How to query Istio metrics in **Prometheus** using PromQL — including request rate, error rate, and P99 latency
+
+## Key Istio Resources and Metrics
+
+- `istio_requests_total` — total request counter (labels: source/destination, response code, method)
+- `istio_request_duration_milliseconds` — request latency histogram
+- `istio_tcp_connections_opened_total` — TCP connection counter for non-HTTP workloads
+
+**Official Istio Docs:** [Observability Tasks](https://istio.io/latest/docs/tasks/observability/)

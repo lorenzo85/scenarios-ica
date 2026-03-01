@@ -19,6 +19,7 @@
     { "path": "security-authentication-mtls"},
     { "path": "security-authorization-http-traffic"},
     { "path": "security-authorization-jwt-token"},
-    { "path": "kiali"}
+    { "path": "kiali"},
+    { "path": "observability-prometheus-grafana"}
   ]
 }

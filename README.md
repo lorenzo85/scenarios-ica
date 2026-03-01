@@ -52,6 +52,7 @@ This repository contains all the Killercoda scenarios that help you practise the
 | Scenario | Description |
 |----------|-------------|
 | [Kiali](kiali) | Visualize the Istio service mesh topology, traffic flow, and configuration health using Kiali |
+| [Prometheus & Grafana](observability-prometheus-grafana) | Install Prometheus and Grafana, generate mesh traffic, and explore Istio's pre-built dashboards |
 
 ### 🛠️ Other
 | Scenario | Description |

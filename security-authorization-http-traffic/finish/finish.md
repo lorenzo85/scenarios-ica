@@ -14,7 +14,6 @@ You have completed the **Authorization for HTTP Traffic** scenario.
 ## Key Istio Resources Used
 
 - `AuthorizationPolicy` — defines allow/deny rules with `selector`, `action`, `rules`, `from`, `to`, and `when` fields
-- `PeerAuthentication` — provides the mTLS-authenticated source identity consumed by authorization rules
 - Service accounts — Kubernetes service accounts form the basis of Istio workload SPIFFE identities
 
 **Official Istio Docs:** [Authorization for HTTP Traffic](https://istio.io/latest/docs/tasks/security/authorization/authz-http/)
