@@ -18,7 +18,7 @@ kubectl run tester --image=nginx
 Wait for all pods to reach `Running` status:
 
 ```bash
-kubectl get pod,service
+kubectl get pod
 ```{{exec}}
 
 | Name | Role |
