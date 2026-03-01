@@ -22,10 +22,7 @@ for the `notification-service` host, with the following properties:
 * name: `default`
 * labels: `version: v2`
 
-The connection pool traffic policy *http1MaxPendingRequests* equal to 1 and *maxRequestsPerConnection* equal to 1
-means that if you exceed more than one connection and request concurrently,
-you should start seeing some failures when the istio-proxy opens the circuit for
-further requests and connections.
+> **Tip:** The connection pool traffic policy `http1MaxPendingRequests` equal to 1 and `maxRequestsPerConnection` equal to 1 means that if you exceed more than one connection and request concurrently, you should start seeing some failures when the istio-proxy opens the circuit for further requests and connections.
 
 <br>
 <details>

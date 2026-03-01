@@ -40,5 +40,5 @@ Query the `istio-proxy` to investigate how many calls so far have been flagged f
 ```bash
 kubectl exec "$FORTIO_POD" -c istio-proxy -- \
     pilot-agent request GET stats | \
-    grep "default|notification-service.default.svc.cluster.local.upstream_rq_pending_overflow"
+    grep "default|notification-service.default.svc.cluster.local;.upstream_rq_pending_overflow"
 ```{{exec}}
