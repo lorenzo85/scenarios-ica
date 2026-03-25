@@ -19,6 +19,7 @@ mv /tmp/demo.yaml /root/istio-${ISTIO_VERSION}/manifests/profiles/
 kubectl -n kube-system patch configmap cilium-config --type merge -p '{"data":{"kubeProxyReplacement":"true"}}'
 kubectl -n kube-system patch configmap cilium-config --type merge -p '{"data":{"socketLB.hostNamespaceOnly":"true"}}'
 kubectl -n kube-system patch configmap cilium-config --type merge -p '{"data":{"cni-exclusive":"false"}}'
+kubectl -n kube-system patch configmap cilium-config --type merge -p '{"data":{"bpf-lb-sock-hostns-only":"true"}}'
 kubectl -n kube-system rollout restart daemonset cilium
 istioctl install --set profile=demo -y --manifests=/root/istio-${ISTIO_VERSION}/manifests
 # Init scenario
