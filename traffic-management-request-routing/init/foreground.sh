@@ -17,6 +17,7 @@ source ${HOME}/.bashrc
 mv /tmp/demo.yaml /root/istio-${ISTIO_VERSION}/manifests/profiles/
 # We need to properly configure Cilium so that it can co-exist with Istio.
 kubectl -n kube-system patch configmap cilium-config --type merge -p '{"data":{"cni-exclusive":"false"}}'
+kubectl -n kube-system patch configmap cilium-config --type merge -p '{"data":{"socketLB.hostNamespaceOnly":"true"}}'
 kubectl -n kube-system rollout restart daemonset cilium
 istioctl install --set profile=demo --set components.cni.enabled=true -y --manifests=/root/istio-${ISTIO_VERSION}/manifests
 # Init scenario
