@@ -19,7 +19,7 @@ mv /tmp/demo.yaml /root/istio-${ISTIO_VERSION}/manifests/profiles/
 kubectl -n kube-system patch configmap cilium-config --type merge -p '{"data":{"cni-exclusive":"false"}}'
 kubectl -n kube-system patch configmap cilium-config --type merge -p '{"data":{"socketLB.hostNamespaceOnly":"true"}}'
 kubectl -n kube-system rollout restart daemonset cilium
-istioctl install --set profile=demo --set components.cni.enabled=true -y --manifests=/root/istio-${ISTIO_VERSION}/manifests
+istioctl install --set profile=demo --set components.cni.enabled=true --set values.cni.chained=true --set values.cni.cniConfDir=/etc/cni/net.d --set values.cni.cniBinDir=/opt/cni/bin -y --manifests=/root/istio-${ISTIO_VERSION}/manifests
 # Init scenario
 kubectl label namespace default istio-injection=enabled
 kubectl apply -f /tmp/notification-deployment.yaml
