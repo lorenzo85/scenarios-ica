@@ -9,6 +9,8 @@ spec:
         service: otel-collector.istio-system.svc.cluster.local
         port: 4317
   components:
+    cni:
+      enabled: true
     egressGateways:
     - name: istio-egressgateway
       enabled: false
@@ -25,6 +27,13 @@ spec:
             cpu: 0m # CHANGED
             memory: 0Mi # CHANGED
   values:
+    cni:
+      excludeNamespaces:
+        - istio-system
+        - kube-system
+      chained: true
+      cniBinDir: /opt/cni/bin
+      cniConfDir: /etc/cni/net.d
     global:
       proxy:
         resources:
