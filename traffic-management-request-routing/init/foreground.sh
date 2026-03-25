@@ -15,7 +15,7 @@ echo "alias k='kubectl'" >> ~/.bashrc
 source ${HOME}/.bashrc
 # Deploy Istio with demo profile
 mv /tmp/demo.yaml /root/istio-${ISTIO_VERSION}/manifests/profiles/
-istioctl install --set profile=demo -y --manifests=/root/istio-${ISTIO_VERSION}/manifests
+istioctl install --set profile=demo --set components.cni.enabled=true -y --manifests=/root/istio-${ISTIO_VERSION}/manifests
 # Init scenario
 kubectl label namespace default istio-injection=enabled
 kubectl apply -f /tmp/notification-deployment.yaml
