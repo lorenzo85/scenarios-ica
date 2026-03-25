@@ -21,6 +21,7 @@ kubectl -n kube-system patch configmap cilium-config --type merge -p '{"data":{"
 kubectl -n kube-system patch configmap cilium-config --type merge -p '{"data":{"cni-chaining-mode":"generic-veth"}}'
 kubectl -n kube-system patch configmap cilium-config --type merge -p '{"data":{"custom-cni-conf":"false"}}'
 kubectl -n kube-system patch configmap cilium-config --type merge -p '{"data":{"enable-endpoint-routes":"true"}}'
+kubectl -n kube-system patch configmap cilium-config --type merge -p '{"data":{"encryption.enabled":"false"}}'
 kubectl -n kube-system rollout restart daemonset cilium
 istioctl install --set profile=demo -y --manifests=/root/istio-${ISTIO_VERSION}/manifests
 # Init scenario
