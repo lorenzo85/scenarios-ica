@@ -20,8 +20,8 @@ echo "[[ -r \"/usr/local/etc/profile.d/bash_completion.sh\" ]] && . \"/usr/local
 cp /root/istio-${ISTIO_VERSION}/tools/istioctl.bash ./istioctl.bash
 echo "source ~/istioctl.bash" >> ~/.bashrc
 # Deploy Istio with demo profile
-mv /tmp/demo.yaml /root/istio-${ISTIO_VERSION}/manifests/profiles/
-istioctl install --set profile=demo -y --manifests=/root/istio-${ISTIO_VERSION}/manifests
+mv /tmp/demo-profile.yaml /root/istio-${ISTIO_VERSION}/manifests/profiles/
+istioctl install --set profile=demo-profile -y --manifests=/root/istio-${ISTIO_VERSION}/manifests
 touch /ks/.istiofinished
 
 
