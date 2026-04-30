@@ -29,8 +29,8 @@
     },
     "intro": {
       "text": "init/init.md",
-      "background": "init/background-script.sh",
-      "foreground": "init/foreground-script.sh"
+      "background": "init/background.sh",
+      "foreground": "init/foreground.sh"
     },
     "assets": {
       "host01": [
