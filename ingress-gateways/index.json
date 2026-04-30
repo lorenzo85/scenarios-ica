@@ -45,7 +45,7 @@
           "chmod": "+x"
         },
         {
-          "file": "demo.yaml",
+          "file": "demo-profile.yaml",
           "target": "/tmp",
           "chmod": "+x"
         },
